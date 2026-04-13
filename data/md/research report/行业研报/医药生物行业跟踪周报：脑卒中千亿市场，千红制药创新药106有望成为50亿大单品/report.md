@@ -1,0 +1,341 @@
+# 医药生物行业跟踪周报
+
+# 脑卒中千亿市场，千红制药创新药 106 有望成为 50 亿大单品
+
+增持（维持）
+
+# 投资要点
+
+本周、年初至今A股医药指数涨幅分别为 2.6%、6.6%，相对沪深 300的超额收益分别为4.5%、9.0%；本周、年初至今 $\mathbf { H }$ 股生物科技指数涨跌幅分别为 4.2%、41.4%，相对于恒生科技指数跑赢-1.6%、15.7%；本周 A 股化药（+4.4%）、原料药（+3.2%）、医疗服务（+3.1%）、生物制品（+2.9%）及医疗器械（+1.2%）等股价明显上涨，中药（+0.9%）及医药商业（-0.1%）等股价涨幅相对较小；本周 A 股涨幅居前三生国健（+100%）、海辰药业（+52%）、舒泰神（+49%），跌幅居前新赣江（-12%）、拱东医疗（-10%）、锦好医疗（-9%）；本周H股涨幅居前中国卫生集团（+100%）、金威医疗（+68%）、隽泰太控股（+36%），跌幅居前佳兆业健康（-39%）、君圣泰医药（-24%）、弘和仁爱医疗（-17%）。本周板块表现特点：本周港股医药板块仍然表现更强，但A 股创新药个股表现更为出色。  
+国内卒中千亿市场，QHRD106研发进展顺利，有望成为大单品：中国卒中患者数量高达 1300 万，发病率仍然在不断升高，每年新发患者达550 万人，卒中用药市场前景广阔，其中不乏如石药恩必普（2024年等级医院销售 58.6 亿元）、先声先必新（2024 年等级医院端销售 23.8 亿元）的大单品。千红制药的 QHRD106 靶向激肽释放酶，同时起到神经保护剂和改善侧支循环作用。目前QHRD106 处在临床 2期，我们预计将在 2025 下半年读出 2 期数据，有望优于已上市同类药物。考虑到卒中用药市场广阔，已上市药物不乏大单品，经我们测算，QHRD106 预计于 2027 年上市，其销售峰值有望达到 40-50 亿元，具备成为大单品潜力。  
+具体配置建议：看好的子行业排序分别为：创新药>CXO>中药>医疗器械>药店>医药商业等。具体标的选择思路：从成长性角度选股，主要集中创新药领域，建议关注千红制药、华纳药厂、舒泰神、百济神州、恒瑞医药、泽璟制药、三生制药、百利天恒、联邦制药、康方生物、科伦博泰、迪哲医药、海思科、科伦博泰等；从低估值角度选股，主要集中中药领域，建议推荐佐力药业、东阿阿胶、昆药集团、华润三九、方盛制药等；从高股息角度选股：主要集中中药领域，建议关注江中药业、羚锐制药、云南白药、济川药业、葵花药业等；从左侧角度选股，主要集中在原料药、部分CXO、医疗器械，建议关注诺泰生物、普洛药业、奥锐特、药明康德、联影医疗等。  
+风险提示：药品或耗材降价超预期；医保政策风险等；产品销售及研发进度不及预期。
+
+2025 年 06 月 02 日
+
+证券分析师 朱国广
+
+执业证书：S0600520070004
+
+zhugg@dwzq.com.cn
+
+![](images/d5d7a35324c274ed5834e4fbbf7fff103065a4e47fdcf4f36ca91bed60eda117.jpg)  
+行业走势
+
+# 相关研究
+
+《国产创新药闪耀 ASCO 国际舞台》2025-05-25
+
+《三抗药物研发进入快车道，建议关注泽璟制药、三生制药等》
+
+2025-05-18
+
+# 内容目录
+
+1. 本周及年初至今各医药股收益情况...  
+2. 脑卒中千亿市场，QHRD106 研发进展顺利，有望成为大单品 ....
+
+2.1. 脑卒中千亿市场，二次预防尤为重要..   
+2.2. 已上市药物不乏大单品，优效新品有望分得市场份额.. 9  
+2.3. QHRD106 研发进展顺利，预计有望成为 40-50 亿大单品. .10
+
+3. 研发进展与企业动态 .......... 11
+
+3.1. 创新药/改良药研发进展（获批上市/申报上市/获批临床） 11  
+3.2. 仿制药及生物类似物上市、临床申报情况. . 16  
+3.3. 重要研发管线一览. . 22
+
+4. 行业洞察与监管动态. .23   
+5. 行情回顾 .... .24
+
+5.1. 医药市盈率追踪：医药指数市盈率为 34.03，较历史均值低 5.20. . 24  
+5.2. 医药子板块追踪：本周化药上升 $4 . 4 \%$ ，优于其他子板块. . 25  
+5.3. 个股表现.. . 26
+
+6. 风险提示 .... .27  
+7. 附录 ............ .27
+
+# 图表目录
+
+图 1： 2020 年中国城市居民主要疾病死因构成比.. 8  
+图 2： 2005-2020年中国城乡居民心血管病死亡率升高. 8  
+图 3： 2012-2020年中国40 岁及以上卒中患病率. 9  
+图 4： 2015-2024E年中国脑卒中患病（千万人） 9  
+图 5： 激肽释放酶-激酶系统作用机制. .10  
+图 6： QHRD106 销售峰值测算. . 11  
+图 7： 药物发现阶段基于人工智能的方法与传统人工方法的效率比较. .24  
+图 8： 子行业估值情况.. . 24  
+图 9： 子行业估值情况.. . 26
+
+表 1： 本周建议关注组合.. 4  
+表 2： 常用急性缺血性卒中用药对比.. 9  
+表 3： 本周创新药以及改良药上市、临床申报一览表. 12  
+表 4： 本周仿制药及生物类似物上市、临床申报一览表. . 16  
+表 5： 重要行业洞察与监管动态.. .23  
+表 6： 板块表现（%） .25  
+表 7： A股本周涨跌幅前十. .26  
+表 8： A股2025年年初至今涨跌幅前十. .26  
+表 9： 国内药品注册分类.. .27
+
+# 1. 本周及年初至今各医药股收益情况
+
+本周、年初至今 A股医药指数涨幅分别为 $2 . 6 \%$ 、 $6 . 6 \%$ ，相对沪深 300的超额收益分别为 $4 . 5 \%$ 、 $9 . 0 \%$ ；本周、年初至今 H股生物科技指数涨跌幅分别为 $4 . 2 \%$ 、 $4 1 . 4 \%$ ，相对于恒生科技指数跑赢- $\mathbf { \partial \cdot 1 . 6 \% }$ 、 $1 5 . 7 \%$ ；本周 A 股化药（ $. + 4 . 4 \%$ ）、原料药（ $_ { + 3 . 2 \% }$ ）、医疗服务（ $_ { + 3 . 1 \% } )$ ）、生物制品（ $. + 2 . 9 \%$ ）及医疗器械（ $_ { + 1 . 2 \% }$ ）等股价明显上涨，中药（ $( + 0 . 9 \%$ ）及医药商业（ $- 0 . 1 \%$ ）等股价涨幅相对较小；本周 A 股涨幅居前三生国健（ $. + 1 0 0 \%$ ）、海辰药业（ $+ 5 2 \%$ ）、舒泰神（ $1 + 4 9 \%$ ），跌幅居前新赣江（ $( - 1 2 \%$ ）、拱东医疗$( - 1 0 \%$ ）、锦好医疗 $( - 9 \%$ ）；本周H股涨幅居前中国卫生集团（ $. + 1 0 0 \%$ ）、金威医疗（ $\zeta + 6 8 \% )$ ）、隽泰太控股（ $. + 3 6 \%$ ），跌幅居前佳兆业健康（ $( - 3 9 \%$ ）、君圣泰医药（ $- 2 4 \%$ ）、弘和仁爱医疗 $( - 1 7 \%$ ）。本周板块表现特点：本周港股医药板块仍然表现更强，但A股创新药个股表现更为出色。
+
+【投资策略】具体配置建议：
+
+具体配置建议：
+
+看好的子行业排序分别为：创新药>CXO>中药>医疗器械>药店>医药商业等
+
+具体标的选择思路
+
+从成长性角度选股，主要集中创新药领域，建议关注千红制药、华纳药厂、舒泰神、百济神州、恒瑞医药、泽璟制药、三生制药、百利天恒、联邦制药、康方生物、科伦博泰、迪哲医药、海思科、科伦博泰等。
+
+从低估值角度选股，主要集中中药领域，建议关注佐力药业、东阿阿胶、昆药集团、华润三九、方盛制药等。
+
+从高股息角度选股：主要集中中药领域，建议关注江中药业、羚锐制药、云南白药、济川药业、葵花药业等。
+
+从左侧角度选股，主要集中在原料药、部分CXO、医疗器械，建议关注诺泰生物、普洛药业、奥锐特、药明康德、联影医疗等。
+
+表1：本周建议关注组合  
+
+<table><tr><td rowspan="2">股票代码</td><td rowspan="2">公司名称</td><td colspan="2">EPS</td><td colspan="3">归母净利润（亿元）</td><td rowspan="2">本周涨跌幅</td><td rowspan="2">市值（亿元）</td></tr><tr><td>2023A</td><td>2022A</td><td>2023A</td><td>2024E</td><td>2024E</td></tr><tr><td>600276.SH</td><td>恒瑞医药</td><td>0.61</td><td>39.06</td><td>43.02</td><td>54.65</td><td>1.57</td><td>3598.92</td><td></td></tr><tr><td>002422.SZ</td><td>科伦药业*</td><td>1.20</td><td>17.09</td><td>24.56</td><td>0.00</td><td>12.36</td><td>628.83</td><td></td></tr><tr><td>002675.SZ</td><td>东诚药业*</td><td>0.37</td><td>3.07</td><td>2.10</td><td>0.00</td><td>0.34</td><td>119.98</td><td></td></tr><tr><td>002653.SZ</td><td>海思科</td><td>0.25</td><td>2.77</td><td>2.78</td><td>3.16</td><td>4.16</td><td>493.21</td><td></td></tr><tr><td>601607.SH</td><td>上海医药*</td><td>1.52</td><td>56.17</td><td>37.68</td><td>0.00</td><td>-0.05</td><td>678.26</td><td></td></tr><tr><td>300573.SZ</td><td>兴齐眼药</td><td>2.39</td><td>2.12</td><td>2.40</td><td>7.11</td><td>0.11</td><td>136.73</td><td></td></tr></table>
+
+<table><tr><td>002294.SZ</td><td>信立泰</td><td>0.57</td><td>6.37</td><td>6.77</td><td>7.87</td><td>14.96</td><td>502.78</td></tr><tr><td>301301.SZ</td><td>川宁生物</td><td>0.19</td><td>4.12</td><td>5.77</td><td>6.28</td><td>-4.16</td><td>292.20</td></tr><tr><td>002262.SZ</td><td>恩华药业</td><td>0.89</td><td>9.01</td><td>11.11</td><td>13.76</td><td>2.31</td><td>225.08</td></tr><tr><td>2171.HK</td><td>科济药业</td><td>-1.55</td><td>-8.92</td><td>-6.90</td><td>-7.39</td><td>5.59</td><td>116.84</td></tr><tr><td>300705.SZ</td><td>九典制药*</td><td>0.78</td><td>2.69</td><td>3.68</td><td>5.12</td><td>-0.50</td><td>78.80</td></tr><tr><td>000513.SZ</td><td>丽珠集团</td><td>2.06</td><td>19.09</td><td>19.54</td><td>21.92</td><td>3.71</td><td>331.35</td></tr><tr><td>688513.SH</td><td>苑东生物</td><td>2.05</td><td>2.47</td><td>2.27</td><td>2.81</td><td>4.75</td><td>62.30</td></tr><tr><td>002019.SZ</td><td>亿帆医药*</td><td>0.16</td><td>1.91</td><td>-5.51</td><td>0.00</td><td>-0.72</td><td>150.83</td></tr><tr><td>1801.HK</td><td>信达生物</td><td>-1.42</td><td>-21.79</td><td>-2.28</td><td>1.21</td><td>14.90</td><td>966.62</td></tr><tr><td>300558.SZ</td><td>贝达药业*</td><td>0.35</td><td>1.45</td><td>3.48</td><td>0.00</td><td>9.04</td><td>223.64</td></tr><tr><td>6855.HK</td><td>亚盛医药</td><td>-3.07</td><td>-8.83</td><td>-8.26</td><td>-6.85</td><td>12.71</td><td>176.14</td></tr><tr><td>9966.HK</td><td>康宁杰瑞*</td><td>0.00</td><td>-3.26</td><td>0.00</td><td>0.01</td><td>32.84</td><td>85.88</td></tr><tr><td>9969.HK</td><td>诺诚健华*</td><td>-0.50</td><td>-8.87</td><td>-6.31</td><td>0.00</td><td>6.85</td><td>186.83</td></tr><tr><td>2315.HK</td><td>百奥赛图*</td><td>-1.51</td><td>-6.02</td><td>-3.83</td><td>0.00</td><td>33.78</td><td>64.22</td></tr><tr><td>2162.HK</td><td>康诺亚</td><td>-1.10</td><td>-3.08</td><td>-3.15</td><td>-6.40</td><td>-1.35</td><td>112.73</td></tr><tr><td>0013.HK</td><td>和黄医药</td><td>-2.90</td><td>-24.91</td><td>-0.46</td><td>-2.97</td><td>0.47</td><td>185.65</td></tr><tr><td>2096.HK</td><td>先声药业</td><td>0.35</td><td>9.33</td><td>25.38</td><td>10.58</td><td>18.58</td><td>257.09</td></tr><tr><td>688235.SH</td><td>百济神州</td><td>-10.05</td><td>-136.42</td><td>-104.06</td><td>-97.85</td><td>0.22</td><td>3553.66</td></tr><tr><td>688506.SH</td><td>百利天恒</td><td>-0.70</td><td>-2.82</td><td>-2.73</td><td>49.34</td><td>-1.19</td><td>1077.45</td></tr><tr><td>603259.SH</td><td>药明康德</td><td>2.98</td><td>88.14</td><td>96.84</td><td>11.91</td><td>3.32</td><td>1792.00</td></tr><tr><td>002821.SZ</td><td>凯莱英*</td><td>8.92</td><td>33.02</td><td>22.69</td><td>0.00</td><td>6.81</td><td>311.73</td></tr><tr><td>300363.SZ</td><td>博腾股份*</td><td>3.67</td><td>20.05</td><td>2.67</td><td>0.00</td><td>1.58</td><td>83.95</td></tr><tr><td>300347.SZ</td><td>泰格医药*</td><td>2.30</td><td>20.07</td><td>20.25</td><td>0.00</td><td>12.48</td><td>411.63</td></tr><tr><td>300725.SZ</td><td>药石科技*</td><td>1.57</td><td>3.14</td><td>1.97</td><td>0.00</td><td>5.01</td><td>66.99</td></tr><tr><td>688238.SH</td><td>和元生物*</td><td>0.08</td><td>0.39</td><td>-1.28</td><td>0.00</td><td>1.90</td><td>38.36</td></tr><tr><td>603456.SH</td><td>九洲药业</td><td>1.02</td><td>9.21</td><td>12.50</td><td>16.19</td><td>3.23</td><td>131.51</td></tr><tr><td>1548.HK</td><td>金斯瑞生物科技</td><td>0.00</td><td>-2.27</td><td>-1.80</td><td>-1.14</td><td>20.59</td><td>267.79</td></tr><tr><td>300759.SZ</td><td>康龙化成*</td><td>1.15</td><td>13.75</td><td>16.01</td><td>0.00</td><td>0.96</td><td>412.72</td></tr><tr><td>603127.SH</td><td>昭衍新药*</td><td>2.01</td><td>10.74</td><td>3.97</td><td>0.00</td><td>9.15</td><td>129.66</td></tr><tr><td>688139.SH</td><td>海尔生物</td><td>1.89</td><td>6.01</td><td>4.06</td><td>5.73</td><td>0.10</td><td>99.65</td></tr><tr><td>688046.SH</td><td>药康生物</td><td>0.40</td><td>1.65</td><td>1.73</td><td>2.22</td><td>-1.94</td><td>47.56</td></tr><tr><td>301080.SZ</td><td>百普赛斯</td><td>1.70</td><td>2.04</td><td>1.54</td><td>1.68</td><td>5.07</td><td>62.44</td></tr><tr><td>688293.SH</td><td>奥浦迈</td><td>0.92</td><td>1.05</td><td>0.82</td><td>1.10</td><td>0.42</td><td>46.58</td></tr><tr><td>688105.SH</td><td>诺唯赞*</td><td>1.49</td><td>5.94</td><td>-0.71</td><td>0.00</td><td>-1.04</td><td>86.90</td></tr><tr><td>688315.SH</td><td>诺禾致源</td><td>0.44</td><td>1.77</td><td>2.20</td><td>2.93</td><td>-3.06</td><td>56.69</td></tr><tr><td>688133.SH</td><td>泰坦科技</td><td>1.06</td><td>1.25</td><td>1.72</td><td>2.73</td><td>-4.04</td><td>35.57</td></tr><tr><td>688426.SH</td><td>康为世纪</td><td>1.42</td><td>1.59</td><td>-0.84</td><td>-0.70</td><td>-0.52</td><td>21.55</td></tr><tr><td>688710.SH</td><td>益诺思</td><td>1.40</td><td>1.35</td><td>1.94</td><td>0.00</td><td>2.77</td><td>45.56</td></tr><tr><td>300636.SZ</td><td>同和药业*</td><td>0.29</td><td>1.01</td><td>1.06</td><td>0.00</td><td>1.64</td><td>31.40</td></tr><tr><td>600521.SH</td><td>华海药业*</td><td>0.79</td><td>11.68</td><td>8.30</td><td>0.00</td><td>16.82</td><td>252.42</td></tr><tr><td>603520.SH</td><td>司太立*</td><td>-0.22</td><td>-0.76</td><td>0.44</td><td>0.00</td><td>8.87</td><td>44.10</td></tr><tr><td>603538.SH</td><td>美诺华*</td><td>1.59</td><td>3.39</td><td>0.12</td><td>0.00</td><td>2.67</td><td>31.98</td></tr><tr><td>688166.SH</td><td>博瑞医药</td><td>0.57</td><td>2.40</td><td>2.45</td><td>2.96</td><td>-1.14</td><td>205.49</td></tr><tr><td>000739.SZ</td><td>普洛药业</td><td>0.84</td><td>9.89</td><td>12.02</td><td>14.66</td><td>1.16</td><td>161.95</td></tr><tr><td>002399.SZ</td><td>海普瑞*</td><td>0.50</td><td>7.27</td><td>-7.83</td><td>0.00</td><td>-0.35</td><td>166.54</td></tr><tr><td>300702.SZ</td><td>天宇股份*</td><td>-0.34</td><td>-1.19</td><td>0.27</td><td>0.00</td><td>-0.27</td><td>75.89</td></tr><tr><td>000661.SZ</td><td>长春高新</td><td>10.23</td><td>41.40</td><td>47.63</td><td>54.91</td><td>2.61</td><td>417.69</td></tr><tr><td>300009.SZ</td><td>安科生物*</td><td>0.42</td><td>7.03</td><td>8.47</td><td>0.00</td><td>-1.34</td><td>143.17</td></tr><tr><td>300294.SZ</td><td>博雅生物*</td><td>0.86</td><td>4.32</td><td>2.37</td><td>0.00</td><td>-1.12</td><td>134.13</td></tr><tr><td>300357.SZ</td><td>我武生物</td><td>0.67</td><td>3.49</td><td>3.90</td><td>4.75</td><td>-0.20</td><td>103.67</td></tr><tr><td>688276.SH</td><td>百克生物</td><td>0.44</td><td>1.82</td><td>4.75</td><td>7.31</td><td>-0.91</td><td>85.50</td></tr><tr><td>300122.SZ</td><td>智飞生物</td><td>3.14</td><td>75.39</td><td>98.56</td><td>156.99</td><td>-0.77</td><td>462.48</td></tr><tr><td>300142.SZ</td><td>沃森生物*</td><td>0.45</td><td>7.29</td><td>4.19</td><td>0.00</td><td>-1.73</td><td>163.13</td></tr><tr><td>300601.SZ</td><td>康泰生物*</td><td>-0.12</td><td>-1.33</td><td>8.61</td><td>0.00</td><td>-1.97</td><td>155.48</td></tr><tr><td>603392.SH</td><td>万泰生物*</td><td>5.23</td><td>47.36</td><td>12.48</td><td>0.00</td><td>1.08</td><td>861.55</td></tr><tr><td>000403.SZ</td><td>派林生物</td><td>0.80</td><td>5.87</td><td>6.12</td><td>7.95</td><td>0.74</td><td>158.86</td></tr><tr><td>603233.SH</td><td>大参林</td><td>0.91</td><td>10.36</td><td>11.67</td><td>14.28</td><td>-1.57</td><td>199.30</td></tr><tr><td>603883.SH</td><td>老百姓</td><td>1.34</td><td>7.85</td><td>9.34</td><td>11.44</td><td>-1.06</td><td>142.37</td></tr><tr><td>603939.SH</td><td>益丰药房</td><td>1.25</td><td>12.66</td><td>13.45</td><td>17.46</td><td>-2.79</td><td>329.53</td></tr><tr><td>002727.SZ</td><td>一心堂*</td><td>1.69</td><td>10.10</td><td>5.49</td><td>10.15</td><td>37.95</td><td>111.32</td></tr><tr><td>605266.SH</td><td>健之佳</td><td>2.90</td><td>3.74</td><td>4.14</td><td>4.79</td><td>9.83</td><td>35.56</td></tr><tr><td>002044.SZ</td><td>美年健康</td><td>-0.14</td><td>-5.59</td><td>5.06</td><td>8.12</td><td>-2.95</td><td>206.28</td></tr><tr><td>300015.SZ</td><td>爱尔眼科</td><td>0.27</td><td>25.24</td><td>33.59</td><td>40.47</td><td>-1.33</td><td>1173.34</td></tr><tr><td>301267.SZ</td><td>华厦眼科</td><td>0.61</td><td>5.14</td><td>6.66</td><td>8.64</td><td>-1.16</td><td>157.84</td></tr><tr><td>301239.SZ</td><td>普瑞眼科</td><td>0.14</td><td>0.21</td><td>2.68</td><td>1.54</td><td>-1.61</td><td>60.18</td></tr><tr><td>600763.SH</td><td>通策医疗</td><td>1.71</td><td>5.48</td><td>5.00</td><td>6.05</td><td>1.43</td><td>184.28</td></tr><tr><td>6078.HK</td><td>海吉亚医疗</td><td>0.00</td><td>4.77</td><td>6.82</td><td>9.74</td><td>6.22</td><td>97.23</td></tr><tr><td>601567.SH</td><td>三星医疗</td><td>0.67</td><td>9.48</td><td>17.28</td><td>21.55</td><td>-4.49</td><td>336.24</td></tr><tr><td>2273.HK</td><td>固生堂</td><td>0.74</td><td>1.83</td><td>2.74</td><td>3.85</td><td>4.87</td><td>82.71</td></tr><tr><td>300143.SZ</td><td>盈康生命</td><td>-0.93</td><td>-5.96</td><td>1.31</td><td>1.79</td><td>-1.51</td><td>68.50</td></tr><tr><td>0853.HK</td><td>微创医疗*</td><td>0.00</td><td>-4.37</td><td>-4.78</td><td>0.00</td><td>1.36</td><td>124.11</td></tr><tr><td>688617.SH</td><td>惠泰医疗</td><td>5.35</td><td>3.58</td><td>5.34</td><td>7.23</td><td>-0.22</td><td>394.17</td></tr><tr><td>300453.SZ</td><td>三鑫医疗*</td><td>0.46</td><td>1.85</td><td>2.07</td><td>0.00</td><td>-1.51</td><td>41.01</td></tr><tr><td>300529.SZ</td><td>健帆生物*</td><td>1.10</td><td>8.90</td><td>4.36</td><td>0.00</td><td>2.62</td><td>178.33</td></tr><tr><td>002223.SZ</td><td>鱼跃医疗</td><td>1.59</td><td>15.95</td><td>23.96</td><td>22.84</td><td>3.36</td><td>370.42</td></tr><tr><td>300653.SZ</td><td>正海生物*</td><td>1.03</td><td>1.85</td><td>1.91</td><td>0.00</td><td>0.75</td><td>36.22</td></tr><tr><td>688161.SH</td><td>威高骨科</td><td>1.36</td><td>5.44</td><td>6.03</td><td>7.32</td><td>-1.41</td><td>103.12</td></tr><tr><td>688677.SH</td><td>海泰新光</td><td>1.50</td><td>1.83</td><td>1.46</td><td>2.16</td><td>8.34</td><td>47.32</td></tr><tr><td>603108.SH</td><td>润达医疗</td><td>0.72</td><td>4.18</td><td>5.16</td><td>6.33</td><td>-3.17</td><td>106.85</td></tr><tr><td>300298.SZ</td><td>三诺生物</td><td>0.79</td><td>4.47</td><td>2.84</td><td>4.12</td><td>-2.13</td><td>119.29</td></tr><tr><td>688114.SH</td><td>华大智造</td><td>4.88</td><td>20.26</td><td>-6.08</td><td>-4.24</td><td>-6.14</td><td>306.51</td></tr><tr><td>688468.SH</td><td>科美诊断</td><td>0.38</td><td>1.53</td><td>1.98</td><td>2.48</td><td>-0.42</td><td>28.80</td></tr><tr><td>430685.BJ</td><td>新芝生物*</td><td>0.44</td><td>0.40</td><td>0.58</td><td>0.00</td><td>-4.54</td><td>13.65</td></tr><tr><td>002901.SZ</td><td>大博医疗*</td><td>0.22</td><td>0.92</td><td>0.59</td><td>0.00</td><td>0.40</td><td>157.78</td></tr><tr><td>603987.SH</td><td>康德莱*</td><td>0.71</td><td>3.12</td><td>2.31</td><td>0.00</td><td>-0.54</td><td>32.15</td></tr><tr><td>688029.SH</td><td>南微医学</td><td>1.76</td><td>3.31</td><td>4.86</td><td>6.09</td><td>5.39</td><td>124.79</td></tr><tr><td>300595.SZ</td><td>欧普康视*</td><td>0.70</td><td>6.24</td><td>6.67</td><td>0.00</td><td>-0.73</td><td>134.06</td></tr><tr><td>688050.SH</td><td>爱博医疗</td><td>2.21</td><td>2.33</td><td>3.15</td><td>4.21</td><td>-2.24</td><td>145.03</td></tr><tr><td>688366.SH</td><td>昊海生科</td><td>1.05</td><td>1.80</td><td>4.56</td><td>5.81</td><td>3.12</td><td>122.43</td></tr><tr><td>300206.SZ</td><td>理邦仪器</td><td>0.40</td><td>2.33</td><td>2.70</td><td>3.39</td><td>-1.36</td><td>67.24</td></tr><tr><td>300760.SZ</td><td>迈瑞医疗</td><td>7.92</td><td>96.07</td><td>115.82</td><td>139.62</td><td>2.45</td><td>2811.65</td></tr><tr><td>688271.SH</td><td>联影医疗</td><td>2.01</td><td>16.86</td><td>19.21</td><td>14.28</td><td>0.12</td><td>1137.34</td></tr><tr><td>300406.SZ</td><td>九强生物*</td><td>0.66</td><td>3.89</td><td>5.24</td><td>0.00</td><td>-1.33</td><td>78.31</td></tr><tr><td>300463.SZ</td><td>迈克生物*</td><td>1.16</td><td>7.08</td><td>3.13</td><td>0.00</td><td>-2.65</td><td>71.97</td></tr><tr><td>300832.SZ</td><td>新产业</td><td>1.69</td><td>13.28</td><td>16.53</td><td>21.37</td><td>4.94</td><td>455.25</td></tr><tr><td>603658.SH</td><td>安图生物</td><td>1.99</td><td>11.67</td><td>13.36</td><td>16.29</td><td>-0.05</td><td>224.63</td></tr><tr><td>603882.SH</td><td>金域医学*</td><td>5.89</td><td>27.53</td><td>6.43</td><td>0.00</td><td>-4.62</td><td>134.76</td></tr><tr><td>688690.SH</td><td>纳微科技</td><td>0.68</td><td>2.75</td><td>0.69</td><td>1.83</td><td>-2.92</td><td>84.60</td></tr><tr><td>06606.HK</td><td>诺辉健康</td><td>-0.17</td><td>-0.79</td><td>2.24</td><td>4.48</td><td>0.00</td><td>0.00</td></tr><tr><td>688108.SH</td><td>赛诺医疗</td><td>-0.40</td><td>-1.62</td><td>-0.40</td><td>0.16</td><td>-0.50</td><td>40.77</td></tr><tr><td>688606.SH</td><td>奥泰生物</td><td>2.28</td><td>11.84</td><td>1.81</td><td>2.42</td><td>0.40</td><td>50.11</td></tr><tr><td>000963.SZ</td><td>华东医药</td><td>1.42</td><td>24.99</td><td>29.03</td><td>35.11</td><td>6.85</td><td>760.92</td></tr><tr><td>6699.HK</td><td>时代天使*</td><td>0.00</td><td>2.14</td><td>0.53</td><td>0.00</td><td>6.13</td><td>97.17</td></tr><tr><td>300896.SZ</td><td>爱美客</td><td>4.18</td><td>12.64</td><td>18.58</td><td>20.84</td><td>-0.22</td><td>519.40</td></tr><tr><td>600436.SH</td><td>片仔癀*</td><td>4.10</td><td>24.72</td><td>27.97</td><td>0.00</td><td>-1.57</td><td>1239.33</td></tr><tr><td>000999.SZ</td><td>华润三九</td><td>2.48</td><td>24.49</td><td>29.53</td><td>34.31</td><td>0.50</td><td>539.28</td></tr><tr><td>300181.SZ</td><td>佐力药业</td><td>0.39</td><td>2.73</td><td>3.71</td><td>5.04</td><td>1.10</td><td>116.22</td></tr><tr><td>600557.SH</td><td>康缘药业</td><td>0.74</td><td>4.34</td><td>4.77</td><td>5.77</td><td>0.70</td><td>73.46</td></tr><tr><td>600566.SH</td><td>济川药业</td><td>2.35</td><td>21.71</td><td>25.00</td><td>27.03</td><td>1.08</td><td>250.24</td></tr><tr><td>600129.SH</td><td>太极集团*</td><td>0.63</td><td>3.50</td><td>8.22</td><td>0.00</td><td>0.66</td><td>119.23</td></tr><tr><td>603998.SH</td><td>方盛制药</td><td>0.65</td><td>2.86</td><td>1.87</td><td>2.42</td><td>1.54</td><td>43.51</td></tr><tr><td>600572.SH</td><td>康恩贝*</td><td>0.14</td><td>3.58</td><td>5.92</td><td>0.00</td><td>0.00</td><td>115.01</td></tr><tr><td>000423.SZ</td><td>东阿阿胶*</td><td>1.21</td><td>7.80</td><td>11.51</td><td>13.87</td><td>-1.36</td><td>360.76</td></tr><tr><td>002864.SZ</td><td>盘龙药业*</td><td>1.17</td><td>1.01</td><td>1.10</td><td>0.00</td><td>-0.43</td><td>29.88</td></tr><tr><td>600422.SH</td><td>昆药集团</td><td>0.51</td><td>3.83</td><td>5.35</td><td>6.94</td><td>1.77</td><td>121.65</td></tr><tr><td>603439.SH</td><td>贵州三力</td><td>0.49</td><td>2.01</td><td>2.61</td><td>3.70</td><td>-2.29</td><td>48.93</td></tr><tr><td>600993.SH</td><td>马应龙</td><td>1.11</td><td>4.79</td><td>4.43</td><td>0.00</td><td>0.61</td><td>121.73</td></tr><tr><td>688658.SH</td><td>悦康药业</td><td>0.74</td><td>3.35</td><td>1.85</td><td>3.09</td><td>-0.35</td><td>64.49</td></tr><tr><td>600329.SH</td><td>达仁堂</td><td>1.12</td><td>8.62</td><td>9.87</td><td>11.95</td><td>4.37</td><td>249.97</td></tr><tr><td>600998.SH</td><td>九州通</td><td>0.53</td><td>20.85</td><td>21.74</td><td>47.78</td><td>-0.19</td><td>259.69</td></tr><tr><td>688136.SH</td><td>科兴制药</td><td>-0.45</td><td>-0.90</td><td>-1.90</td><td>0.24</td><td>16.10</td><td>83.07</td></tr></table>
+
+数据来源：wind（数据截至2025年5月30日收盘价。数据后带*为 Wind一致性预期，其余为内部预测，本表使用的货币单位均为人民币，港股市值由当日汇率换算得到），公司公告，东吴证券研究所
+
+# 2. 脑卒中千亿市场，QHRD106研发进展顺利，有望成为大单品
+
+# 2.1. 脑卒中千亿市场，二次预防尤为重要
+
+脑卒中，别名“中风”、“脑血管意外”，属于急性脑血管疾病，指由于脑部血管突然破裂或因血管阻塞导致血液不能流入大脑而引起脑组织损伤的一组疾病。急性缺血性
+
+卒中（AIS）作为最常见的卒中类型，约占全部脑卒中的 $6 0 \% { - } 8 0 \%$ 。
+
+急性缺血性脑卒中的二次预防极为重要。溶栓和取栓是当前 AIS 的主要治疗方案，应用范围窄，时间窗口短：需在急性发病的 4.5-6 小时以内使用急性期溶栓药物，我国常用重组组织型纤溶酶原激活剂（rt-PA）和尿激酶（UK）；机械取栓则需在 16 小时内为最优且不得超过 24小时。其治疗缺陷在于：1）治疗率低，复发风险很高（我国 2019-2020 年 AIS 静脉溶栓率为 $5 . 6 4 \%$ ，血管内治疗率为 $1 . 4 5 \%$ ）；2）技术要求高，需要严格临床及影像学评估；3）可能发生脑再灌注损伤，使神经受损。因此，AIS 二次预防尤为重要。二次预防是针对发生过一次或多次脑卒中的患者，通过寻找卒中发生的原因进行治疗，达到降低卒中复发的危险。非急性期常用调脂药（他汀类）、抗血小板药（阿司匹林、氯吡格雷）、抗凝药物（低分子肝素、华法林等）、和神经保护类药物。
+
+图 1：中国急性缺血性脑卒中的治疗
+
+图1：2020年中国城市居民主要疾病死因构成比  
+图2：2005-2020年中国城乡居民心血管病死亡率升高  
+![](images/002af357218090e5fa46ed352c127f13d51f0ed3ae29373bcde237a882f9151e.jpg)  
+数据来源：2018版中国急性缺血性脑卒中诊治指南更新，东吴证券研究所
+
+中国卒中用药市场容量已超千亿元，化学药、生物药及中药注射液三分天下。根据第4版《中国脑卒中防治报告》，我国带病生存的卒中患者在我国已高达 1300万，每 5位死亡者中至少有 1人死于卒中。根据《中国卫生健康统计年鉴 2021》和《中国心血管健康与疾病报告》，我国城市和农村居民心血管疾病的死亡率呈不断上升趋势，其死亡率在 2020 年分别达 291/10 万和 336/10 万，占我国城市和农村居民死因比重的 $4 8 . 0 0 \%$ 和 $4 5 . 8 6 \%$ ，远超其他主要疾病死因占比。根据弗若斯特沙利文分析，中国脑卒中存量患者人数以每年约 $4 . 5 \% - 4 . 8 \%$ 的速度增加，预计 2025年将达到20.7百万人，2030年将达25.8百万人。根据中国国家卒中登记研究，我国急性脑卒中患者第1年复发率达 $1 7 . 7 \%$ ，由此推算 2025 年缺血性卒中存量复发患者约 3.7 百万人。根据《中国脑卒中防治报告2020》和国家卫健委2021数据，我国40岁及以上人群的卒中人口标化患病率不断上升，由 2012 年的 $1 . 8 9 \%$ 增至 2020 年的 $2 . 6 1 \%$ ；由此推算，我国每年新发脑卒中患者约 4.6百万人，且正以每年 $8 . 7 \%$ 的速度上升。根据中国经济网的数据，我国脑卒中用药市场规模已超千亿元。从治疗机制上划分，主要包括了溶栓、抗血小板抗凝、血管扩张等以改善脑供血为目的药物，以及以保护神经细胞结构和功能为目的的神经保护剂类药物，如丁苯酞、神经节苷脂、依达拉奉等。
+
+![](images/8a347d822db2c3e86f796356e7d29eb9382ef7f1204ba2121011b2887dd1d8ad.jpg)  
+数据来源：《中国卫生健康统计年鉴 2021》，东吴证券研究所
+
+![](images/a7c6e567a5e8d463fd7fe8513a0b5992912236a455244b94d3531e27658edef6.jpg)  
+数据来源：《中国心血管健康与疾病报告》，东吴证券研究所
+
+图3：2012-2020年中国 40岁及以上卒中患病率  
+![](images/cfa93ae2080ea41d41c04e8fe5192274b09d6ccc80aa2a9c907612005a052b2a.jpg)  
+数据来源：《中国脑卒中防治报告 2020》，国家卫健委2021数据，东吴证券研究所
+
+图4：2015-2024E年中国脑卒中患病（千万人）  
+![](images/6d6f54112235ebd1b61209d734abc8ee0690650921058831c0cf778bf79f194b.jpg)  
+数据来源：弗若斯特沙利文，东吴证券研究所
+
+# 2.2. 已上市药物不乏大单品，优效新品有望分得市场份额
+
+卒中用药品种众多，已上市药物不乏恩必普、先必新等大单品。已获批的AIS 神经保护类常用药物包括必存®依达拉奉、先必新®依达拉奉右莰醇、恩必普®丁苯酞、和尼可林®胞磷胆碱。石药集团的恩必普 $\textsuperscript { \textregistered }$ 丁苯酞注射液/软胶囊为 1 类新药，在治疗急性缺血性脑卒中，属于脑侧支循环改善类药物，是石药集团的独家拳头产品。恩必普分为两种剂型，注射液 $\cdot ^ { + }$ 软胶囊的序贯疗法延长产品生命周期，目前两大产品均为全国医保目录谈判品种，根据开思数据库，其 2024年等级医院端销售额 58.6亿元。先声药业的先必新®依达拉奉右莰醇为 2020 年获批的新药，基于其 2004 年上市的国产首仿药必存 $\textsuperscript { \textregistered }$ 依达拉奉的渠道积累，先必新快速放量，2024年等级医院端销售额达 23.8亿元。
+
+表2：常用急性缺血性卒中用药对比
+
+<table><tr><td></td><td>必存®依达拉奉</td><td>先必新®依达拉奉右莰醇</td><td>恩必普®丁苯酞</td><td>尼可林®胞磷胆碱</td></tr><tr><td>原研药企</td><td>日本三菱</td><td>先声药业</td><td>石药集团</td><td>日本武田</td></tr><tr><td>给药方式</td><td>注射</td><td>注射、舌下片</td><td>注射/口服</td><td>注射</td></tr><tr><td>中国上市</td><td>2004年</td><td>2020年</td><td>2004年</td><td>1988年</td></tr><tr><td>适应症</td><td>脑梗死急性发作,改善神经症状、日常生活能力和功能障碍</td><td>急性脑梗塞和脑水肿,改善中风后神经系统功能,减轻症状,增强活动能力</td><td>用于轻度或中度急性缺血性脑卒中患者</td><td>颅脑损伤、脑血管意外,所引起的神经系统的后遗</td></tr><tr><td>作用机理</td><td>作为抗氧化剂,抑制黄嘌呤氧化等酶的活性,刺激前列环素合成,从而清除羟基自由基团</td><td>依达拉奉:清除氧自由基右莰醇:抑制缺血/再灌注后氧化应激损伤和炎症反应</td><td>作为谷氨酰胺类药物,通过降低花生四烯酸含量,抑制自由基和提高抗氧化酶活性</td><td>参与乙酰胆碱的合成和释放,促进中枢神经的代谢,调节神经细胞膜的流动性</td></tr><tr><td>2024医保</td><td>脑卒中;无;肌萎缩侧索硬化;乙类</td><td>乙类</td><td>乙类</td><td>乙类</td></tr><tr><td>2024通用名院端销售额</td><td>-</td><td>23.8亿元</td><td>58.6亿元</td><td>-</td></tr><tr><td>中标价</td><td>第七批国采:15-30元/30mg</td><td>48.8元/支</td><td>139元/支;110元/盒(0.1g*24粒)</td><td>第九批国采:6.9-8.7元/0.25g*10支</td></tr><tr><td>次均疗程</td><td>一次30mg,每日2次,14天一疗程</td><td>一次3支,每日2次,14天一疗程</td><td>每天2次,连续注射14天一疗程;一次2粒,一日3次,20天一疗程</td><td>一日0.25-0.5g,10天一疗程</td></tr><tr><td>次均费用</td><td>630元</td><td>4099元</td><td>3892元;550元</td><td>117元</td></tr></table>
+
+数据来源：中康开思，东吴证券研究所
+
+激肽系统与缺血性脑卒中密切相关，它的主要成分是激肽原，激肽释放酶（KLK）和激肽等，激肽释放酶又包括组织型激肽释放酶（TK）和血浆型激肽释放酶（PK），两者作用于激肽原生成缓激肽（BK）。BK 是激肽系统的主要效应分子，通过与缓激肽受体结合发挥作用，最终目的是扩张血管，促进心脑血管重构，从而实现从根本上改善缺血性脑卒中。目前，我国针对KLK靶点上市的药物只有1种，是每日需要静脉滴注的尤瑞克林。千红制药的 QHRD106 处在临床 2 期阶段，是长效制剂，可每周一次肌肉注射给药，更加方便便捷。此外，国内还没有其它进入临床阶段的 KLK 靶点的在研药物，QHRD106的竞争格局良好。
+
+图5：激肽释放酶-激酶系统作用机制  
+![](images/29d1bc7dbdf7dca1777861a4557eceedd5203150ebfc6644df91a9f83fb73059.jpg)  
+数据来源：心血管调节肽，东吴证券研究所
+
+# 2.3. QHRD106 研发进展顺利，预计有望成为 40-50 亿大单品
+
+QHRD106同时起到神经保护剂和改善侧支循环作用。据2023年7月发表在iScience期刊的《QHRD106 ameliorates ischemic stroke injury as a long-acting tissue kallikreinpreparation》，QHRD106 注射液可激活机体激肽释放酶 -激肽系统（KKS），通过 B2 受
+
+体，抑制缺血部位 HMGB1 释放，调控免疫炎症，抑制神经细胞凋亡，同时通过组织激肽释放酶改善侧支循环，改善急性缺血性卒中的神经功能结局。既能够起到神经保护剂作用，又能够改善心脑血管循环，具备较大临床潜力。目前 QHRD106 处在临床 2 期，我们预计近期已经接近数据读出关键时间节点。临床上改善血流和神经保护治疗（及其他机制治疗如免疫、抗炎等）临床试验的主要目的是促进神经功能恢复，并改善受试者日常生活能力和整体结局，有效性终点通常使用90天的 mRS。
+
+我们预计 QHRD106 有望成为 40-50 亿级别大单品。根据弗若斯特沙利文，预计2025 年我国脑卒中存量患者 2078 万人，年复发率 $1 7 . 7 \%$ ；新发脑卒中患者人数达 759万人；缺血性脑卒中患者人数约占卒中群体的 $7 0 \mathrm { - } 8 0 \%$ ，那么 2025年缺血性脑卒中用药需求人群 788万人。主要对标产品为先声药业的先必新 $\textsuperscript { \textregistered }$ 依达拉奉右莰醇，和石药集团的恩必普 $\textsuperscript { \textregistered }$ 丁苯酞。我们假设QHRD106 上市后12 周为一疗程，每周一支300元，并于上市次年参与医保谈判，在2033 年达到销售峰值44.9亿元。
+
+图6：QHRD106 销售峰值测算
+
+<table><tr><td colspan="2">研发调整后权益销售额(亿元)</td><td>单位</td><td>2023</td><td>2024</td><td>2025E</td><td>2026E</td><td>2027E</td><td>2028E</td><td>2029E</td><td>2030E</td><td>2031E</td><td>2032E</td><td>2033E</td><td>2034E</td><td>2035E</td><td>2036E</td><td>2037E</td></tr><tr><td colspan="2">QHRD106-急性缺血性脑卒中适应症(国内)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>存量患者数</td><td></td><td>万人</td><td>1898</td><td>1987</td><td>2078</td><td>2171</td><td>2267</td><td>2368</td><td>2472</td><td>2581</td><td>2695</td><td>2813</td><td>2937</td><td>3066</td><td>3201</td><td>3342</td><td>3489</td></tr><tr><td>存量患者yoy</td><td></td><td>%</td><td>5%</td><td>5%</td><td>5%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td><td>4%</td></tr><tr><td>复发患者数</td><td></td><td>万人</td><td>336</td><td>352</td><td>368</td><td>384</td><td>401</td><td>419</td><td>438</td><td>457</td><td>477</td><td>498</td><td>520</td><td>543</td><td>567</td><td>592</td><td>618</td></tr><tr><td>年复发率</td><td></td><td>%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td><td>18%</td></tr><tr><td>新发患者数</td><td></td><td>万人</td><td>642</td><td>698</td><td>759</td><td>825</td><td>897</td><td>975</td><td>1059</td><td>1134</td><td>1213</td><td>1298</td><td>1376</td><td>1458</td><td>1546</td><td>1638</td><td>1737</td></tr><tr><td>新发患者yoy</td><td></td><td>%</td><td>9%</td><td>9%</td><td>9%</td><td>9%</td><td>9%</td><td>9%</td><td>9%</td><td>7%</td><td>7%</td><td>7%</td><td>6%</td><td>6%</td><td>6%</td><td>6%</td><td>6%</td></tr><tr><td>脑卒中患者总数</td><td></td><td>万人</td><td>978</td><td>1050</td><td>1127</td><td>1200</td><td>1298</td><td>1304</td><td>1497</td><td>1590</td><td>1690</td><td>1796</td><td>1896</td><td>2001</td><td>2112</td><td>2230</td><td>2354</td></tr><tr><td>缺血性脑卒中患者总数</td><td></td><td>万人</td><td>685</td><td>735</td><td>789</td><td>846</td><td>909</td><td>976</td><td>1048</td><td>1113</td><td>1183</td><td>1257</td><td>1327</td><td>1401</td><td>1479</td><td>1561</td><td>1648</td></tr><tr><td>患者治疗率</td><td></td><td>%</td><td>62%</td><td>62%</td><td>65%</td><td>65%</td><td>67%</td><td>67%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td><td>70%</td></tr><tr><td>QHRD106渗透率</td><td></td><td>%</td><td></td><td></td><td></td><td></td><td>5%</td><td>9%</td><td>14%</td><td>18%</td><td>20%</td><td>22%</td><td>21%</td><td>20%</td><td>18%</td><td>16%</td><td>14%</td></tr><tr><td>目标药物年治疗费用</td><td></td><td>元</td><td></td><td></td><td></td><td></td><td>3600</td><td>2880</td><td>2880</td><td>2880</td><td>2304</td><td>2304</td><td>2304</td><td>1843</td><td>1843</td><td>1843</td><td>1843</td></tr><tr><td colspan="7">关键事件</td><td>药品获批</td><td colspan="2">进入医保</td><td colspan="3">地方省采等</td><td colspan="5">主动降价</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>目标药物年销售额</td><td></td><td>亿元</td><td>-</td><td>-</td><td>-</td><td>-</td><td>11.0</td><td>16.9</td><td>29.6</td><td>40.4</td><td>38.2</td><td>44.6</td><td>44.9</td><td>36.1</td><td>34.3</td><td>32.2</td><td>29.8</td></tr><tr><td>研发风险调整后销售额</td><td></td><td>r2=70%</td><td>-</td><td>-</td><td>-</td><td>-</td><td>7.7</td><td>11.9</td><td>20.7</td><td>28.3</td><td>26.7</td><td>31.2</td><td>31.5</td><td>25.3</td><td>24.0</td><td>22.6</td><td>20.8</td></tr><tr><td>权益调整后销售额</td><td></td><td>r2=100%</td><td>-</td><td>-</td><td>-</td><td>-</td><td>7.7</td><td>11.9</td><td>20.7</td><td>28.3</td><td>26.7</td><td>31.2</td><td>31.5</td><td>25.3</td><td>24.0</td><td>22.6</td><td>20.8</td></tr></table>
+
+数据来源：弗若斯特沙利文，东吴证券研究所
+
+# 3. 研发进展与企业动态
+
+# 3.1. 创新药/改良药研发进展（获批上市/申报上市/获批临床）
+
+ 5月29日，国家药监局网站显示，恒瑞子公司盛迪医药研发的磷罗拉匹坦帕洛诺司琼（研发代号：HR20013，商品名：瑞坦宁）获批上市，用于预防成人高度致吐性化疗（HEC）引起的急性和迟发性恶心和呕吐。  
+ 5 月 29 日，NMPA 官网显示，海创药业 1 类创新药氘恩扎鲁胺软胶囊（商品名：海纳安）的上市申请已获批准，该药适用于接受醋酸阿比特龙及化疗后出现疾病进展，且既往未接受新型雄激素受体抑制剂的转移性去势抵抗性前列腺癌（mCRPC）成人患者。  
+ 5月29日，国家药品监督管理局（NMPA）官网显示，复星医药控股子公司
+
+奥鸿药业和嘉和生物的两款 CDK4/6 抑制剂的上市申请已获得批准。
+
+ 5 月 29 日，NMPA 官网显示，恒瑞医药的注射用瑞康曲妥珠单抗（SHR-A1811）在国内获批上市，单药适用于治疗存在 HER2（ERBB2）激活突变且既往接受过至少一种系统治疗的不可切除的局部晚期或转移性非小细胞肺癌（NSCLC）成人患者。  
+ 5 月 28 日，爱尔康宣布美国 FDA 已批准 Tryptyr（acoltremon 滴眼液） $0 . 0 0 3 \%$ 用于治疗干眼症（DED）的体征和症状。Tryptyr是首个TRPM8受体激动剂（神经调节剂），通过刺激角膜感觉神经，快速增加自然泪液产生。  
+ 5月28日，中国国家药监局药品审评中心（CDE）官网最新公示，麓鹏制药BTK抑制剂洛布替尼片（Rocbrutinib）的上市申请已获受理。此前，该药已被纳入优先审评，适用于既往接受过 BTK 抑制剂治疗的成人套细胞淋巴瘤（MCL）患者。  
+ 5 月 28日，诺华宣布新一代抗血管内皮生长因子（anti-VEGF）单抗布西珠单抗（brolucizumab）获得国家药品监督管理局批准，用于治疗糖尿病黄斑水肿（DME）适应症。  
+ 5月27日，荣昌生物宣布，由公司自主研发的BLyS/APRIL双靶点融合蛋白创新药物泰它西普（RC18，商品名：泰爱®）第三项适应症获国家药品监督管理局（NMPA）批准上市，与常规治疗药物联合用于治疗抗乙酰胆碱受体（AChR）抗体阳性的成人全身型重症肌无力（gMG）患者。  
+ 5 月 27 日，荣昌生物的注射用泰它西普已获 NMPA 批准新适应症，用于治疗全身型重症肌无力（gMG）。此前，泰它西普已有系统性红斑狼疮（SLE）、类风湿关节炎（RA）两项适应症在国内获批上市。  
+ 5月27日，卫材宣布莱博雷生片（lemborexant，商品名：达卫可）获国家药监局批准，用于治疗失眠症。这是国内首款获批上市的 OX1R/OX2R拮抗剂。
+
+表3：本周创新药以及改良药上市、临床申报一览表  
+
+<table><tr><td>企业名称</td><td>药品名称</td><td>企业进度</td><td>受理号</td><td>剂型</td><td>药品类别</td><td>注册分类</td><td>靶点</td></tr><tr><td>Pfizer Europe MAEEIG;Pfizer IrelandPharmaceuticals</td><td>13价肺炎球菌多糖结合疫苗</td><td>已上市</td><td>JYSB2500123</td><td>注射剂</td><td>生物制品</td><td>无</td><td>S. pneumoniae</td></tr><tr><td>Wyeth PharmaceuticalsLLCWyeth PharmaceuticalDivision of Wyeth HoldingsLLC</td><td>注射用奥加伊妥珠单抗</td><td>已上市</td><td>JYSB2500122</td><td>注射剂</td><td>生物制品</td><td>无</td><td>CD22</td></tr><tr><td>Eli Lilly Nederland B.V.;</td><td>巴瑞替尼片</td><td>已上市</td><td>JYHB2500289</td><td>片剂</td><td>化学药品</td><td>无</td><td>JAK2; JAK1</td></tr><tr><td>Lilly del Caribe, Inc.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>上海仁会生物制药股份有限公司</td><td>贝那鲁肽注射液</td><td>已上市</td><td>CYSB2500123</td><td>注射剂</td><td>生物制品</td><td>无</td><td>GLP-1R</td></tr><tr><td>UCB Pharma S.A.; Vetter Pharma-Fertigung GmbH &amp; Co. KG;UCB Trading (Shanghai) Co., Ltd</td><td>比奇珠单抗注射液</td><td>已上市</td><td>JXSS2500067</td><td>注射剂</td><td>生物制品</td><td>3.1</td><td>IL-17F; IL-17A</td></tr><tr><td>Eli Lilly and Company:Lilly France</td><td>多奈单抗注射液</td><td>已上市</td><td>JYSB2500121</td><td>注射剂</td><td>生物制品</td><td>1</td><td>pGlu3-Aβ</td></tr><tr><td>Vantive Belgium SRL;Bieffe Medital S.p.A.</td><td>枸橼酸钠血滤置换液</td><td>已上市</td><td>JYHB2500295</td><td>透析用溶液剂</td><td>化学药品</td><td>5.1</td><td>not available</td></tr><tr><td>北京科兴生物制品有限公司</td><td>Sabin 株脊髓灰质炎灭活疫苗(Vero细胞)</td><td>已上市</td><td>CYSB2500119</td><td>注射剂</td><td>生物制品</td><td>无</td><td>poliovirus</td></tr><tr><td>PIERRE FABREMEDICAMENT;CATALE NT GERMANY EBERBACH GMBH</td><td>酒石酸长春瑞滨软胶囊</td><td>已上市</td><td>JYHB2500287</td><td>软胶囊</td><td>化学药品</td><td>无</td><td>microtubule</td></tr><tr><td>Vantive Belgium SRL;Bieffe Medital S.p.A.</td><td>磷/碳酸氢钠血滤置换液</td><td>已上市</td><td>JYHB2500294</td><td>透析用溶液剂</td><td>化学药品</td><td>5.1</td><td>not available</td></tr><tr><td>PharmaMar AG;GP PHARM, SA; Bsp Pharmaceuticals S.p.A.</td><td>注射用芦比替定</td><td>已上市</td><td>JYHB2500288</td><td>注射剂</td><td>化学药品</td><td>5.1</td><td>minor groove</td></tr><tr><td>N.V. Organon;Organon Pharma (UK) Limited</td><td>孟鲁司特钠片</td><td>已上市</td><td>JYHB2500291</td><td>片剂</td><td>化学药品</td><td></td><td>CysLT1</td></tr><tr><td>F. Hoffmann-La Roche Ltd;Roche (China) Holding Ltd.</td><td>莫妥珠单抗注射液(皮下注射)</td><td>已上市</td><td>JXSL2500083</td><td>注射剂</td><td>生物制品</td><td>2.1</td><td>CD20; CD3</td></tr><tr><td>上海药明巨诺生物科技有限公司;苏州药明巨诺生物科技有限公司</td><td>瑞基奥仑赛注射液</td><td>已上市</td><td>CXSS2500053</td><td>注射剂</td><td>生物制品</td><td>2.2</td><td>CD19</td></tr><tr><td>Alexion Pharmaceuticals, Inc.;Alexion Athlone Manufacturing Facility (AAMF)</td><td>瑞利珠单抗注射液</td><td>已上市</td><td>JXSB2500047</td><td>注射剂</td><td>生物制品</td><td>2.2</td><td>C5</td></tr><tr><td>Haleon Schweiz AG;Haleon CH SARL</td><td>双氯芬酸二乙胺乳胶剂</td><td>已上市</td><td>JYHB2500273</td><td>凝胶剂</td><td>化学药品</td><td>无</td><td>COX</td></tr><tr><td>Roche Pharma (Schweiz) AG;F. Hoffmann-La Roche AG;Roche (China) Holding Ltd.</td><td>注射用维泊妥珠单抗</td><td>已上市</td><td>JXSS2500069</td><td>注射剂</td><td>生物制品</td><td>2.2</td><td>CD79b</td></tr><tr><td>Takeda Pharma A/S;BSP Pharmaceuticals S.p.A.</td><td>注射用维布妥昔单抗</td><td>已上市</td><td>JYSB2500124</td><td>注射剂</td><td>生物制品</td><td>3.1</td><td>CD30</td></tr><tr><td>Dr. Falk Pharma</td><td>熊去氧胆酸口服</td><td>已上市</td><td>JYHB2500285</td><td>口服混悬剂</td><td>化学药品</td><td>5.1</td><td>bile acid</td></tr><tr><td>GmbH;Corden PharmaFribourg AG,ZweigniederlassungEttingen</td><td>混悬液</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>SciClone PharmaceuticalsItaly S.R.L.;Pattheon ItaliaS.p.A.</td><td>注射用胸腺法新</td><td>已上市</td><td>JYHB2500296</td><td>注射剂</td><td>化学药品</td><td></td><td>thymosin alpha 1</td></tr><tr><td>AZ.CHIM.RIUN.ANGELINI FRANCESCO ACRAFS.P.A.;ZHAOPEPHARMACEUTICAL(HEFEI) CO.,LTD.</td><td>盐酸曲唑酮缓释片</td><td>已上市</td><td>JYHZ2500106</td><td>缓释片</td><td>化学药品</td><td>5.1</td><td>SERT;5-HT2A receptor</td></tr><tr><td>Horizon TherapeuticsIreland DAC;AstraZenecaNijmegen B.V.;ChangzhouHansoh PharmaceuticalCo., Ltd.</td><td>伊奈利珠单抗注射液</td><td>已上市</td><td>JXSS2500070</td><td>注射剂</td><td>生物制品</td><td>2.2</td><td>CD19</td></tr><tr><td>北京天广实生物技术股份有限公司;北京华放天实生物制药有限责任公司</td><td>重组人源化单克隆抗体MIL62注射液</td><td>申请上市</td><td>CXSS2500054</td><td>注射剂</td><td>生物制品</td><td>1</td><td>CD20</td></tr><tr><td>Biogen Idec ResearchLimited;BiogenBiotechnology (Shanghai) Co., Ltd</td><td>注射用菲泽妥单抗</td><td>申请上市</td><td>JXSL2500082</td><td>注射剂</td><td>生物制品</td><td>1</td><td>CD38</td></tr><tr><td>Shionogi &amp; Co.,Ltd.;Shionogi Pharma Co.,Ltd. Settsu Plant;ShionogiChina Co., Ltd.</td><td>甲苯磺酸纳地美定片</td><td>申请上市</td><td>JXHS2500060</td><td>片剂</td><td>化学药品</td><td>5.1</td><td>μ opioid receptor</td></tr><tr><td>广州麓鹏制药有限公司;无锡合全药业有限公司</td><td>洛布替尼片</td><td>申请上市</td><td>CXHS2500057</td><td>片剂</td><td>化学药品</td><td>1</td><td>BTK C481S</td></tr><tr><td>浙江萃泽医药科技有限公司</td><td>CZ006注射液</td><td>申请临床</td><td>CXHL2500520</td><td>注射剂</td><td>化学药品</td><td>2.2</td><td>not available</td></tr><tr><td>上海华奥泰生物药业股份有限公司;华博生物医药技术(上海)有限公司</td><td>注射用HB0043</td><td>申请临床</td><td>CXSL2500431</td><td>注射剂</td><td>生物制品</td><td>1</td><td>IL-36R;IL-17</td></tr><tr><td>东莞市东阳光生物药研发有限公司;广东东阳光药业股份有限公司;深圳市格必加分子药物创新中心有限责任公司</td><td>HEC-301注射液</td><td>申请临床</td><td>CXSL2500426</td><td>注射剂</td><td>生物制品</td><td>1</td><td>not available</td></tr><tr><td>海南元盈医药科技有限公司</td><td>HKG-456</td><td>申请临床</td><td>CXHL2500505</td><td>未知</td><td>化学药品</td><td>2.2</td><td>not available</td></tr><tr><td>海思科医药集团股份有限公司</td><td>HSK47388片</td><td>申请临床</td><td>CXHL2500521</td><td>片剂</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>亲合力(成都)药业有限公司</td><td>注射用IMD303</td><td>申请临床</td><td>CXSL2500422</td><td>注射剂</td><td>生物制品</td><td>1</td><td>CTLA4</td></tr><tr><td>深圳法玛易药品科技有限公司</td><td>KEM2417缓释干混悬剂</td><td>申请临床</td><td>CXHL2500514</td><td>干混悬剂(缓释)</td><td>化学药品</td><td>2.2</td><td>not available</td></tr><tr><td>成都米子生物医药科技有限公司</td><td>MZ-01吸入溶液</td><td>申请临床</td><td>CXHL2500513</td><td>吸入剂</td><td>化学药品</td><td>2.2</td><td>not available</td></tr><tr><td>长春康悦生物科技有限公司</td><td>注射用RMMV疫苗</td><td>申请临床</td><td>CXSL2500423</td><td>注射剂</td><td>生物制品</td><td>1</td><td>Muc1</td></tr><tr><td>罗氏(中国)投资有限公司</td><td>RO7840734</td><td>申请临床</td><td>CXHL2500519</td><td>未知</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>苏中药业集团股份有限公司;江苏苏中药业研究院有限公司</td><td>SZ2001片</td><td>申请临床</td><td>CXHL2500524</td><td>片剂</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>浙江扬厉医药技术有限公司</td><td>VB19055片</td><td>申请临床</td><td>CXHL2500509</td><td>片剂</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>广州恩安信生物技术有限公司</td><td>鼻喷重组呼吸道合胞病毒疫苗(5型副流感病毒载体)</td><td>申请临床</td><td>CXSL2500430</td><td>鼻用喷雾剂</td><td>生物制品</td><td>1.1</td><td>not available</td></tr><tr><td>湖南迈欧医疗科技有限公司</td><td>硫酸阿托品滴眼液</td><td>申请临床</td><td>CXHL2500517</td><td>滴眼剂</td><td>化学药品</td><td>2.2</td><td>mAChR</td></tr><tr><td>乐普健糖药业(重庆)有限公司</td><td>注射用重组A型肉毒毒素</td><td>申请临床</td><td>CXSL2500427</td><td>注射剂</td><td>生物制品</td><td>2.4</td><td>BoNT/A;SNAP25</td></tr><tr><td>江苏中慧元通生物科技股份有限公司;易慧生物技术(上海)有限公司</td><td>重组呼吸道合胞病毒疫苗(CHO细胞)(佐剂)(中慧元通)</td><td>申请临床</td><td>CXSL2500429</td><td>注射剂</td><td>生物制品</td><td>1.2</td><td>RSV</td></tr><tr><td>武汉滨会生物科技股份有限公司</td><td>重组人PD-L1/CD3双抗II型单纯疱疹病毒注射液(Vero细胞)</td><td>批准临床</td><td>CXSL2500425</td><td>注射剂</td><td>生物制品</td><td>1</td><td>PDL1;CD3</td></tr><tr><td>Genentech,Inc.;Roche(China) Holding Ltd.</td><td>Giredestrant胶囊</td><td>Phase III</td><td>JXHL2500122</td><td>胶囊剂</td><td>化学药品</td><td>1</td><td>ER</td></tr><tr><td>明慧医药(杭州)有限公司</td><td>注射用MHB088C</td><td>Phase III</td><td>CXSL2500433</td><td>注射剂</td><td>生物制品</td><td>1</td><td>B7-H3</td></tr><tr><td>苏州宜联生物医药有限公司</td><td>注射用YL201</td><td>Phase III</td><td>CXSL2500436</td><td>注射剂</td><td>生物制品</td><td>1</td><td>B7-H3</td></tr><tr><td>百济神州(苏州)生物科技有限公司</td><td>BGB-16673片</td><td>Phase III</td><td>CXHL2500525</td><td>片剂</td><td>化学药品</td><td>1</td><td>BTK</td></tr><tr><td>成都百利多特生物药业有限责任公司</td><td>注射用伦康依隆妥单抗</td><td>Phase III</td><td>CXSL2500424</td><td>注射剂</td><td>生物制品</td><td>1</td><td>HER3;EGFR</td></tr><tr><td>Pfizer Inc.;PfizerInvestment CO.,Ltd.</td><td>注射用PF-08046047</td><td>Phase III</td><td>JXSL2500085</td><td>注射剂</td><td>生物制品</td><td>1</td><td>ITGB6</td></tr></table>
+
+表4：本周仿制药及生物类似物上市、临床申报一览表  
+
+<table><tr><td>苏州宜联生物医药有限公司</td><td>注射用BNT326</td><td>Phase II</td><td>CXSL2500437</td><td>注射剂</td><td>生物制品</td><td>1</td><td>HER3</td></tr><tr><td>南京海融医药科技股份有限公司</td><td>HR1405-01 注射液</td><td>Phase II</td><td>CXHB2500158</td><td>注射剂</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>福建盛迪医药有限公司</td><td>HRS9531 片</td><td>Phase II</td><td>CXHB2500152</td><td>片剂</td><td>化学药品</td><td>1</td><td>GIPR; GLP-1R</td></tr><tr><td>信达生物制药(苏州)有限公司</td><td>IBI363 注射液</td><td>Phase II</td><td>CXSL2500435</td><td>注射剂</td><td>生物制品</td><td>1</td><td>IL-2; PD1</td></tr><tr><td>北京赛特明强医药科技有限公司</td><td>ST-1898 片</td><td>Phase II</td><td>CXHB2500154</td><td>片剂</td><td>化学药品</td><td>1</td><td>Axl; RET; c-Met; PDGFR α; VEGFR2; c-Kit</td></tr><tr><td>深圳市真兴医药技术有限公司</td><td>富马酸奥比特嗪肠溶微丸胶囊</td><td>Phase II</td><td>CXHL2500512</td><td>胶囊剂(肠溶)</td><td>化学药品</td><td>1</td><td>proaspase 3</td></tr><tr><td>康诺亚生物医药科技(成都)有限公司;成都康诺行生物医药科技有限公司</td><td>CM336 注射液</td><td>Phase I/II</td><td>CXSB2500079</td><td>注射剂</td><td>生物制品</td><td>1</td><td>BCMA; CD3</td></tr><tr><td>明慧医药(杭州)有限公司</td><td>注射用MHB039A</td><td>Phase I/II</td><td>CXSL2500432</td><td>注射剂</td><td>生物制品</td><td>1</td><td>PD1; VEGF</td></tr><tr><td>Pfizer Europe MAEEIG;Pfizer IrelandPharmaceuticals</td><td>20价肺炎球菌多糖结合疫苗</td><td>Phase I</td><td>JXSB2500046</td><td>注射剂</td><td>生物制品</td><td>3.1</td><td>not available</td></tr><tr><td>百济神州(苏州)生物科技有限公司</td><td>BGB-43395 片</td><td>Phase I</td><td>CXHB2500146</td><td>片剂</td><td>化学药品</td><td>1</td><td>CDK4</td></tr><tr><td>百济神州(苏州)生物科技有限公司</td><td>BGB-58067 片</td><td>Phase I</td><td>CXHB2500157</td><td>片剂</td><td>化学药品</td><td>1</td><td>PRMT5</td></tr><tr><td>神州细胞工程有限公司</td><td>SCTB35 注射液</td><td>Phase I</td><td>CXSB2500080</td><td>注射剂</td><td>生物制品</td><td>1</td><td>CD20; CD3</td></tr><tr><td>维泰瑞隆(北京)生物科技有限公司</td><td>SIR2501 片</td><td>Phase I</td><td>CXHB2500144</td><td>片剂</td><td>化学药品</td><td>1</td><td>not available</td></tr><tr><td>沈阳三生制药有限责任公司</td><td>SSGJ-706 注射液</td><td>Phase I</td><td>CXSL2500419</td><td>注射剂</td><td>生物制品</td><td>1</td><td>PDL1; PD1</td></tr><tr><td>杭州圣域生物医药科技有限公司</td><td>SYN818 片</td><td>Phase I</td><td>CXHL2500510</td><td>片剂</td><td>化学药品</td><td>1</td><td>POLQ</td></tr><tr><td>兰州百灵生物技术有限公司;深圳康泰生物制品股份有限公司</td><td>三价流感病毒裂解疫苗(MDCK细胞)</td><td>Phase I</td><td>CXSL2500428</td><td>注射剂</td><td>生物制品</td><td>2.2</td><td>influenza virus</td></tr></table>
+
+数据来源：CDE，东吴证券研究所
+
+# 3.2. 仿制药及生物类似物上市、临床申报情况
+
+ 5月27日，国家药监局官网显示，康缘药业的舒马普坦萘普生钠片仿制药获批，用于急性治疗有或无先兆的偏头痛发作。这是首个上市的舒马普坦萘普生钠片仿制药。
+
+<table><tr><td>企业名称</td><td>药品名称</td><td>企业进度</td><td>受理号</td><td>剂型</td><td>药品类别</td><td>注册分类</td><td>靶点</td></tr><tr><td>Hugel,Inc.</td><td>注射用A型肉毒毒素</td><td>已上市</td><td>JYSZ2500013</td><td>注射剂</td><td>生物制品</td><td></td><td>BoNT/A; SNAP25</td></tr><tr><td>齐鲁制药有限公司</td><td>艾曲泊帕乙醇胺片</td><td>已上市</td><td>CYHB2501089</td><td>片剂</td><td>化学药品</td><td>4</td><td>TPO receptor</td></tr><tr><td>吉林省祈克药业有限公司;长春长庆药业集团有限公司</td><td>氨基比林咖啡因片</td><td>已上市</td><td>CYHB2501077</td><td>片剂</td><td>化学药品</td><td></td><td>adenosine receptor; PDE</td></tr><tr><td>哈尔滨同一堂药业有限公司;哈尔滨九真堂制药有限公司</td><td>去痛片</td><td>已上市</td><td>CYHB2501066</td><td>片剂</td><td>化学药品</td><td></td><td>COX; adenosine receptor; PDE</td></tr><tr><td>哈药集团制药六厂;哈药集团三精干鹤制药有限公司</td><td>奥美拉唑肠溶胶囊</td><td>已上市</td><td>CYHB2501109</td><td>胶囊剂(肠溶)</td><td>化学药品</td><td></td><td>proton pump</td></tr><tr><td>齐鲁制药有限公司</td><td>贝伐珠单抗注射液</td><td>已上市</td><td>CYSB2500124</td><td>注射剂</td><td>生物制品</td><td>无</td><td>VEGF-A</td></tr><tr><td>哈尔滨同一堂药业有限公司;哈尔滨九真堂制药有限公司</td><td>复方茶碱甲麻黄碱片</td><td>已上市</td><td>CYHB2501068</td><td>片剂</td><td>化学药品</td><td></td><td>α-adrenergic receptor; β-adrenergic receptor; PDE</td></tr><tr><td>上海上药第一生化药业有限公司</td><td>丹参酮II A 磺酸钠注射液</td><td>已上市</td><td>CYHB2501097</td><td>注射剂</td><td>化学药品</td><td>无</td><td>not available</td></tr><tr><td>吉林省祈克药业有限公司;长春长庆药业集团有限公司</td><td>氯咖黄敏片</td><td>已上市</td><td>CYHB2501070</td><td>片剂</td><td>化学药品</td><td></td><td>COX; H1 receptor; adenosine receptor; PDE</td></tr><tr><td>吉林省祈克药业有限公司;长春长庆药业集团有限公司</td><td>复方氨酚苯海拉明片</td><td>已上市</td><td>CYHB2501074</td><td>片剂</td><td>化学药品</td><td></td><td>COX; α-adrenergic receptor; H1 receptor; adenosine receptor; β-adrenergic receptor; PDE</td></tr><tr><td>北京麦康药业有限公司;四川科伦药业股份有限公司</td><td>复方氨基酸(15)双肽(2)注射液</td><td>已上市</td><td>CYHB2501099</td><td>注射剂</td><td>化学药品</td><td>无</td><td>amino acid</td></tr><tr><td>Daewoong Pharmaceutical Co.,LTD.;DaewoongPharmaceutical Co.,LTD.</td><td>复方消化酶片</td><td>已上市</td><td>JYHZ2500107</td><td>片剂</td><td>化学药品</td><td>无</td><td>protease; gastrointestinal lipase; bile acid; amylase</td></tr><tr><td>山西振东制药股份有限公司;山东朗诺制药有限公司</td><td>富马酸伏诺拉生片</td><td>已上市</td><td>CYHB2501088</td><td>片剂</td><td>化学药品</td><td>4</td><td>proton pump</td></tr><tr><td>丽珠集团丽珠制药厂</td><td>枸橼酸铋钾片</td><td>已上市</td><td>CYHB2550200</td><td>片剂</td><td>化学药品</td><td>无</td><td>gastric acid</td></tr><tr><td>宜昌人福药业有限责任公司</td><td>枸橼酸舒芬太尼注射液</td><td>已上市</td><td>CYHB2501065</td><td>注射剂</td><td>化学药品</td><td></td><td>opioid receptor</td></tr><tr><td>正大天晴药业集团南京顺欣制药有限公司</td><td>利妥昔单抗注射液</td><td>已上市</td><td>CYSB2500117</td><td>注射剂</td><td>生物制品</td><td></td><td>CD20</td></tr><tr><td>山东新时代药业有限公司;山东华鲁制药有限公司</td><td>吸入用硫酸沙丁胺醇溶液</td><td>已上市</td><td>CYHB2501105</td><td>吸入剂</td><td>化学药品</td><td>4</td><td>β 2-adrenergic receptor</td></tr><tr><td>国药集团国瑞药业有限公司</td><td>氯化钾颗粒</td><td>已上市</td><td>CYHB2501111</td><td>颗粒剂</td><td>化学药品</td><td>3</td><td>K+</td></tr><tr><td>辰欣药业股份有限公司</td><td>氯化钠注射液</td><td>已上市</td><td>CYHB2501101</td><td>注射剂</td><td>化学药品</td><td></td><td>Na+</td></tr><tr><td>贵州云峰药业有限公司;江苏贝佳制药有限公司</td><td>铝碳酸镁咀嚼片</td><td>已上市</td><td>CYHB2501094</td><td>咀嚼片</td><td>化学药品</td><td>4</td><td>gastric acid</td></tr><tr><td>福建太平洋制药有限公司</td><td>蒙脱石散</td><td>已上市</td><td>CYHB2501090</td><td>散剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>成都赛诺联创生物科技有限公司;四川美大康佳乐药业有限公司</td><td>复方醋酸钠林格注射液</td><td>已上市</td><td>CYHB2550198</td><td>注射剂</td><td>化学药品</td><td>原6</td><td>Mg; carbohydrate; Ca2+; Na+; K+</td></tr><tr><td>山西鑫煜制药股份有限公司</td><td>尼可地尔片</td><td>已上市</td><td>CYHB2501086</td><td>片剂</td><td>化学药品</td><td>无</td><td>NO</td></tr><tr><td>华兰生物工程股份有限公司</td><td>人血白蛋白</td><td>已上市</td><td>CYSB2500121</td><td>注射剂</td><td>生物制品</td><td>原15</td><td>albumin</td></tr><tr><td>哈尔滨一洲制药有限公司</td><td>乳酸菌素片</td><td>已上市</td><td>CYHB2501079</td><td>片剂</td><td>化学药品</td><td>无</td><td>not available</td></tr><tr><td>石药集团欧意药业有限公司</td><td>沙库巴曲缬沙坦钠片</td><td>已上市</td><td>CYHB2501083</td><td>片剂</td><td>化学药品</td><td>4</td><td>NEP; AT1R</td></tr><tr><td>华北制药股份有限公司</td><td>注射用舒巴坦钠</td><td>已上市</td><td>CYHB2501073</td><td>注射剂</td><td>化学药品</td><td>原6</td><td>β-lactamase</td></tr><tr><td>湖南科伦制药有限公司</td><td>注射用头孢曲松钠/氯化钠注射液</td><td>已上市</td><td>CYHB2501063</td><td>注射剂</td><td>化学药品</td><td>3</td><td>EAAT2; PBP</td></tr><tr><td>宁波美舒医药科技有限公司</td><td>维格列汀片</td><td>已上市</td><td>CYHB2501076</td><td>片剂</td><td>化学药品</td><td>4</td><td>DPP-4</td></tr><tr><td>哈尔滨同一堂药业有限公司;哈尔滨九真堂制药有限公司</td><td>维生素E烟酸酯胶囊</td><td>已上市</td><td>CYHB2501067</td><td>胶囊剂</td><td>化学药品</td><td></td><td>vitamin E</td></tr><tr><td>南昌市飞弘药业有限公司</td><td>盐酸二甲双胍缓释片</td><td>已上市</td><td>CYHB2501092</td><td>缓释片</td><td>化学药品</td><td>原4</td><td>PEN2</td></tr><tr><td>宁波美舒医药科技有限公司;宁波美诺华天康药业有限公司</td><td>二甲双胍维格列汀片(II)</td><td>已上市</td><td>CYHB2501075</td><td>片剂</td><td>化学药品</td><td>4</td><td>DPP-4; PEN2</td></tr><tr><td>亚宝药业集团股份有限公司</td><td>盐酸普萘洛尔片</td><td>已上市</td><td>CYHB2501093</td><td>片剂</td><td>化学药品</td><td>无</td><td>β-adrenergic receptor</td></tr><tr><td>远大医药(中国)有限公司</td><td>盐酸肾上腺素注射液</td><td>已上市</td><td>CYHB2501108</td><td>注射剂</td><td>化学药品</td><td></td><td>adenosine receptor</td></tr><tr><td>哈尔滨同一堂药业有限公司;哈尔滨九真堂制药有限公司</td><td>碘啶新林胶囊</td><td>已上市</td><td>CYHB2501069</td><td>胶囊剂</td><td>化学药品</td><td></td><td>bacterial DHPS; bacterial DHFR; β-adrenergic receptor</td></tr><tr><td>四川海梦智森生物制药有限公司;浙江赛默制药有限公司</td><td>乙酰半胱氨酸注射液</td><td>已上市</td><td>CYHB2550199</td><td>注射剂</td><td>化学药品</td><td></td><td>GSH</td></tr><tr><td>武汉福星生物药业有限公司</td><td>左氧氟沙星氯化钠注射液</td><td>已上市</td><td>CYHB2501085</td><td>注射剂</td><td>化学药品</td><td>4</td><td>bacterial Top II</td></tr><tr><td>湖南欧拉医药科技有限公司;山东朗诺制药有限公司</td><td>比拉斯汀口服溶液</td><td>未知</td><td>CYHB2501098</td><td>口服溶液剂</td><td>化学药品</td><td>3</td><td>H1 receptor</td></tr><tr><td>湖南先施制药有限公司;浙江凯润药业股份有限公司</td><td>复方聚乙二醇(3350)电解质口服溶液</td><td>未知</td><td>CYHB2501100</td><td>口服溶液剂</td><td>化学药品</td><td>3</td><td>Na+;K+;gastric acid</td></tr><tr><td>深圳海王药业有限公司</td><td>枸橼酸西地那非片</td><td>未知</td><td>CYHB2501081</td><td>片剂</td><td>化学药品</td><td>4</td><td>PDE5</td></tr><tr><td>宿州亿帆药业有限公司</td><td>拉考沙胺片</td><td>未知</td><td>CYHB2501096</td><td>片剂</td><td>化学药品</td><td>4</td><td>CRMP2;sodium channel</td></tr><tr><td>海南丰恺思制药有限公司;哈尔滨誉衡制药有限公司</td><td>注射用拉氧头孢钠</td><td>未知</td><td>CYHB2501107</td><td>注射剂</td><td>化学药品</td><td>3</td><td>PBP</td></tr><tr><td>广东星昊药业有限公司</td><td>胸腺肽注射液</td><td>未知</td><td>CYHB2501061</td><td>注射剂</td><td>化学药品</td><td></td><td>not available</td></tr><tr><td>河南普瑞药业有限公司</td><td>盐酸倍他司汀注射液</td><td>未知</td><td>CYHB2501091</td><td>注射剂</td><td>化学药品</td><td></td><td>H3 receptor;H1 receptor</td></tr><tr><td>河南科伦药业有限公司</td><td>盐酸戊乙奎醚注射液</td><td>未知</td><td>CYHB2501106</td><td>注射剂</td><td>化学药品</td><td>4</td><td>mAChR</td></tr><tr><td>辽宁赫铭医药科技有限公司;华润双鹤利民药业(济南)有限公司</td><td>吸入用乙酰半胱氨酸溶液</td><td>未知</td><td>CYHB2501110</td><td>吸入剂</td><td>化学药品</td><td>4</td><td>GSH</td></tr><tr><td>东阳祥昇医药科技有限公司;浙江北生药业汉生制药有限公司</td><td>左卡尼汀注射液</td><td>未知</td><td>CYHB2501104</td><td>注射剂</td><td>化学药品</td><td>4</td><td>carnitine</td></tr><tr><td>乐泰药业(兰西)有限公司</td><td>阿达帕林凝胶</td><td>申请上市</td><td>CYHS2501879</td><td>凝胶剂</td><td>化学药品</td><td>4</td><td>RARβ;RARγ</td></tr><tr><td>江苏知原药业股份有限公司</td><td>阿达帕林过氧苯甲酰凝胶</td><td>申请上市</td><td>CYHS2501886</td><td>凝胶剂</td><td>化学药品</td><td>4</td><td>RARβ;RARγ</td></tr><tr><td>江苏和晨药业有限公司</td><td>艾普拉唑肠溶片</td><td>申请上市</td><td>CYHS2501899</td><td>肠溶片</td><td>化学药品</td><td>4</td><td>proton pump</td></tr><tr><td>福安药业集团湖北人民制药有限公司</td><td>氨磺必利口服溶液</td><td>申请上市</td><td>CYHS2501908</td><td>口服溶液剂</td><td>化学药品</td><td>3</td><td>D2 receptor;5-HT7 receptor;D3 receptor</td></tr><tr><td>裕松源药业有限公司</td><td>奥美拉唑碳酸氢钠干混悬剂(II)</td><td>申请上市</td><td>CYHS2501882</td><td>干混悬剂</td><td>化学药品</td><td>3</td><td>proton pump;gastric acid</td></tr><tr><td>赤峰万泽药业股份有限公司</td><td>阿司匹林肠溶片</td><td>申请上市</td><td>CYHS2501875</td><td>肠溶片</td><td>化学药品</td><td>4</td><td>COX</td></tr><tr><td>湖南尚众合生物医药有限公司;大桐制药(中国)有限责任公司</td><td>氯吡格雷阿司匹林片</td><td>申请上市</td><td>CYHS2501881</td><td>片剂</td><td>化学药品</td><td>4</td><td>COX;P2Y12 receptor</td></tr><tr><td>山东创新药物研发有限公司;江西施美药业股份有限公司</td><td>依折麦布阿托伐他汀钙片(1)</td><td>申请上市</td><td>CYHS2501902</td><td>片剂</td><td>化学药品</td><td>4</td><td>NPCIL1; HMG-CoA reductase; HCV entry</td></tr><tr><td>山西同达药业有限公司</td><td>奥美沙坦酯氨氯地平片</td><td>申请上市</td><td>CYHS2501872</td><td>片剂</td><td>化学药品</td><td>4</td><td>L-type calcium channel; AT1R</td></tr><tr><td>新乡市常乐制药有限责任公司</td><td>比拉斯汀片</td><td>申请上市</td><td>CYHS2501914</td><td>片剂</td><td>化学药品</td><td>4</td><td></td></tr><tr><td>杭州领业医药科技有限公司</td><td>卡泊三醇倍他米松软膏</td><td>申请上市</td><td>CYHS2501873</td><td>软膏剂</td><td>化学药品</td><td>4</td><td>glucocorticoid; vitamin D3</td></tr><tr><td>润尔眼科药物(广州)有限公司</td><td>玻璃酸钠滴眼液</td><td>申请上市</td><td>CYHS2501918</td><td>滴眼剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>杭州和康药业有限公司</td><td>布瑞哌唑片</td><td>申请上市</td><td>CYHS2501924</td><td>片剂</td><td>化学药品</td><td>4</td><td>D2 receptor; 5-HT1A receptor; 5-HT2A receptor</td></tr><tr><td>陕西君可力医药科技有限公司;安徽佳和药业有限公司</td><td>达格列净片</td><td>申请上市</td><td>CYHS2501890</td><td>片剂</td><td>化学药品</td><td>4</td><td>SGLT2</td></tr><tr><td>北京康立生医药技术开发有限公司;江西山香药业有限公司</td><td>达可替尼片</td><td>申请上市</td><td>CYHS2501931</td><td>片剂</td><td>化学药品</td><td>4</td><td>HER2; EGFR; HER4</td></tr><tr><td>海南斯达制药有限公司</td><td>地夸磷索钠滴眼液</td><td>申请上市</td><td>CYHS2501887</td><td>滴眼剂</td><td>化学药品</td><td>4</td><td>P2Y2 receptor</td></tr><tr><td>Aurobindo Pharma Limited; Aurovitas Pharma Taizhou Co., Ltd.;</td><td>恩他卡朋片</td><td>申请上市</td><td>JYHS2500024</td><td>片剂</td><td>化学药品</td><td>5.2</td><td>FTO; COMT</td></tr><tr><td>苏州特瑞药业股份有限公司</td><td>非诺贝特酸胆碱缓释胶囊</td><td>申请上市</td><td>CYHS2501911</td><td>胶囊剂(缓释)</td><td>化学药品</td><td>4</td><td>PPAR α</td></tr><tr><td>广州大光制药有限公司</td><td>氟比洛芬钠滴眼液</td><td>申请上市</td><td>CYHS2501910</td><td>滴眼剂</td><td>化学药品</td><td>4</td><td>COX</td></tr><tr><td>内蒙古白医制药股份有限公司</td><td>复方氨基酸注射液(20AA-Ⅱ)</td><td>申请上市</td><td>CYHS2501930</td><td>注射剂</td><td>化学药品</td><td>3</td><td>not available</td></tr><tr><td>湖南润兴药业有限公司;天地恒一制药股份有限公司</td><td>复方聚乙二醇电解质散(Ⅱ)</td><td>申请上市</td><td>CYHS2501876</td><td>散剂</td><td>化学药品</td><td>3</td><td>Na+; K+; gastric acid</td></tr><tr><td>湖北午时医药研究院有限公司;湖北潜龙药业有限公司</td><td>注射用伏立康唑</td><td>申请上市</td><td>CYHS2501935</td><td>注射剂</td><td>化学药品</td><td>4</td><td>fungal CYP51</td></tr><tr><td>安徽茂康药业有限公司;安徽永生堂药业有限责任公司</td><td>富马酸酮替芬口服溶液</td><td>申请上市</td><td>CYHS2501921</td><td>口服溶液剂</td><td>化学药品</td><td>3</td><td>H1 receptor</td></tr><tr><td>石家庄四药有限公司</td><td>中性腹膜透析液(碳酸氢盐-G4.25%)</td><td>申请上市</td><td>CYHS2501913</td><td>透析用溶液剂</td><td>化学药品</td><td>3</td><td>not available</td></tr><tr><td>江苏知原药业股份有限公司</td><td>克林霉素磷酸酯</td><td>申请上市</td><td>CYHS2501905</td><td>凝胶剂</td><td>化学药品</td><td>4</td><td>50S subunit</td></tr><tr><td>司</td><td>过氧苯甲酰凝胶</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>上海上药信谊药厂有限公司</td><td>环索奈德吸入气雾剂</td><td>申请上市</td><td>CYHS2501937</td><td>吸入气雾剂</td><td>化学药品</td><td>4</td><td>glucocorticoid</td></tr><tr><td>成都国为生物医药有限公司;安徽丰原药业股份有限公司</td><td>结构脂肪乳注射液(C6-24)</td><td>申请上市</td><td>CYHS2501898</td><td>注射剂(乳剂)</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>山东普瑞曼药业有限公司</td><td>酒石酸美托洛尔片</td><td>申请上市</td><td>CYHS2501878</td><td>片剂</td><td>化学药品</td><td>4</td><td>β 1-adrenergic receptor</td></tr><tr><td>复星万邦(江苏)医药集团有限公司</td><td>恩他卡朋双多巴片(II)</td><td>申请上市</td><td>CYHS2501940</td><td>片剂</td><td>化学药品</td><td>4</td><td>FTO; dopamine;COMT; DDC</td></tr><tr><td>山东达冠医药科技有限公司;赤峰赛林泰药业有限公司</td><td>克立硼罗软膏</td><td>申请上市</td><td>CYHS2501906</td><td>软膏剂</td><td>化学药品</td><td>4</td><td>PDE4</td></tr><tr><td>杭州中美华东制药有限公司</td><td>雷珠单抗注射液</td><td>申请上市</td><td>CXSS2500055</td><td>眼内注射剂</td><td>生物制品</td><td>3.3</td><td>VEGF-A</td></tr><tr><td>山东新时代药业有限公司</td><td>利伐沙班口崩片</td><td>申请上市</td><td>CYHS2501884</td><td>口腔崩解片</td><td>化学药品</td><td>3</td><td>factor Xa</td></tr><tr><td>云鹏医药集团有限公司</td><td>磷酸西格列汀片</td><td>申请上市</td><td>CYHS2501933</td><td>片剂</td><td>化学药品</td><td>4</td><td>DPP-4</td></tr><tr><td>唐山利康药业有限责任公司</td><td>硫酸氨基葡萄糖胶囊</td><td>申请上市</td><td>CYHS2501888</td><td>胶囊剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>上海旭东海普药业有限公司</td><td>硫酸特布他林雾化吸入用溶液</td><td>申请上市</td><td>CYHS2501938</td><td>吸入剂</td><td>化学药品</td><td>4</td><td>β 2-adrenergic receptor</td></tr><tr><td>成都恒瑞制药有限公司</td><td>蒙脱石散</td><td>申请上市</td><td>CYHS2501916</td><td>散剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>广州大光制药有限公司;广州绿十字制药股份有限公司</td><td>苹果酸奈诺沙星氯化钠注射液</td><td>申请上市</td><td>CYHS2501880</td><td>注射剂</td><td>化学药品</td><td>4</td><td>bacterial Top II</td></tr><tr><td>浙江浙北药业有限公司</td><td>瑞巴派特片</td><td>申请上市</td><td>CYHS2501934</td><td>片剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>南京海鲸药业股份有限公司;山西诺成制药有限公司</td><td>维生素B6注射液</td><td>申请上市</td><td>CYHS2501927</td><td>注射剂</td><td>化学药品</td><td>3</td><td>vitamin B6</td></tr><tr><td>广东华润顺峰药业有限公司;郑州泰丰制药有限公司</td><td>乌帕替尼缓释片</td><td>申请上市</td><td>CYHS2501912</td><td>缓释片</td><td>化学药品</td><td>4</td><td>JAK1</td></tr><tr><td>济南中渔润医药科技有限公司;山东方明药业集团股份有限公司</td><td>腺苷钴胺胶囊</td><td>申请上市</td><td>CYHS2501874</td><td>胶囊剂</td><td>化学药品</td><td>3</td><td>vitamin B12</td></tr><tr><td>云县长隆工业气体有限公司</td><td>氧(气态)</td><td>申请上市</td><td>CYHS2501891</td><td>医用气体</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>长春海悦药业股份有限公司</td><td>盐酸阿罗洛尔片</td><td>申请上市</td><td>CYHS2501907</td><td>片剂</td><td>化学药品</td><td>4</td><td>α-adrenergic receptor; β-adrenergic receptor</td></tr><tr><td>南京海鲸药业股份有限公司</td><td>盐酸昂丹司琼片</td><td>申请上市</td><td>CYHS2501901</td><td>片剂</td><td>化学药品</td><td>3</td><td>5-HT3 receptor</td></tr><tr><td>浙江赛默制药有限公司</td><td>盐酸氮溴索滴剂</td><td>申请上市</td><td>CYHS2501925</td><td>滴剂</td><td>化学药品</td><td>3</td><td>GBA</td></tr><tr><td>江西施美药业股份有限公司</td><td>西格列汀二甲双胍片(II)</td><td>申请上市</td><td>CYHS2501932</td><td>片剂</td><td>化学药品</td><td>4</td><td>DPP-4; PEN2</td></tr><tr><td>湖南赛隆药业(长沙)有限公司</td><td>盐酸尼卡地平注射液</td><td>申请上市</td><td>CYHS2501909</td><td>注射剂</td><td>化学药品</td><td>4</td><td>L-type calcium channel</td></tr><tr><td>安徽美来药业股份有限公司;马鞍山丰原制药有限公司</td><td>盐酸普萘洛尔注射液</td><td>申请上市</td><td>CYHS2501895</td><td>注射剂</td><td>化学药品</td><td>3</td><td>β-adrenergic receptor</td></tr><tr><td>湖南科伦制药有限公司</td><td>注射用盐酸头孢替安/氯化钠注射液</td><td>申请上市</td><td>CYHS2501904</td><td>组合包装</td><td>化学药品</td><td>3</td><td>PBP</td></tr><tr><td>西洲医药科技(浙江)有限公司;浙江北生药业汉生制药有限公司</td><td>盐酸乙哌立松片</td><td>申请上市</td><td>CYHS2501939</td><td>片剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>河南普瑞药业有限公司</td><td>盐酸左布比卡因注射液</td><td>申请上市</td><td>CYHS2501896</td><td>注射剂</td><td>化学药品</td><td>4</td><td></td></tr><tr><td>陕西丽彩药业有限公司;酒泉大得利制药股份有限公司</td><td>依达拉奉右莰醇注射用浓溶液</td><td>申请上市</td><td>CYHS2501928</td><td>注射剂</td><td>化学药品</td><td>4</td><td>not available</td></tr><tr><td>广州大光制药有限公司;广东星昊药业有限公司</td><td>乙酰半胱氨酸注射液</td><td>申请上市</td><td>CYHS2501917</td><td>注射剂</td><td>化学药品</td><td>4</td><td>GSH</td></tr><tr><td>江苏德源药业股份有限公司</td><td>左甲状腺素钠片</td><td>申请上市</td><td>CYHS2501893</td><td>片剂</td><td>化学药品</td><td>4</td><td>thyroxine</td></tr><tr><td>江苏润恒制药有限公司</td><td>去氧胆酸注射液</td><td>申请临床</td><td>CYHL2500099</td><td>注射剂</td><td>化学药品</td><td>3</td><td>bile acid</td></tr><tr><td>鲁南贝特制药有限公司</td><td>倍氯米松福莫特罗吸入气雾剂</td><td>BE临床</td><td>CYHL2500100</td><td>吸入气雾剂</td><td>化学药品</td><td>4</td><td>glucocorticoid;β2-adrenergic receptor</td></tr><tr><td>长春金赛药业有限责任公司</td><td>卡麦角林片</td><td>BE临床</td><td>CYHL2500098</td><td>片剂</td><td>化学药品</td><td>3</td><td>D2 receptor</td></tr></table>
+
+数据来源：CDE, 东吴证券研究所
+
+# 3.3. 重要研发管线一览
+
+ 5月29日，国家药监局网站显示，复星医药自主研发的芦沃美替尼（曾用名：复迈替尼，研发代号：FCN-159）获批上市，用于治疗朗格汉斯细胞组织细胞增生症（LCH）和组织细胞肿瘤成人患者；2 岁及2 岁以上伴有症状、无法手术的丛状神经纤维瘤（PN）的 I型神经纤维瘤病（NF1）儿童及青少年患者。  
+ 5月29日，NMPA 官网显示，恒瑞医药的法米替尼已获批上市，该药联合注射用卡瑞利珠单抗用于既往接受含铂化疗治疗失败但未接受过贝伐珠单抗治疗的复发或转移性宫颈癌患者。  
+ 5月29日，药监局官网显示，泽璟制药JAK抑制剂杰克替尼片获批上市，用于治疗中、高危骨髓纤维化，包括原发性骨髓纤维化（PMF）、真性红细胞增
+
+多症后骨髓纤维化（Post-PV-MF）和原发性血小板增多症后骨髓纤维化（Post-ET-MF）。
+
+ 5月27日，国家药品监督管理局（NMPA）官网显示，信立泰的沙库巴曲阿利沙坦钙片（S086）获批上市，用于治疗轻、中度原发性高血压。
+
+ 5 月 25 日，全球临床试验收录网站显示，Kodiak Sciences 启动了 IL-6/VEGF双抗药物 KSI-101（Tabirafusp Alfa）的首个 III 期临床试验（PEAK）。这是全球第二款进入III期阶段的眼科双抗药物。
+
+# 4. 行业洞察与监管动态
+
+ 5月29日，核磁共振研究是多糖结合疫苗研发过程中有力的分析技术手段，为推动该技术的落地、应用和实施，我中心起草了《多糖结合疫苗核磁共振研究的技术考虑（征求意见稿）》，现公开征求意见。征求意见时限为自发布之日起1个月。  
+ 5 月 29 日，为指导血液制品上市许可持有人科学规范开展血液制品上市后场地变更药学研究，引导和促进血液制品持有人利用场地变更进行生产工艺升级优化和硬件系统改造，加强对已上市血液制品药学变更的管理，药审中心组织制定了《已上市血液制品生产场地变更研究技术指导原则（试行）》。根据《国家药监局综合司关于印发药品技术指导原则发布程序的通知》（药监综药管〔2020〕9 号）要求，经国家药品监督管理局审查同意，现予发布，自发布之日起施行。  
+ 5月29日，为了落实国家药监局“提前介入、一企一策、全程指导、研审联动”的要求，加强与申请人的沟通交流，就抗肿瘤药物儿童人群研究过程中技术难点提供针对性指导，提高儿童抗肿瘤药物的研发效率，药审中心组织制定了“儿童抗肿瘤药物研发鼓励试点计划（星光计划）”，经国家药品监督管理局审核同意，现予发布，自发布之日起施行。  
+ 5 月 29 日，为规范儿童药物临床试验安全信息的风险监测、识别、评估与控制，在国家药品监督管理局的部署下，药审中心组织制定了《儿童药物临床试验安全信息评估与报告技术指导原则（试行）》。根据《国家药监局综合司关于印发药品技术指导原则发布程序的通知》（药监综药管〔2020〕9 号）要求，经国家药品监督管理局审查同意，现予发布，自发布之日起施行。
+
+表5：重要行业洞察与监管动态  
+
+<table><tr><td>所属领域</td><td>发布日期</td><td>重要动态</td></tr><tr><td>政策监管</td><td>20250529</td><td>关于公开征求《多糖结合疫苗核磁共振研究的技术考虑（征求意见稿）》意见的通知</td></tr><tr><td>政策监管</td><td>20250529</td><td>国家药监局药审中心关于发布《已上市血液制品生产场地变更研究技术指导原则（试行)》的通告（2025年第20号）</td></tr><tr><td>政策监管</td><td>20250529</td><td>国家药监局药审中心关于发布“儿童抗肿瘤药物研发鼓励试点计划（星光计划)”的通知</td></tr></table>
+
+政策监管 20250529
+
+国家药监局药审中心关于发布《儿童药物临床试验安全信息评估与报告技术指导原则（试行）》的通告（2025 年第 21号）
+
+数据来源：CDE, 东吴证券研究所
+
+# 5. 行情回顾
+
+本周、年初至今 A股医药指数涨幅分别为 $2 . 6 \%$ 、 $6 . 6 \%$ ，相对沪深 300的超额收益分别为 $4 . 5 \%$ 、 $9 . 0 \%$ ；本周、年初至今 $\mathbf { H }$ 股生物科技指数涨跌幅分别为 $4 . 2 \%$ 、 $4 1 . 4 \%$ ，相对于恒生科技指数跑赢- $. 1 . 6 \%$ 、 $1 5 . 7 \%$ ；本周 A 股化药（ $_ { + 4 . 4 \% }$ ）、原料药（ $. + 3 . 2 \% )$ ）、医疗服务（ $( + 3 . 1 \% )$ ）、生物制品（ $+ 2 . 9 \%$ ）及医疗器械（ $( + 1 . 2 \%$ ）等股价明显上涨，中药（ $( + 0 . 9 \%$ ）及医药商业（ $- 0 . 1 \%$ ）等股价涨幅相对较小；本周 A 股涨幅居前三生国健（ $\dot { \mathbf { \Omega } } + 1 0 0 \%$ ）、海辰药业（ $+ 5 2 \%$ ）、舒泰神（ $. + 4 9 \% )$ ），跌幅居前新赣江（ $( - 1 2 \%$ ）、拱东医疗$( - 1 0 \%$ ）、锦好医疗 $( - 9 \%$ ）；本周H股涨幅居前中国卫生集团（ $. + 1 0 0 \%$ ）、金威医疗 $( + 6 8 \% )$ ）、隽泰太控股（ $. + 3 6 \%$ ），跌幅居前佳兆业健康（ $( - 3 9 \%$ ）、君圣泰医药（ $( - 2 4 \%$ ）、弘和仁爱医疗 $( - 1 7 \%$ ）。
+
+图7：药物发现阶段基于人工智能的方法与传统人工方法的效率比较
+
+图8：子行业估值情况  
+![](images/8fd0ac920d4bb0a8468c93098e858f6c4c2a44d74d6e8e02a40be8dfe2cd4762.jpg)  
+数据来源：公司招股书，东吴证券研究所
+
+# 5.1. 医药市盈率追踪：医药指数市盈率为 34.03，较历史均值低 5.20
+
+截至2025年5月30日，医药指数市盈率为 34.03倍，环比上周上升0.78 倍，低于历史均值5.20 倍；沪深300指数市盈率为 12.46倍，医药指数盈利率溢价率为 $1 7 3 . 1 \%$ ，环比上周上升 $8 . 1 \%$ ，低于历史均值 $1 5 . 6 \%$ 。
+
+![](images/0a9cca7ab8f9ce8ec231a5a8bfa089c4aec89980e344d26152cd6528d9aaa3b2.jpg)  
+数据来源：wind，东吴证券研究所（注：数据截至 2025 年 5月 30日）
+
+# 5.2. 医药子板块追踪：本周化药上升 $4 . 4 \%$ ，优于其他子板块
+
+本周、年初至今 A股医药指数涨幅分别为 $2 . 6 \%$ 、 $6 . 6 \%$ ，相对沪深 300的超额收益分别为 $4 . 5 \%$ 、 $9 . 0 \%$ ；本周、年初至今 $\mathbf { H }$ 股生物科技指数涨跌幅分别为 $4 . 2 \%$ 、 $4 1 . 4 \%$ ，相对于恒生科技指数跑赢- $. 1 . 6 \%$ 、 $1 5 . 7 \%$ ；本周 A 股化药（ $\cdot + 4 . 4 \%$ ）、原料药（ $+ 3 . 2 \%$ ）、医疗服务（ $( + 3 . 1 \% )$ ）、生物制品（ $+ 2 . 9 \%$ ）及医疗器械（ $( + 1 . 2 \%$ ）等股价明显上涨，中药（ $. + 0 . 9 \%$ ）及医药商业（ $- 0 . 1 \%$ ）等股价涨幅相对较小；本周 A 股涨幅居前三生国健（ $( + 1 0 0 \%$ ）、海辰药业（ $+ 5 2 \%$ ）、舒泰神（ $( + 4 9 \%$ ），跌幅居前新赣江（ $( - 1 2 \%$ ）、拱东医疗$( - 1 0 \%$ ）、锦好医疗 $( - 9 \%$ ）；本周H股涨幅居前中国卫生集团（ $. + 1 0 0 \%$ ）、金威医疗 $\left( + 6 8 \% \right)$ ）、隽泰太控股（ $. + 3 6 \%$ ），跌幅居前佳兆业健康（ $_ { - 3 9 \% }$ ）、君圣泰医药（ $- 2 4 \%$ ）、弘和仁爱医疗 $( - 1 7 \%$ ）。
+
+表6：板块表现（%）  
+
+<table><tr><td>行业代码</td><td>行业</td><td>区间涨跌幅</td><td>年初至今</td></tr><tr><td>851151.SI</td><td>化学制药</td><td>4.35</td><td>19.17</td></tr><tr><td>801511.SI</td><td>原料药</td><td>3.21</td><td>17.01</td></tr><tr><td>801156.SI</td><td>医疗服务</td><td>3.14</td><td>7.08</td></tr><tr><td>801152.SI</td><td>生物制品</td><td>2.93</td><td>3.34</td></tr><tr><td>801150.SI</td><td>生物医药</td><td>2.64</td><td>6.61</td></tr><tr><td>801153.SI</td><td>医疗器械</td><td>1.17</td><td>-0.99</td></tr><tr><td>801155.SI</td><td>中药</td><td>0.89</td><td>-3.03</td></tr><tr><td>801154. SI</td><td>医药商业</td><td>-0.05</td><td>1.15</td></tr><tr><td>000001. SH</td><td>上证指数</td><td>-0.97</td><td>-0.13</td></tr><tr><td>000300. SH</td><td>沪深300</td><td>-1.88</td><td>-2.41</td></tr></table>
+
+数据来源：Wind，东吴证券研究所（注：数据截至 2025 年 5 月 30 日）
+
+图9：子行业估值情况  
+![](images/47346871131c9b74204079a914ebf884c357b0a996d9b826226c84fd616919cc.jpg)  
+数据来源：wind，东吴证券研究所（注：数据截至 2025 年 5 月 30 日）
+
+# 5.3. 个股表现
+
+表7：A 股本周涨跌幅前十  
+
+<table><tr><td>排名</td><td>公司</td><td>涨幅(%)</td><td>公司</td><td>跌幅(%)</td><td>排名</td><td>公司</td><td>涨幅(%)</td><td>公司</td><td>跌幅(%)</td></tr><tr><td>1</td><td>三生国健</td><td>99.96</td><td>新赣江</td><td>-11.65</td><td>1</td><td>一品红</td><td>189.86</td><td>普利退(退市)</td><td>-86.93</td></tr><tr><td>2</td><td>海辰药业</td><td>51.55</td><td>拱东医疗</td><td>-9.90</td><td>2</td><td>三生国健</td><td>155.23</td><td>*ST吉药</td><td>-83.59</td></tr><tr><td>3</td><td>舒泰神</td><td>49.23</td><td>锦好医疗</td><td>-9.04</td><td>3</td><td>永安药业</td><td>154.82</td><td>*ST苏吴</td><td>-71.35</td></tr><tr><td>4</td><td>永安药业</td><td>45.32</td><td>拓新药业</td><td>-8.68</td><td>4</td><td>舒泰神</td><td>122.94</td><td>*ST双成</td><td>-55.54</td></tr><tr><td>5</td><td>一心堂</td><td>37.95</td><td>欧康医药</td><td>-8.66</td><td>5</td><td>热景生物</td><td>102.54</td><td>*ST大药(退市)</td><td>-51.24</td></tr><tr><td>6</td><td>一品红</td><td>30.10</td><td>天目药业</td><td>-8.65</td><td>6</td><td>荣昌生物</td><td>92.06</td><td>*ST龙津</td><td>-48.40</td></tr><tr><td>7</td><td>*ST赛隆</td><td>27.66</td><td>万泽股份</td><td>-8.37</td><td>7</td><td>新赣江</td><td>91.83</td><td>ST葫芦娃</td><td>-37.48</td></tr><tr><td>8</td><td>睿智医药</td><td>24.72</td><td>花园生物</td><td>-7.26</td><td>8</td><td>科兴制药</td><td>90.35</td><td>康为世纪</td><td>-33.03</td></tr><tr><td>9</td><td>海森药业</td><td>22.70</td><td>华大基因</td><td>-6.75</td><td>9</td><td>辰光医疗</td><td>88.79</td><td>ST凯利</td><td>-32.46</td></tr><tr><td>10</td><td>海翔药业</td><td>22.61</td><td>金城医药</td><td>-6.49</td><td>10</td><td>哈一药业</td><td>83.48</td><td>智飞生物</td><td>-26.54</td></tr></table>
+
+数据来源：Wind，东吴证券研究所（注：数据截至 2025 年 5 月 30 日）
+
+# 6. 风险提示
+
+# 1、药品或耗材降价幅度继续超预期：
+
+国家加大集采范围，药品和耗材的集采带来了药品和耗材的大幅降价，随着国内医药和器材市场的竞争加剧，集采对降价的推动作用将会更加明显，未来药品和耗材集采降价幅度可能会超预期，对企业的利润造成较大影响。
+
+# 2、医保政策进一步严厉等：
+
+医保局作为中国医药行业最大单一支付方，其支付政策变化可能直接导致相关公司盈利水平发生显著变化。
+
+# 3、产品销售及研发进度不及预期。
+
+# 7. 附录
+
+表9：国内药品注册分类  
+
+<table><tr><td>药品分类</td><td>子类别</td><td>细分类别</td></tr><tr><td rowspan="5">化学药品</td><td>1.境内外均未上市的创新药</td><td>含有新的结构明确的、具有药理作用的化合物,且具有临床价值的药品</td></tr><tr><td>2.境内外均未上市的改良型新药</td><td>(1)含有用拆分或者合成等方法制得的已知活性成份的光学异构体,或者对已知活性成份成酯,或者对已知活性成份成盐(包括含有氢键或配位键的盐),或者改变已知盐类活性成份的酸根、碱基或金属元素,或者形成其他非共价键衍生物(如络合物、螯合物或包合物),且具有明显临床优势的药品(2)含有已知活性成份的新剂型(包括新的给药系统)、新处方工艺、新给药途径,且具有明显临床优势的药品(3)含有已知活性成份的新复方制剂,且具有明显临床优势(4)含有已知活性成份的新适应症的药品</td></tr><tr><td colspan="2">3.境内申请人仿制境外上市但境内未上市原研药品的药品</td></tr><tr><td colspan="2">4.境内申请人仿制已在境内上市原研药品的药品</td></tr><tr><td>5.境外上市的药品申请在境内上市</td><td>(1)境外上市的原研药品和改良型药品申请在境内上市(2)境外上市的仿制药申请在境内上市</td></tr><tr><td rowspan="2">预防用生物制品</td><td colspan="2">1.创新型疫苗</td></tr><tr><td>2.改良型疫苗</td><td>(1)在境内或境外已上市产品基础上改变抗原谱或型别,且具有明显临床优势的疫苗。(2)具有重大技术改进的疫苗,包括对疫苗菌毒种/细胞基质/生产工艺/剂型等的改进。(如更换为其他表达体系或细胞基质的疫苗;更换菌毒株或对已上市菌毒株进行改造;对已上市细胞基质或目的基因进行改造;非纯化疫苗改进为纯化疫苗;全细胞疫苗改进为组分疫苗等)</td></tr><tr><td></td><td></td><td>(3)已有同类产品上市的疫苗组成的新的多联/多价疫苗。</td></tr><tr><td></td><td></td><td>(4)改变给药途径,且具有明显临床优势的疫苗。</td></tr><tr><td></td><td></td><td>(5)改变免疫剂量或免疫程序,且新免疫剂量或免疫程序具有明显临床优势的疫苗。</td></tr><tr><td></td><td></td><td>(6)改变适用人群的疫苗。</td></tr><tr><td></td><td rowspan="3">3.境内或境外已上市的疫苗</td><td>(1)境外生产的境外已上市、境内未上市的疫苗申报上市</td></tr><tr><td></td><td>(2)境外已上市、境内未上市的疫苗申报在境内生产上市</td></tr><tr><td></td><td>(3)境内已上市疫苗</td></tr><tr><td rowspan="9">治疗用生物制品</td><td>1.创新型生物制品</td><td></td></tr><tr><td rowspan="4">2.改良型生物制品</td><td>(1)在已上市制品基础上,对其剂型、给药途径等进行优化,且具有明显临床优势的生物制品</td></tr><tr><td>(2)增加境内外均未获批的新适应症和/或改变用药人群</td></tr><tr><td>(3)已有同类制品上市的生物制品组成新的复方制品</td></tr><tr><td>(4)在已上市制品基础上,具有重大技术改进的生物制品,如重组技术替代生物组织提取技术;较已上市制品改变氨基酸位点或表达系统、宿主细胞后具有明显临床优势等。</td></tr><tr><td rowspan="4">3.境内或境外已上市生物制品</td><td>(1)境外生产的境外已上市、境内未上市的生物制品申报上市</td></tr><tr><td>(2)境外已上市、境内未上市的生物制品申报在境内生产上市</td></tr><tr><td>(3)生物类似药</td></tr><tr><td>(4)其他生物制品</td></tr><tr><td rowspan="10">中药</td><td rowspan="3">1.中药创新药</td><td>(1)中药复方制剂,系指由多味饮片、提取物等在中医药理论指导下组方而成的制剂。</td></tr><tr><td>(2)从单一植物、动物、矿物等物质中提取得到的提取物及其制剂。</td></tr><tr><td>(3)新药材及其制剂,即未被国家药品标准、药品注册标准以及省、自治区、直辖市药材标准收载的药材及其制剂,以及具有上述标准药材的原动、植物新的药用部位及其制剂。</td></tr><tr><td rowspan="4">2.中药改良型新药</td><td>(1)改变已上市中药给药途径的制剂,即不同给药途径或不同吸收部位之间相互改变的制剂。</td></tr><tr><td>(2)改变已上市中药剂型的制剂,即在给药途径不变的情况下改变剂型的制剂。</td></tr><tr><td>(3)中药增加功能主治。</td></tr><tr><td>(4)已上市中药生产工艺或辅料等改变引起药用物质基础或药物吸收、利用明显改变的。</td></tr><tr><td rowspan="2">3.古代经典名方中药复方制剂</td><td>(1)按古代经典名方目录管理的中药复方制剂。</td></tr><tr><td>(2)其他来源于古代经典名方的中药复方制剂。包括未按古代经典名方目录管理的古代经典名方中药复方制剂和基于古代经典名方加减化裁的中药复方制剂。</td></tr><tr><td>4.同名同方药</td><td></td></tr></table>
+
+数据来源：CDE, 东吴证券研究所
+
+# 免责声明
+
+东吴证券股份有限公司经中国证券监督管理委员会批准，已具备证券投资咨询业务资格。
+
+本研究报告仅供东吴证券股份有限公司（以下简称“本公司”）的客户使用。本公司不会因接收人收到本报告而视其为客户。在任何情况下，本报告中的信息或所表述的意见并不构成对任何人的投资建议，本公司及作者不对任何人因使用本报告中的内容所导致的任何后果负任何责任。任何形式的分享证券投资收益或者分担证券投资损失的书面或口头承诺均为无效。
+
+在法律许可的情况下，东吴证券及其所属关联机构可能会持有报告中提到的公司所发行的证券并进行交易，还可能为这些公司提供投资银行服务或其他服务。
+
+市场有风险，投资需谨慎。本报告是基于本公司分析师认为可靠且已公开的信息，本公司力求但不保证这些信息的准确性和完整性，也不保证文中观点或陈述不会发生任何变更，在不同时期，本公司可发出与本报告所载资料、意见及推测不一致的报告。
+
+本报告的版权归本公司所有，未经书面许可，任何机构和个人不得以任何形式翻版、复制和发布。经授权刊载、转发本报告或者摘要的，应当注明出处为东吴证券研究所，并注明本报告发布人和发布日期，提示使用本报告的风险，且不得对本报告进行有悖原意的引用、删节和修改。未经授权或未按要求刊载、转发本报告的，应当承担相应的法律责任。本公司将保留向其追究法律责任的权利。
+
+# 东吴证券投资评级标准
+
+投资评级基于分析师对报告发布日后 6 至 12 个月内行业或公司回报潜力相对基准表现的预期（A 股市场基准为沪深 300 指数，香港市场基准为恒生指数，美国市场基准为标普500 指数，新三板基准指数为三板成指（针对协议转让标的）或三板做市指数（针对做市转让标的），北交所基准指数为北证 50指数），具体如下：
+
+公司投资评级：
+
+买入：预期未来 6个月个股涨跌幅相对基准在 $1 5 \%$ 以上；
+
+增持：预期未来 6个月个股涨跌幅相对基准介于 $5 \%$ 与 $1 5 \%$ 之间；
+
+中性：预期未来 6 个月个股涨跌幅相对基准介于 $- 5 \%$ 与 $5 \%$ 之间；
+
+减持：预期未来 6 个月个股涨跌幅相对基准介于- $. 1 5 \%$ 与 $- 5 \%$ 之间；
+
+卖出：预期未来 6个月个股涨跌幅相对基准在- $. 1 5 \%$ 以下。
+
+行业投资评级：
+
+增持： 预期未来 6个月内，行业指数相对强于基准 $5 \%$ 以上；
+
+中性： 预期未来 6 个月内，行业指数相对基准 $- 5 \%$ 与 $5 \%$ ；
+
+减持： 预期未来 6 个月内，行业指数相对弱于基准 $5 \%$ 以上。
+
+我们在此提醒您，不同证券研究机构采用不同的评级术语及评级标准。我们采用的是相对评级体系，表示投资的相对比重建议。投资者买入或者卖出证券的决定应当充分考虑自身特定状况，如具体投资目的、财务状况以及特定需求等，并完整理解和使用本报告内容，不应视本报告为做出投资决策的唯一因素。
+
+东吴证券研究所
+
+苏州工业园区星阳街 5 号
+
+邮政编码：215021
+
+传真：（0512）62938527
+
+公司网址： http://www.dwzq.com.cn

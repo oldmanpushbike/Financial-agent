@@ -1,0 +1,21 @@
+[project]
+name = "fs-agent"
+version = "0.1.0"
+description = "Financial Statement Agent based on LangGraph + Zhipu LLM"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3",
+    "langgraph>=0.2",
+    "langchain-openai>=0.3",
+    "python-dotenv>=1.0",
+    "pydantic>=2.0",
+    "matplotlib>=3.8,<3.11",
+    "numpy>=1.26,<2.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["agent", "tool"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
