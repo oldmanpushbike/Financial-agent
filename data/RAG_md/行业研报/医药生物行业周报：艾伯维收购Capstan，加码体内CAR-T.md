@@ -1,0 +1,159 @@
+---
+report_type: 行业研报
+title: "医药生物行业周报：艾伯维收购Capstan，加码体内CAR-T"
+source_pdf: "./research report/行业研报/医药生物行业周报：艾伯维收购Capstan，加码体内CAR-T.pdf"
+---
+
+# 医药生物
+
+2025 年 07 月 06 日
+
+投资评级：看好（维持）
+
+行业走势图  
+数据来源：聚源
+
+# 相关研究报告
+
+《多款减肥药亮相 2025 ADA，重点关注 AMYR 与 ActRII 靶点—行业周报》-2025.6.29
+
+《关注高质量减重赛道近期积极进展—行业周报》-2025.6.22
+
+《SYS6010:广谱抗肿瘤大品种，早期NSCLC 数 据 优 异 — 行 业 周 报 》-2025.6.15
+
+# 艾伯维收购 Capstan，加码体内 CAR-T
+
+行业周报
+
+余汝意（分析师）
+
+证书编号：S0790523070002
+
+巢舒然（联系人）
+
+证书编号：S0790123110015
+
+聂媛媛（联系人）
+
+证书编号：S0790124050002
+
+#  艾伯维收购Capstan，加码体内 CAR-T技术路径
+
+2025年6月30日，艾伯维宣布将以最高 21 亿美元现金方式收购体内 CAR-T 疗法生物技术公司 Capstan Therapeutics。Capstan 是一家位于加州圣地亚哥的公司，专注于开发体内细胞疗法，其创始人包括了 CAR-T 先驱 Bruce Levine 及 Carl June，以及因 mRNA 疫苗相关工作而获得诺贝尔生理学或医学奖的 Drew Weissman。Capstan 的主要资产 CPTX2309 是一种利用靶向脂质纳米颗粒（tLNPs）进行 RNA递送的体内抗 CD19 CAR-T 疗法候选药物，目前正处于 I 期临床阶段，主要开发用于治疗 B 细胞介导的自身免疫性疾病；此外，艾伯维还将收购 Capstan 专有的tLNP 平台技术。
+
+#  MNC 积极布局 in vivo CAR-T 技术，递送技术多元
+
+据 Insight 统计，MNC 近几年积极以合作和并购方式布局 in vivo CAR-T 技术，且其中艾伯维同时布局慢病毒载体 LV 和脂质纳米粒载体 LNP 技术路线。目前，病毒载体系统和纳米颗粒载体递送系统为两大重点开发系统。
+
+据 Insight 统计，目前全球已披露 mRNA 技术路径（非病毒载体）in vivo CAR-T研发项目超20个，并且多集中在脂质纳米粒载体LNP 方向。
+
+我们看好体内CAR-T技术未来广阔的空间，关注国内布局相关技术标的。推荐标的：悦康药业；受益标的：云顶新耀、石药集团。
+
+#  本周医药生物上涨 3.64% ，其他生物制品涨幅最大
+
+本周医药生物上涨 3.64% ，跑赢沪深 300 指数 2.1pct，在 31 个子行业中排名第 4位。本周大部分板块处于上涨态势，本周其他生物制品板块涨幅最大，上涨 8.28% ；医疗研发外包板块上涨 7.13% ，原料药板块上涨 5.77% ，体外诊断板块上涨 4.94% ，化学制剂板块上涨 4.9% ；医疗设备板块跌幅最大，下跌 0.21% ，医院板块下跌0.04% ，血液制品板块上涨 0.01% ，疫苗板块上涨 0.43% ，中药板块上涨 1.27% 。
+
+# \bigcirc 推荐标的
+
+推荐标的：制药及生物制品：恒瑞医药、华东医药、三生制药、人福医药、恩华药业、信达生物、再鼎医药、百利天恒、泽璟制药-U、诺诚健华、科伦博泰生物-B、三生国健、康诺亚-B、一品红、海思科、艾力斯、艾迪药业、和黄医药、京新药业、健康元；CXO：药明康德、药明合联、泰格医药、药明生物、博腾股份、泓博医药；科研服务：毕得医药、百普赛斯、皓元医药、昊帆生物、海尔生物、奥浦迈、阿拉丁；中药：东阿阿胶、江中药业、天士力、济川药业、羚锐制药、悦康药业、方盛制药、佐力药业；原料药：普洛药业、健友股份、华海药业、奥锐特、博瑞医药；医疗器械：迈瑞医疗、联影医疗、开立医疗、澳华内镜、英科医疗、万孚生物、可孚医疗、圣湘生物、康拓医疗；医疗服务：爱尔眼科、通策医疗、美年健康、海吉亚医疗、锦欣生殖；零售药店：益丰药房。
+
+ 风险提示：研发不确定性风险、药物安全性风险、竞争加剧风险等。
+
+# 目 录
+
+1、 艾伯维收购 Capstan，加码体内 CAR-T 技术路径..  
+2、 MNC 积极布局 in vivo CAR-T 技术，递送技术多元 .  
+3、 7 月第 1 周医药生物上涨 3.64% ，其他生物制品涨幅最大..
+
+3.1、 板块行情：本周医药生物上涨 3.64% ，跑赢沪深 300 指数 2.1pct..  
+3.2、 子板块行情：其他生物制品板块涨幅最大，医疗设备跌幅最大. 8
+
+4、 风险提示... .10
+
+# 图表目录
+
+图 1： Capstan 的主要资产 CPTX2309 处于临床 I 期阶段 .  
+图 2： CellSeeker Platform 为模块化靶向体内细胞工程平台 . 4  
+图 3： CPTX2309 是 Capstan 专有技术平台的核心产物...  
+图 4： 7 月医药生物指数上涨 3.64% （单位： % ）  
+图 5： 7 月第 1 周医药生物上涨 3.64% （单位： % ）  
+图 6： 其他生物制品板块涨幅最大，医疗设备跌幅最大..
+
+表 1： 全球 mRNA（非病毒载体）技术路径 in vivo CAR-T 管线多处于临床 I期及临床前.  
+表 2： MNC 积极布局 in vivo CAR-T 技术. 6  
+表 3： 病毒载体系统和纳米颗粒载体递送系统为两大重点开发系统.  
+表 4： 7 月以来其他生物制品和医疗研发外包板块涨幅领先. 9  
+表 5： 子板块中个股涨跌幅（%）前 5.. .10
+
+# 1、 艾伯维收购 Capstan，加码体内 CAR-T 技术路径
+
+艾伯维收购 Capstan，加码体内 CAR-T 技术路径。2025 年6月 30 日，艾伯维宣布将以最高 21 亿美元现金方式收购体内 CAR-T 疗法生物技术公司 CapstanTherapeutics。Capstan 是一家位于加州圣地亚哥的公司，专注于开发体内细胞疗法，其创始人包括了 CAR-T 先驱 Bruce Levine 及 Carl June，以及因 mRNA 疫苗相关工作而获得诺贝尔生理学或医学奖的 Drew Weissman。
+
+Capstan 的主要资产 CPTX2309 是一种利用靶向脂质纳米颗粒（tLNPs）进行 RNA递送的体内抗 CD19 CAR-T 疗法候选药物，具有同类首创的潜力，目前正处于 I 期临床阶段，主要开发用于治疗 B 细胞介导的自身免疫性疾病。此外，艾伯维还将收购 Capstan 专有的 tLNP 平台技术，该技术旨在递送如 mRNA 等 RNA 有效载荷，能够在体内对特定细胞类型进行工程化改造。
+
+图1：Capstan 的主要资产 CPTX2309 处于临床 I 期阶段  
+
+技术平台：CellSeeker Platform为模块化靶向体内细胞工程平台，其基于专有的靶向脂质纳米颗粒（tLNP）递送载体，该载体由与重组蛋白结合物（如单克隆抗体）偶联的 tLNP 组成，旨在递送包括 mRNA 或基因编辑工具在内的 RNA 有效载荷，从而实现在体内对特定细胞类型进行重编程。同时，LNP 递送系统临床前验证具有快速生物降解特性，可实现重复给药。虽然公司模块化平台可应用于多种治疗领域，但现阶段优先聚焦于开发新一代体内 CAR-T 疗法，用于治疗B 细胞介导的自身免疫性疾病，目标是为自身免疫性疾病患者实现“免疫重置”，即通过深度清除自身反应性B 细胞和正常B细胞，进而促使初始健康 B细胞重新增殖。
+
+图2：CellSeeker Platform 为模块化靶向体内细胞工程平台  
+
+核心管线：CPTX2309是Capstan专有技术平台的核心产物，由于该平台包含肝脏去靶向技术，因此能将编码抗CD19 CAR的 mRNA有效载荷优先递送至表达CD8的细胞毒性 T 细胞中进行重编程。这一过程在体内即可完成，无需淋巴细胞清除预处理和复杂的体外制造过程。体内改造的表达CD8的T细胞将瞬时表达CD19 CAR，并在外周和组织中耗竭 B细胞。耗竭产生自身抗体的致病性记忆 B细胞，并用初始B 细胞重新填充，从而实现免疫系统重置，这有潜力阻止疾病进展并诱导临床缓解。
+
+图3：CPTX2309 是 Capstan 专有技术平台的核心产物  
+
+全球 mRNA技术路径（非病毒载体）in vivo CAR-T管线多处于临床I期及临床前。据Insight统计，目前全球已披露 mRNA 技术路径（非病毒载体）in vivo CAR-T研发项目超 20个，并且多集中在脂质纳米粒载体LNP 方向。
+
+表1：全球 mRNA（非病毒载体）技术路径 in vivo CAR-T管线多处于临床 I期及临床前  
+
+<table><tr><td>技术类型-载体</td><td>药品成分</td><td>靶点</td><td>研发机构</td><td>全球最高状态</td><td>全球最高状态时间</td><td>疾病领域</td></tr><tr><td rowspan="16">脂质纳米粒载体 LNP</td><td>STR-P004</td><td>CD19</td><td>星锐医药(Orig.)</td><td>临床I期</td><td>2025-06-04</td><td>肿瘤,免疫系统疾病</td></tr><tr><td>CPTX2309</td><td>CD19</td><td>艾伯维(Orig.),Capstan Therapeutics(Orig.)</td><td>临床I期</td><td>2025-04-08</td><td>免疫系统疾病</td></tr><tr><td>JCXH-213</td><td>-</td><td>嘉晨西海(杭州)生物技术(Orig.)</td><td>临床中(分期未知)</td><td>2024-10-01</td><td>肿瘤</td></tr><tr><td>CD19-specificCAR-T(Nitto Denko)</td><td>CD19</td><td>日东电工(Orig.)</td><td>临床前</td><td>2025-05-13</td><td>肿瘤,免疫系统疾病</td></tr><tr><td>SAIL-0804</td><td>CD19</td><td>Sail Biomedicines(Orig.)</td><td>临床前</td><td>2025-05-12</td><td>免疫系统疾病</td></tr><tr><td>CLDN6 targetedCAR-T(UFMG)</td><td>CLDN6</td><td>Federal University of Minas Gerais(Orig.)</td><td>临床前</td><td>2025-04-28</td><td>肿瘤</td></tr><tr><td>MT-103(Myeloid)</td><td>TROP2</td><td>Myeloid Therapeutics(Orig.)</td><td>临床前</td><td>2024-04-23</td><td>肿瘤</td></tr><tr><td>ORN-101</td><td>CD19</td><td>Orna Therapeutics(Orig.),上海先博生物(Lic.)</td><td>临床前</td><td>2022-12-08</td><td>肿瘤</td></tr><tr><td>CD5/LNP-FAPCAR</td><td>-</td><td>University of Pennsylvania(Orig.)</td><td>临床前</td><td>2022-01-06</td><td>心血管系统疾病</td></tr><tr><td>mRNA CAR(Exuma)</td><td>-</td><td>Exuma Biotech(Orig.)</td><td>临床前</td><td>-</td><td>-</td></tr><tr><td>BCMA靶向in vivoCAR-T</td><td>BCMA</td><td>Capstan Therapeutics(Orig.)</td><td>临床前</td><td>-</td><td>肿瘤,免疫系统疾病</td></tr><tr><td>CD19靶向CAR-T</td><td>CD19</td><td>沙砾生物(Orig.)</td><td>临床前</td><td>-</td><td>免疫系统疾病,肿瘤</td></tr><tr><td>MSLN靶向mRNA原位生成CAR-T</td><td>MSLN</td><td>杭州普略生物(Orig.),北京百替生物(Orig.)</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>血液疾病</td><td>-</td><td>Capstan Therapeutics(Orig.)</td><td>临床前</td><td>-</td><td>血液系统疾病</td></tr><tr><td>FAP靶向的CAR-T</td><td>FAP-α</td><td>Capstan Therapeutics(Orig.)</td><td>临床前</td><td>-</td><td>其它</td></tr><tr><td>血液肿瘤</td><td>-</td><td>Capstan Therapeutics(Orig.)</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>多肽纳米粒载体 PNP</td><td>CD3/CD5装载PNP编码CD19CAR-T(Aanastra)</td><td>CD19</td><td>Aanastra Inc(Orig.)</td><td>临床前</td><td>2025-05-15</td><td>肿瘤</td></tr><tr><td>类病毒颗粒载体 VLP</td><td>In-vivoCAR-T(Thesian)</td><td>-</td><td>Thesian Bio(Orig.)</td><td>临床前</td><td>-</td><td>肿瘤,免疫系统疾病</td></tr><tr><td>纳米粒载体NPs</td><td>hematologicalmalignancy</td><td>-</td><td>Alaya.bio(Orig.)</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>慢病毒载体LV,纳米粒载体NPs</td><td>CELTIC</td><td>CD19</td><td>Ixaka(Orig.),Alaya.bio(Lic.)</td><td>临床前</td><td>-</td><td>肿瘤</td></tr></table>
+
+# 2、 MNC 积极布局 in vivo CAR-T 技术，递送技术多元
+
+MNC 积极布局 in vivo CAR-T 技术，递送技术多元。据 Insight 统计，MNC 近几年积极以合作和并购方式布局 in vivo CAR-T 技术，且其中艾伯维同时布局慢病毒载体 LV 和脂质纳米粒载体 LNP 技术路线。目前，病毒载体系统和纳米颗粒载体递送系统为两大重点开发系统。
+
+表2：MNC 积极布局 in vivo CAR-T 技术  
+
+<table><tr><td>所属集团</td><td>交易类型</td><td>交易金额(美元)</td><td>研发机构</td><td>药品成分</td><td>靶点</td><td>全球最高状态</td><td>全球最高状态时间</td><td>疾病领域</td><td>技术类型-载体</td></tr><tr><td rowspan="7">艾伯维</td><td rowspan="5">收购(2025/6/30)</td><td rowspan="5">总额21亿</td><td>艾伯维(Orig.)，Capstan Therapeutics(Orig.)</td><td>CPTX2309</td><td>CD19</td><td>临床I期</td><td>2025-04-08</td><td>免疫系统疾病</td><td rowspan="5">脂质纳米粒载体LNP</td></tr><tr><td rowspan="4">Capstan Therapeutics(Orig.)</td><td>BCMA靶向in vivoCAR-T</td><td>BCMA</td><td>临床前</td><td>-</td><td>肿瘤,免疫系统疾病</td></tr><tr><td>血液疾病</td><td>-</td><td>临床前</td><td>-</td><td>血液系统疾病</td></tr><tr><td>FAP靶向的CAR-T</td><td>FAP-a</td><td>临床前</td><td>-</td><td>其它</td></tr><tr><td>血液肿瘤</td><td>-</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td rowspan="2">合作(2024/1/4)</td><td rowspan="2">总额14.4亿</td><td rowspan="2">Umoja Biopharma(Orig.)</td><td>CD19靶向原位生成CAR-T细胞疗法候选药物的独家选择权(其中包括UB-VV111)</td><td>CD19</td><td>- (UB-VV111临床I期)</td><td>-</td><td>-</td><td rowspan="2">慢病毒载体LV</td></tr><tr><td>艾伯维和Umoja将针对艾伯维所选择的靶标,共同开发多达4个额外的原位生成CAR-T细胞疗法候选物</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td rowspan="4">阿斯利康</td><td rowspan="4">收购(2025/5/20)</td><td rowspan="4">总额10亿首付款4.25亿里程碑付款5.75亿</td><td>普瑞金生物(Orig.)，EsoBiotec(Orig.)</td><td>ESO-T01</td><td>BCMA</td><td>临床I期</td><td>2024-11-13</td><td>肿瘤</td><td rowspan="4">慢病毒载体LV</td></tr><tr><td rowspan="3">EsoBiotec(Orig.)</td><td>ESO-TX103</td><td>-</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>ESO-TX102</td><td>-</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>ESO-TX101</td><td>-</td><td>临床前</td><td>-</td><td>肿瘤</td></tr><tr><td>诺华</td><td>合作(2024/11/19)</td><td>-</td><td>Vyriad(Orig.)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>慢病毒载体LV</td></tr><tr><td>安斯泰来</td><td>合作(最多针对两个项目)(2024/2/15)</td><td>总额8亿首付款0.4亿其他交易额0.35亿</td><td>KeloniaTherapeutics(Orig.)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>慢病毒载体LV</td></tr></table>
+
+表3：病毒载体系统和纳米颗粒载体递送系统为两大重点开发系统  
+
+<table><tr><td>载体系统</td><td colspan="2">细分类型</td><td>原理</td></tr><tr><td rowspan="2">病毒载体系统</td><td rowspan="2">以慢病毒和腺相关病毒(AAV)为代表</td><td>慢病毒</td><td>慢病毒作为逆转录病毒亚属,具有球形包膜结构和单链RNA基因组,其通过整合宿主基因组实现转基因长效表达的特性备受关注</td></tr><tr><td>AAV</td><td>AAV是一种小型无包膜病毒,具有二十面体衣壳结构和单链DNA基因组,不会整合至宿主基因组。通过工程化改造衣壳蛋白(如scFv或DARPin),可增强其细胞靶向性并减少非特异性摄取</td></tr><tr><td rowspan="2">纳米颗粒载体系统</td><td rowspan="2">包括脂质纳米颗粒(LNP)和聚合物纳米颗粒(PBAE)等</td><td>LNP</td><td>LNP搭载mRNA或质粒DNA,通过靶向抗体特异性递送至T细胞</td></tr><tr><td>PBAE</td><td>PBAE聚合物可封装mRNA/质粒DNA,通过靶向肽促进核内递送</td></tr><tr><td>生物支架系统</td><td>藻酸盐或胶原支架局部递送病毒载体和细胞因子</td><td>-</td><td>-</td></tr><tr><td>其他新兴技术</td><td>Cas9-EDVs、FuNVs等</td><td>-</td><td>-</td></tr></table>
+
+我们看好体内CAR-T技术未来成长空间，关注国内布局相关技术标的。推荐标的：悦康药业；受益标的：云顶新耀、石药集团。
+
+# 3、 7月第 1周医药生物上涨 3.64% ，其他生物制品涨幅最大
+
+# 3.1、 板块行情：本周医药生物上涨 3.64% ，跑赢沪深 300 指数 2.1pct
+
+从月度数据来看，2025年初至今沪深整体呈现上行趋势。2025年7月第 1周钢铁、建筑材料等行业涨幅靠前，计算机、非银金融等行业涨幅靠后。本周医药生物上涨 3.64% ，跑赢沪深300指数2.1pct，在31 个子行业中排名第 4位。
+
+图4：7月医药生物指数上涨 3.64% （单位： % ）  
+数据来源：Wind、开源证券研究所（截至 2025.07.04）
+
+图5：7月第 1周医药生物上涨 3.64% （单位：%）  
+数据来源：Wind、开源证券研究所（注：2025.06.30-2025.07.04 为 7 月第 1 周）
+
+# 3.2、 子板块行情：其他生物制品板块涨幅最大，医疗设备跌幅最大
+
+2025年7月第1周大部分板块处于上涨态势，本周其他生物制品板块涨幅最大，上涨 8.28% ；医疗研发外包板块上涨 7.13% ，原料药板块上涨 5.77% ，体外诊断板块上涨 4.94% ，化学制剂板块上涨 4.9% ；医疗设备板块跌幅最大，下跌 0.21% ，医院板块下跌 0.04% ，血液制品板块上涨 0.01% ，疫苗板块上涨 0.43% ，中药板块上涨 1.27% 。
+
+图6：其他生物制品板块涨幅最大，医疗设备跌幅最大  
+数据来源：Wind、开源证券研究所
+
+表4：7月以来其他生物制品和医疗研发外包板块涨幅领先  
+
+<table><tr><td>子板块</td><td>M1</td><td>M2</td><td>M3</td><td>M4</td><td>M5</td><td>M6</td><td>M7</td><td>年初至今预测PE(2025)</td><td>预测PEG(2025)</td></tr><tr><td>中药</td><td>-4.94%</td><td>-1.15%</td><td>0.35%</td><td>-2.77%</td><td>4.39%</td><td>-1.86%</td><td>1.27%</td><td>-3.38%</td><td>19.98</td></tr><tr><td>化学制药</td><td>-2.91%</td><td>4.68%</td><td>1.78%</td><td>1.61%</td><td>11.31%</td><td>0.77%</td><td>5.03%</td><td>25.42%</td><td>24.14</td></tr><tr><td>原料药</td><td>-2.92%</td><td>7.53%</td><td>-1.31%</td><td>-0.93%</td><td>10.83%</td><td>0.50%</td><td>5.77%</td><td>23.28%</td><td>29.14</td></tr><tr><td>化学制剂</td><td>-2.90%</td><td>4.12%</td><td>2.40%</td><td>2.10%</td><td>11.40%</td><td>0.83%</td><td>4.90%</td><td>25.84%</td><td>22.94</td></tr><tr><td>医药商业</td><td>-4.18%</td><td>0.72%</td><td>0.11%</td><td>0.25%</td><td>2.75%</td><td>-1.23%</td><td>2.47%</td><td>1.43%</td><td>21.25</td></tr><tr><td>医药流通</td><td>-3.92%</td><td>0.33%</td><td>-2.04%</td><td>-4.25%</td><td>3.89%</td><td>-0.82%</td><td>2.45%</td><td>-2.08%</td><td>18.16</td></tr><tr><td>线下药店</td><td>-4.84%</td><td>1.71%</td><td>5.60%</td><td>11.12%</td><td>0.33%</td><td>-2.13%</td><td>2.52%</td><td>10.38%</td><td>25.11</td></tr><tr><td>医疗器械</td><td>-4.29%</td><td>6.26%</td><td>-4.00%</td><td>-5.49%</td><td>4.82%</td><td>0.44%</td><td>2.16%</td><td>0.51%</td><td>29.42</td></tr><tr><td>医疗设备</td><td>-5.34%</td><td>10.49%</td><td>-6.81%</td><td>-3.05%</td><td>5.76%</td><td>-2.33%</td><td>-0.21%</td><td>-1.60%</td><td>38.08</td></tr><tr><td>医疗耗材</td><td>-1.97%</td><td>-0.11%</td><td>-1.14%</td><td>-6.78%</td><td>3.15%</td><td>3.96%</td><td>3.77%</td><td>1.50%</td><td>30.16</td></tr><tr><td>体外诊断</td><td>-5.23%</td><td>6.26%</td><td>-1.64%</td><td>-8.83%</td><td>4.98%</td><td>1.83%</td><td>4.94%</td><td>3.48%</td><td>19.39</td></tr><tr><td>生物制品</td><td>-3.21%</td><td>2.64%</td><td>-1.80%</td><td>-5.27%</td><td>7.42%</td><td>0.13%</td><td>4.40%</td><td>7.09%</td><td>30.88</td></tr><tr><td>血液制品</td><td>-1.58%</td><td>-3.50%</td><td>0.09%</td><td>-3.67%</td><td>1.08%</td><td>1.07%</td><td>0.01%</td><td>-3.49%</td><td>25.02</td></tr><tr><td>疫苗</td><td>-6.59%</td><td>3.66%</td><td>-4.86%</td><td>-9.52%</td><td>4.92%</td><td>-0.60%</td><td>0.43%</td><td>-9.45%</td><td>34.27</td></tr><tr><td>其他生物制品</td><td>-1.32%</td><td>4.49%</td><td>-0.35%</td><td>-2.99%</td><td>11.37%</td><td>0.25%</td><td>8.28%</td><td>24.03%</td><td>31.82</td></tr><tr><td>医疗服务</td><td>-3.90%</td><td>15.16%</td><td>-3.78%</td><td>-9.92%</td><td>5.71%</td><td>4.77%</td><td>4.47%</td><td>12.93%</td><td>28.98</td></tr><tr><td>医院</td><td>-6.10%</td><td>15.06%</td><td>-7.53%</td><td>-6.32%</td><td>0.47%</td><td>2.27%</td><td>-0.04%</td><td>-0.73%</td><td>30.67</td></tr><tr><td>医疗研发外包</td><td>-2.34%</td><td>11.74%</td><td>-0.74%</td><td>-11.56%</td><td>8.34%</td><td>6.63%</td><td>7.13%</td><td>19.56%</td><td>36.91</td></tr></table>
+
+数据来源：Wind、开源证券研究所
+
+表5：子板块中个股涨跌幅（%）前 5  
+
+<table><tr><td></td><td colspan="2">原料药</td><td colspan="2">化学制剂</td><td colspan="2">中药</td><td colspan="2">生物制品</td><td colspan="2">医药商业</td><td></td></tr><tr><td rowspan="5">涨幅前5</td><td>1</td><td>美诺华</td><td>29.58</td><td>广生堂</td><td>48.64</td><td>九芝堂</td><td>14.41</td><td>神州细胞</td><td>45.01</td><td>塞力医疗</td><td>51.55</td></tr><tr><td>2</td><td>山河药辅</td><td>18.73</td><td>上海谊众</td><td>32.20</td><td>佐力药业</td><td>12.64</td><td>科兴制药</td><td>30.08</td><td>海王生物</td><td>10.33</td></tr><tr><td>3</td><td>威尔药业</td><td>18.23</td><td>汇宇制药-W</td><td>31.88</td><td>康惠制药</td><td>12.52</td><td>未名医药</td><td>24.66</td><td>百洋医药</td><td>6.84</td></tr><tr><td>4</td><td>能特科技</td><td>16.67</td><td>前沿生物-U</td><td>30.62</td><td>启迪药业</td><td>11.81</td><td>君实生物-U</td><td>18.93</td><td>益丰药房</td><td>5.62</td></tr><tr><td>5</td><td>永安药业</td><td>11.63</td><td>微芯生物</td><td>30.53</td><td>贵州百灵</td><td>10.96</td><td>百普赛斯</td><td>16.44</td><td>一心堂</td><td>5.54</td></tr><tr><td rowspan="5">跌幅前5</td><td>1</td><td>新赣江</td><td>(5.53)</td><td>益方生物-U</td><td>(3.57)</td><td>马应龙</td><td>(3.32)</td><td>康华生物</td><td>(3.24)</td><td>*ST荣控</td><td>(5.12)</td></tr><tr><td>2</td><td>皓一药业</td><td>(2.73)</td><td>ST景峰</td><td>(2.17)</td><td>济川药业</td><td>(3.16)</td><td>百济神州-U</td><td>(2.74)</td><td>漱玉平民</td><td>(4.53)</td></tr><tr><td>3</td><td>森萱医药</td><td>(0.94)</td><td>通化金马</td><td>(2.17)</td><td>东阿阿胶</td><td>(2.66)</td><td>凯因科技</td><td>(2.18)</td><td>老百姓</td><td>(3.83)</td></tr><tr><td>4</td><td>科源制药</td><td>(0.77)</td><td>易明医药</td><td>(2.08)</td><td>华润三九</td><td>(1.65)</td><td>东宝生物</td><td>(1.39)</td><td>国发股份</td><td>(2.14)</td></tr><tr><td>5</td><td>赛托生物</td><td>0.58</td><td>金城医药</td><td>(1.65)</td><td>ST香雪</td><td>(1.30)</td><td>派林生物</td><td>(1.26)</td><td>健之佳</td><td>(2.10)</td></tr><tr><td></td><td colspan="2">医疗研发外包</td><td colspan="2">医疗服务</td><td colspan="2">医疗设备</td><td colspan="2">医疗耗材</td><td colspan="2">体外诊断</td><td></td></tr><tr><td rowspan="5">涨幅前5</td><td>1</td><td>昭衍新药</td><td>16.95</td><td>创新医疗</td><td>23.01</td><td>锦好医疗</td><td>16.05</td><td>乐普医疗</td><td>17.99</td><td>热景生物</td><td>44.30</td></tr><tr><td>2</td><td>皓元医药</td><td>15.70</td><td>贝瑞基因</td><td>8.60</td><td>鹿得医疗</td><td>11.34</td><td>迈普医学</td><td>12.99</td><td>博拓生物</td><td>13.50</td></tr><tr><td>3</td><td>美迪西</td><td>11.23</td><td>*ST生物</td><td>6.50</td><td>宝莱特</td><td>7.68</td><td>拱东医疗</td><td>9.86</td><td>中源协和</td><td>12.23</td></tr><tr><td>4</td><td>睿智医药</td><td>9.19</td><td>三博脑科</td><td>5.40</td><td>天智航-U</td><td>7.58</td><td>天臣医疗</td><td>9.81</td><td>睿昂基因</td><td>9.32</td></tr><tr><td>5</td><td>和元生物</td><td>8.94</td><td>兰卫医学</td><td>3.88</td><td>康众医疗</td><td>6.96</td><td>五洲医疗</td><td>9.61</td><td>之江生物</td><td>5.70</td></tr><tr><td rowspan="5">跌幅前5</td><td>1</td><td>数字人</td><td>(4.63)</td><td>ST中珠</td><td>(4.79)</td><td>开立医疗</td><td>(1.00)</td><td>威高骨科</td><td>(1.79)</td><td>新产业</td><td>(2.93)</td></tr><tr><td>2</td><td>南模生物</td><td>(2.82)</td><td>美年健康</td><td>(4.01)</td><td>迈瑞医疗</td><td>(0.27)</td><td>爱博医疗</td><td>(1.62)</td><td>英诺特</td><td>(1.70)</td></tr><tr><td>3</td><td>成都先导</td><td>2.16</td><td>新里程</td><td>(3.13)</td><td>联影医疗</td><td>(0.20)</td><td>惠泰医疗</td><td>(1.61)</td><td>浩欧博</td><td>(1.64)</td></tr><tr><td>4</td><td>百花医药</td><td>2.81</td><td>金域医学</td><td>(2.50)</td><td>东富龙</td><td>0.16</td><td>济民健康</td><td>(1.48)</td><td>圣湘生物</td><td>(0.30)</td></tr><tr><td>5</td><td>诺思格</td><td>3.21</td><td>迪安诊断</td><td>(2.14)</td><td>山外山</td><td>0.23</td><td>佰仁医疗</td><td>(1.48)</td><td>爱威科技</td><td>0.23</td></tr></table>
+
+数据来源：Wind、开源证券研究所
+
+# 4 、 风险提示
+
+（1）政策波动风险。医保政策、价格调整等政策可能对医药行业产生影响。  
+（2）市场震荡风险。若市场风险偏好改变或公司成长性预期调整，可能影响公司估值稳定性。  
+（3）医保未准入风险。医保谈判结果还未正式落地，还需要以实际医保谈判结果为准。

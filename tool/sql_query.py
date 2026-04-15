@@ -76,6 +76,9 @@ SQL: SELECT i.stock_code, i.stock_abbr, i.operating_expense_rnd_expenses, i.tota
 User: 对比白云山2022年至2025年第三季度的营业总收入同比增长率。
 SQL: SELECT report_year, report_period, operating_revenue_yoy_growth FROM core_performance_indicators_sheet WHERE stock_abbr = '白云山' AND report_period = 'Q3' AND report_year BETWEEN 2022 AND 2025 ORDER BY report_year;
 
+User: 金花股份近几年的利润总额变化趋势。
+SQL: SELECT report_year, total_profit FROM income_sheet WHERE stock_abbr = '金花股份' AND report_period = 'FY' ORDER BY report_year;
+
 User: 2022-2025年第三季度加权ROE扣非连续四期均超过10%的公司。
 SQL: SELECT stock_code, stock_abbr, GROUP_CONCAT(report_year || ':' || roe_weighted_excl_non_recurring) AS roe_by_year FROM core_performance_indicators_sheet WHERE report_period = 'Q3' AND report_year BETWEEN 2022 AND 2025 GROUP BY stock_code, stock_abbr HAVING MIN(roe_weighted_excl_non_recurring) > 10;
 
@@ -97,8 +100,9 @@ SQL_SYSTEM_PROMPT = f"""你是一个SQL查询生成助手，专门为66家中药
 {DB_SCHEMA}
 
 ## 核心规则：
-1. 只返回一条SQL SELECT语句，以分号结尾，不要包含任何解释或markdown。
-2. 仅允许访问上述四张表。
+1. 只返回一条SQL SELECT语句，以分号结尾，不要包含任何解释或markdown代码块。
+2. 忽略用户消息中关于"可视化""绘图""画图""图表"等请求，只关注数据查询部分。
+3. 仅允许访问上述四张表。
 3. 报告期映射："第一季度/一季度"→'Q1'，"上半年/半年度"→'HY'，"第三季度/前三季度"→'Q3'，"年度/全年/年报"→'FY'。report_year为四位数字。
 4. 当问题给出证券代码（6位数字）时优先用stock_code过滤，否则用stock_abbr模糊匹配（LIKE '%关键词%'）。
 5. "亏钱/亏损"→net_profit < 0；"盈利"→net_profit > 0。

@@ -10,31 +10,36 @@ from agent.state import AgentState
 # Condition 1-4: Planner 之后的主路由
 # ──────────────────────────────────────────────────────
 
-RouteAfterPlanner = Literal["clarify", "sql", "rag", "sql_and_rag"]
+RouteAfterPlanner = Literal["clarify", "sql", "rag", "sql_and_rag", "executor"]
 
 
 def route_after_planner(state: AgentState) -> RouteAfterPlanner:
-    """Planner → 主路由。优先级：clarification > both > sql > rag > clarify(兜底)。"""
-    intent = state.get("intent", {})
+    """Planner → 主路由。
 
-    # Condition 1: needs_clarification — 最优先
-    if intent.get("needs_clarification"):
-        return "clarify"
+    多意图拆分时走 executor；
+    RAG 类问题不走 clarify，直接检索（检索不到由 rag_node 兜底）；
+    clarify 只拦截纯 SQL 且信息不足的情况。
+    """
+    # 多意图拆分 → executor
+    if state.get("sub_tasks"):
+        return "executor"
+
+    intent = state.get("intent", {})
 
     needs_sql = intent.get("needs_sql", False)
     needs_rag = intent.get("needs_rag", False)
 
-    # Condition 4: route_to_both
+    # RAG 优先：只要 needs_rag=True，不管 needs_clarification，直接走检索
     if needs_sql and needs_rag:
         return "sql_and_rag"
-
-    # Condition 2: route_to_sql
-    if needs_sql:
-        return "sql"
-
-    # Condition 3: route_to_rag
     if needs_rag:
         return "rag"
+
+    # 纯 SQL 场景才考虑 clarify
+    if intent.get("needs_clarification"):
+        return "clarify"
+    if needs_sql:
+        return "sql"
 
     # 兜底：无法判断意图 → 澄清
     return "clarify"
