@@ -26,8 +26,13 @@ data/.env
 data/chroma_db/
 data/financial.db
 
+# Large data files (source PDFs, too large for GitHub)
+data/pdf/
+
 # Generated outputs
 result/img/
+result/*.xlsx
+result/*.xlsm
 
 # OS
 .DS_Store
