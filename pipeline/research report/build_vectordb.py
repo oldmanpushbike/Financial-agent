@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """将切分后的 chunks 写入本地 ChromaDB 向量数据库。
 
-Embedding 模型: BAAI/bge-large-zh-v1.5 (1024维, sentence-transformers)
+Embedding: 百度千帆 Embedding API (通过 qianfan_embedding 模块调用)
 存储位置: data/chroma_db/
 
 用法:
@@ -19,29 +19,19 @@ import time
 from pathlib import Path
 
 import chromadb
-from sentence_transformers import SentenceTransformer
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent  # FS/
 _CHUNKS_DIR = _PROJECT_ROOT / "data" / "chunks"
 _CHROMA_DIR = _PROJECT_ROOT / "data" / "chroma_db"
 _COLLECTION_NAME = "research_reports"
 
-# BGE-large-zh-v1.5: 1024维, 中文 RAG 标杆模型
-_MODEL_NAME = "BAAI/bge-large-zh-v1.5"
-_BATCH_SIZE = 64  # embedding 批次大小
-
-_model: SentenceTransformer | None = None
+_BATCH_SIZE = 16  # 千帆 API 单次最多 16 条
 
 
-def _get_model() -> SentenceTransformer:
-    global _model
-    if _model is None:
-        from modelscope import snapshot_download
-        # 从 ModelScope 下载模型到本地缓存
-        model_dir = snapshot_download(_MODEL_NAME)
-        print(f"加载 embedding 模型: {model_dir} ...")
-        _model = SentenceTransformer(model_dir)
-    return _model
+# 延迟导入，避免循环依赖
+def _embed_texts(texts: list[str]) -> list[list[float]]:
+    from qianfan_embedding import embed_texts
+    return embed_texts(texts, batch_size=_BATCH_SIZE)
 
 
 def _load_chunks(jsonl_path: Path) -> list[dict]:
@@ -83,16 +73,9 @@ def get_collection(client: chromadb.ClientAPI | None = None) -> chromadb.Collect
 
 
 def query(text: str, n_results: int = 5) -> dict:
-    """用 BGE 模型对 query 做 embedding，然后检索 ChromaDB。
-
-    BGE 系列 query 端加指令前缀可提升检索效果。
-    """
-    model = _get_model()
-    # BGE 推荐的中文 query 指令前缀
-    query_with_instruction = f"为这个句子生成表示以用于检索中文相关段落：{text}"
-    query_embedding = model.encode(
-        query_with_instruction, normalize_embeddings=True
-    ).tolist()
+    """用千帆 API 对 query 做 embedding，然后检索 ChromaDB。"""
+    from qianfan_embedding import embed_query
+    query_embedding = embed_query(text)
 
     collection = get_collection()
     return collection.query(
@@ -107,42 +90,29 @@ def build_from_jsonl(jsonl_path: Path, collection: chromadb.Collection) -> int:
     if not chunks:
         return 0
 
-    model = _get_model()
-
     texts = [c["text"] for c in chunks]
     metadatas = [c["metadata"] for c in chunks]
-    # 用增强文本做 embedding（表格 chunk 拼接 table_title），提升语义检索效果
-    embed_texts = [_enrich_text(c["text"], c["metadata"]) for c in chunks]
+    embed_texts_list = [_enrich_text(c["text"], c["metadata"]) for c in chunks]
 
-    # 生成唯一 ID: {文件stem}_{chunk序号}
     stem = jsonl_path.stem
     ids = [f"{stem}_{i}" for i in range(len(chunks))]
 
-    # 分批 embedding + 写入
-    written = 0
+    embeddings = _embed_texts(embed_texts_list)
+
     for start in range(0, len(texts), _BATCH_SIZE):
         end = min(start + _BATCH_SIZE, len(texts))
-        batch_embed_texts = embed_texts[start:end]
-        batch_texts = texts[start:end]
-        batch_ids = ids[start:end]
-        batch_metas = metadatas[start:end]
-
-        # embedding 用增强文本，document 存原始文本
-        embeddings = model.encode(batch_embed_texts, normalize_embeddings=True)
-
         collection.add(
-            ids=batch_ids,
-            embeddings=embeddings.tolist(),
-            documents=batch_texts,
-            metadatas=batch_metas,
+            ids=ids[start:end],
+            embeddings=embeddings[start:end],
+            documents=texts[start:end],
+            metadatas=metadatas[start:end],
         )
-        written += len(batch_texts)
 
-    return written
+    return len(texts)
 
 
 def build_all() -> None:
-    """遍历 data/chunks/ 下所有 jsonl，写入 ChromaDB。"""
+    """遍历 data/chunks/ 下所有 children jsonl，写入 ChromaDB。"""
     client = chromadb.PersistentClient(path=str(_CHROMA_DIR))
 
     # 全量重建：先删后建
@@ -153,25 +123,29 @@ def build_all() -> None:
     collection = get_collection(client)
 
     total = 0
-    files = sorted(_CHUNKS_DIR.rglob("*.jsonl"))
-    print(f"共 {len(files)} 个 jsonl 文件待处理")
+    files = sorted(_CHUNKS_DIR.rglob("*_children.jsonl"))
+    print(f"共 {len(files)} 个 children jsonl 文件待处理")
 
     t0 = time.time()
     for i, jsonl_file in enumerate(files, 1):
         n = build_from_jsonl(jsonl_file, collection)
         total += n
         if i % 50 == 0 or i == len(files):
-            print(f"  [{i}/{len(files)}] 已写入 {total} 个 chunk")
+            print(f"  [{i}/{len(files)}] 已写入 {total} 个 child chunk")
 
     elapsed = time.time() - t0
-    print(f"完成，共 {total} 个 chunk 写入 {_CHROMA_DIR}，耗时 {elapsed:.1f}s")
+    print(f"完成，共 {total} 个 child chunk 写入 {_CHROMA_DIR}，耗时 {elapsed:.1f}s")
 
 
 def build_single(jsonl_path: Path) -> None:
-    """将单个 jsonl 写入 ChromaDB（追加模式）。"""
+    """将单个 children jsonl 写入 ChromaDB（追加模式）。"""
+    if not jsonl_path.name.endswith("_children.jsonl"):
+        children_path = jsonl_path.with_name(jsonl_path.stem + "_children.jsonl")
+        if children_path.exists():
+            jsonl_path = children_path
+
     collection = get_collection()
 
-    # 先删除该文件已有的 chunk（按 id 前缀）
     stem = jsonl_path.stem
     existing = collection.get(where={"source_pdf": {"$ne": ""}})
     ids_to_delete = [id_ for id_ in existing["ids"] if id_.startswith(f"{stem}_")]
@@ -179,7 +153,7 @@ def build_single(jsonl_path: Path) -> None:
         collection.delete(ids=ids_to_delete)
 
     n = build_from_jsonl(jsonl_path, collection)
-    print(f"写入 {n} 个 chunk → {_CHROMA_DIR}")
+    print(f"写入 {n} 个 child chunk → {_CHROMA_DIR}")
 
 
 def main() -> None:

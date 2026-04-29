@@ -15,9 +15,19 @@ from agent.config import DB_PATH
 # DB Schema 描述（供 LLM 生成 SQL 时参考）
 # ──────────────────────────────────────────────
 DB_SCHEMA = """
-数据库为66家中药上市公司的财务数据，覆盖2022-2025年，共4张表。
+数据库为医药/CXO上市公司的财务数据，共4张表。
 公共字段：stock_code（证券代码TEXT）、stock_abbr（股票简称TEXT）、report_year（年份INT）、report_period（报告期TEXT：'Q1'一季度、'HY'半年度、'Q3'前三季度、'FY'年度）。
 所有金额字段单位为万元，百分比字段单位为%，每股字段单位为元/股。
+
+### 数据覆盖范围（重要）
+- 2022年：仅有 FY（年度）数据，没有 Q1/HY/Q3
+- 2023-2025年：有 Q1/HY/Q3/FY 全部报告期
+- 查询"2022年Q1/Q3"等必然无结果，应提示用户或改用FY数据
+
+### 公司代码映射（stock_code → stock_abbr）
+002821 凯莱英 | 300244 迪安诊断 | 300347 泰格医药 | 301033 迈普医学 | 301080 百普赛斯
+301096 百诚医药 | 603127 昭衍新药 | 603259 药明康德 | 688222 成都先导 | 688276 百克生物
+【重要】数据库中只有以上10家公司的数据。不要凭记忆编造证券代码！查询特定公司时优先用 stock_abbr 匹配，或参考上面的映射表。
 
 ### 1. core_performance_indicators_sheet（核心业绩指标表，583行）
 eps（每股收益）, total_operating_revenue（营业总收入）, operating_revenue_yoy_growth（营收同比增长率%）, operating_revenue_qoq_growth（营收环比增长率%）, net_profit_10k_yuan（净利润万元）, net_profit_yoy_growth（净利润同比增长率%）, net_profit_qoq_growth（净利润环比增长率%）, net_asset_per_share（每股净资产）, roe（净资产收益率%）, operating_cf_per_share（每股经营现金流）, net_profit_excl_non_recurring（扣非净利润万元）, net_profit_excl_non_recurring_yoy（扣非净利润同比%）, gross_profit_margin（销售毛利率%）, net_profit_margin（销售净利率%）, roe_weighted_excl_non_recurring（加权ROE扣非%）
@@ -48,7 +58,7 @@ User: 2025年前三季度营业总收入超过200亿元（即2000000万元）的
 SQL: SELECT stock_code, stock_abbr, total_operating_revenue FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND total_operating_revenue > 2000000;
 
 ## 排名 Top N
-User: 2025年第三季度营业总收入排名前五的中药公司有哪些？
+User: 2025年第三季度营业总收入排名前五的公司有哪些？
 SQL: SELECT stock_code, stock_abbr, total_operating_revenue FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3' ORDER BY total_operating_revenue DESC LIMIT 5;
 
 User: 2025年第三季度"股东权益-未分配利润"金额排名前五的公司，其2025年的净利润占未分配利润的比例。
@@ -82,29 +92,73 @@ SQL: SELECT report_year, total_profit FROM income_sheet WHERE stock_abbr = '金�
 User: 2022-2025年第三季度加权ROE扣非连续四期均超过10%的公司。
 SQL: SELECT stock_code, stock_abbr, GROUP_CONCAT(report_year || ':' || roe_weighted_excl_non_recurring) AS roe_by_year FROM core_performance_indicators_sheet WHERE report_period = 'Q3' AND report_year BETWEEN 2022 AND 2025 GROUP BY stock_code, stock_abbr HAVING MIN(roe_weighted_excl_non_recurring) > 10;
 
-## 复合增长率（CAGR）
+## 复合增长率（CAGR）— SQLite 无 POWER 函数，只查起止值
 User: 2022年至2025年第三季度66家公司营业总收入复合增长率排名前三。
-SQL: SELECT stock_code, stock_abbr, ROUND((POWER(t2.rev / t1.rev, 1.0/3) - 1) * 100, 2) AS cagr_pct FROM (SELECT stock_code, stock_abbr, total_operating_revenue AS rev FROM core_performance_indicators_sheet WHERE report_year = 2022 AND report_period = 'Q3') t1 JOIN (SELECT stock_code, total_operating_revenue AS rev FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3') t2 ON t1.stock_code = t2.stock_code WHERE t1.rev > 0 ORDER BY cagr_pct DESC LIMIT 3;
+SQL: SELECT t1.stock_code, t1.stock_abbr, t1.rev AS rev_2022, t2.rev AS rev_2025 FROM (SELECT stock_code, stock_abbr, total_operating_revenue AS rev FROM core_performance_indicators_sheet WHERE report_year = 2022 AND report_period = 'Q3') t1 JOIN (SELECT stock_code, total_operating_revenue AS rev FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3') t2 ON t1.stock_code = t2.stock_code WHERE t1.rev > 0 AND t2.rev > 0 ORDER BY t2.rev * 1.0 / t1.rev DESC LIMIT 3;
 
 ## 营业总收入与净利润均排名前N的交集
 User: 2025年第三季度营业总收入和净利润均排名前五的公司。
 SQL: SELECT a.stock_code, a.stock_abbr, a.total_operating_revenue, b.net_profit FROM (SELECT stock_code, stock_abbr, total_operating_revenue FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3' ORDER BY total_operating_revenue DESC LIMIT 5) a INNER JOIN (SELECT stock_code, net_profit FROM income_sheet WHERE report_year = 2025 AND report_period = 'Q3' ORDER BY net_profit DESC LIMIT 5) b ON a.stock_code = b.stock_code;
+
+## CASE WHEN 分组统计
+User: 2025年第三季度按资产负债率分组（低于40%为低、40%-60%为中、60%以上为高），统计各组公司数量。
+SQL: SELECT CASE WHEN asset_liability_ratio < 40 THEN '低(<40%)' WHEN asset_liability_ratio <= 60 THEN '中(40%-60%)' ELSE '高(>60%)' END AS level, COUNT(*) AS cnt FROM balance_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND asset_liability_ratio IS NOT NULL GROUP BY level ORDER BY cnt DESC;
+
+User: 2025年第三季度按净利润正负分组，统计盈利和亏损公司数量及平均净利润。
+SQL: SELECT CASE WHEN net_profit >= 0 THEN '盈利' ELSE '亏损' END AS category, COUNT(*) AS cnt, ROUND(AVG(net_profit), 2) AS avg_net_profit FROM income_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND net_profit IS NOT NULL GROUP BY category;
+
+User: 统计2025年第三季度公司资产负债率的分布情况（按0-30%、30%-50%、50%-70%、70%以上分组），各组公司数量。
+SQL: SELECT CASE WHEN asset_liability_ratio < 30 THEN '0-30%' WHEN asset_liability_ratio < 50 THEN '30%-50%' WHEN asset_liability_ratio < 70 THEN '50%-70%' ELSE '70%以上' END AS level, COUNT(*) AS cnt FROM balance_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND asset_liability_ratio IS NOT NULL GROUP BY level ORDER BY level;
+
+## 同比变化与多期对比
+User: 金花股份2023年和2024年年度营业总收入分别是多少，增长了多少？
+SQL: SELECT report_year, total_operating_revenue FROM core_performance_indicators_sheet WHERE stock_abbr = '金花股份' AND report_period = 'FY' AND report_year IN (2023, 2024) ORDER BY report_year;
+
+User: 2025年第三季度净利润同比增长率最高和最低的公司各是哪家？
+SQL: SELECT stock_code, stock_abbr, net_profit_yoy_growth FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND net_profit_yoy_growth IS NOT NULL ORDER BY net_profit_yoy_growth DESC LIMIT 1 UNION ALL SELECT stock_code, stock_abbr, net_profit_yoy_growth FROM core_performance_indicators_sheet WHERE report_year = 2025 AND report_period = 'Q3' AND net_profit_yoy_growth IS NOT NULL ORDER BY net_profit_yoy_growth ASC LIMIT 1;
+
+## 跨表字段查询（注意字段归属）
+User: 2025年第三季度扣非净利润与净利润差值绝对值最大的5家公司。
+SQL: SELECT c.stock_code, c.stock_abbr, i.net_profit, c.net_profit_excl_non_recurring, ABS(c.net_profit_excl_non_recurring - i.net_profit) AS diff_abs FROM core_performance_indicators_sheet c JOIN income_sheet i ON c.stock_code = i.stock_code AND c.report_year = i.report_year AND c.report_period = i.report_period WHERE c.report_year = 2025 AND c.report_period = 'Q3' ORDER BY diff_abs DESC LIMIT 5;
+
+User: 2025年第三季度投资性现金流量净额为正的公司中营收排名前三。
+SQL: SELECT c.stock_abbr, cf.investing_cf_net_amount, c.total_operating_revenue FROM core_performance_indicators_sheet c JOIN cash_flow_sheet cf ON c.stock_code = cf.stock_code AND c.report_year = cf.report_year AND c.report_period = cf.report_period WHERE c.report_year = 2025 AND c.report_period = 'Q3' AND cf.investing_cf_net_amount > 0 ORDER BY c.total_operating_revenue DESC LIMIT 3;
+
+User: 2025年第三季度总资产同比增长率超过营收同比增长率10个百分点以上的公司。
+SQL: SELECT b.stock_abbr, b.asset_total_assets_yoy_growth, c.operating_revenue_yoy_growth FROM balance_sheet b JOIN core_performance_indicators_sheet c ON b.stock_code = c.stock_code AND b.report_year = c.report_year AND b.report_period = c.report_period WHERE b.report_year = 2025 AND b.report_period = 'Q3' AND b.asset_total_assets_yoy_growth - c.operating_revenue_yoy_growth > 10;
+
+User: 2025年第三季度销售费用率低于行业均值的公司的平均净利润率。
+SQL: SELECT ROUND(AVG(c.net_profit_margin), 2) AS avg_net_profit_margin FROM core_performance_indicators_sheet c JOIN income_sheet i ON c.stock_code = i.stock_code AND c.report_year = i.report_year AND c.report_period = i.report_period WHERE c.report_year = 2025 AND c.report_period = 'Q3' AND i.total_operating_revenue > 0 AND i.operating_expense_selling_expenses * 1.0 / i.total_operating_revenue < (SELECT AVG(i2.operating_expense_selling_expenses * 1.0 / i2.total_operating_revenue) FROM income_sheet i2 WHERE i2.report_year = 2025 AND i2.report_period = 'Q3' AND i2.total_operating_revenue > 0);
+
+User: 华润三九与白云山相比，去年收益率最高的是哪家？
+SQL: SELECT stock_abbr, roe FROM core_performance_indicators_sheet WHERE stock_abbr IN ('华润三九', '白云山') AND report_year = 2024 AND report_period = 'FY' ORDER BY roe DESC LIMIT 1;
+
+User: 2022-2025年第三季度加权ROE扣非连续四期均超过10%的公司。
+SQL: SELECT stock_code, stock_abbr, GROUP_CONCAT(report_year || ':' || roe_weighted_excl_non_recurring) AS roe_by_year FROM core_performance_indicators_sheet WHERE report_period = 'Q3' AND report_year BETWEEN 2022 AND 2025 GROUP BY stock_code, stock_abbr HAVING COUNT(*) = 4 AND MIN(roe_weighted_excl_non_recurring) > 10;
+
+## 费用占比与结构分析
+User: 2025年第三季度销售费用占营业总收入比例超过30%的公司。
+SQL: SELECT i.stock_code, i.stock_abbr, i.operating_expense_selling_expenses, i.total_operating_revenue, ROUND(i.operating_expense_selling_expenses * 100.0 / i.total_operating_revenue, 2) AS sell_ratio_pct FROM income_sheet i WHERE i.report_year = 2025 AND i.report_period = 'Q3' AND i.total_operating_revenue > 0 AND i.operating_expense_selling_expenses * 100.0 / i.total_operating_revenue > 30;
+
+## 多条件组合筛选
+User: 2025年第三季度ROE超过15%且资产负债率低于50%的公司。
+SQL: SELECT c.stock_code, c.stock_abbr, c.roe, b.asset_liability_ratio FROM core_performance_indicators_sheet c JOIN balance_sheet b ON c.stock_code = b.stock_code AND c.report_year = b.report_year AND c.report_period = b.report_period WHERE c.report_year = 2025 AND c.report_period = 'Q3' AND c.roe > 15 AND b.asset_liability_ratio < 50;
 """.strip()
 
 # ──────────────────────────────────────────────
 # SQL 生成系统提示词
 # ──────────────────────────────────────────────
-SQL_SYSTEM_PROMPT = f"""你是一个SQL查询生成助手，专门为66家中药上市公司财报"智能问数"系统生成SQL语句。数据库为SQLite。
+SQL_SYSTEM_PROMPT = f"""你是一个SQL查询生成助手，专门为医药/CXO上市公司财报"智能问数"系统生成SQL语句。数据库为SQLite。
 
 ## 数据库表结构：
 {DB_SCHEMA}
 
 ## 核心规则：
 1. 只返回一条SQL SELECT语句，以分号结尾，不要包含任何解释或markdown代码块。
-2. 忽略用户消息中关于"可视化""绘图""画图""图表"等请求，只关注数据查询部分。
+2. 忽略用户消息中关于"可视化""绘图""画图""图表""折线图""柱状图""饼图""趋势图"等请求，只关注数据查询部分。即使用户只要求画图，也要生成对应的数据查询SQL。
 3. 仅允许访问上述四张表。
 3. 报告期映射："第一季度/一季度"→'Q1'，"上半年/半年度"→'HY'，"第三季度/前三季度"→'Q3'，"年度/全年/年报"→'FY'。report_year为四位数字。
-4. 当问题给出证券代码（6位数字）时优先用stock_code过滤，否则用stock_abbr模糊匹配（LIKE '%关键词%'）。
+4. 【重要】查询特定公司时，优先使用 stock_abbr 精确匹配（WHERE stock_abbr = '公司简称'），不要凭记忆编造 stock_code。如需用 stock_code，必须参考上方公司代码映射表。
 5. "亏钱/亏损"→net_profit < 0；"盈利"→net_profit > 0。
 6. "营业总收入超过N亿元"→total_operating_revenue > N*10000（万元）；"超过N万元"直接比较。
 7. 需要计算比率时用ROUND(..., 2)保留两位小数，注意分母不为0（加WHERE或NULLIF）。
@@ -115,6 +169,20 @@ SQL_SYSTEM_PROMPT = f"""你是一个SQL查询生成助手，专门为66家中药
 12. 如问题要求多个字段或多行，一次性查询齐全。
 13. "销售毛利率"如果核心指标表中有gross_profit_margin字段可直接用；否则用利润表计算：(total_operating_revenue - operating_expense_cost_of_sales) / total_operating_revenue * 100。
 14. stock_abbr匹配时注意简称可能不完全一致，如"三金"应匹配"三金药业"，"999"应匹配"华润三九"，用LIKE。
+15. 【重要】每个字段只存在于特定的表中，跨表查询必须用JOIN，绝对不能从错误的表中取字段：
+    - net_profit（净利润）只在 income_sheet 中，core_performance_indicators_sheet 中的净利润字段叫 net_profit_10k_yuan
+    - net_profit_excl_non_recurring（扣非净利润）只在 core_performance_indicators_sheet 中，income_sheet 没有此字段
+    - investing_cf_net_amount（投资性现金流量净额）只在 cash_flow_sheet 中
+    - asset_total_assets_yoy_growth（总资产同比%）只在 balance_sheet 中
+    - asset_liability_ratio（资产负债率）只在 balance_sheet 中
+    - operating_expense_selling_expenses（销售费用）、operating_expense_rnd_expenses（研发费用）等费用字段只在 income_sheet 中
+    - operating_revenue_yoy_growth（营收同比%）在 core_performance_indicators_sheet 和 income_sheet 中都有，但 balance_sheet 和 cash_flow_sheet 中没有
+    - 需要同时用到不同表的字段时，必须用 JOIN ON stock_code AND report_year AND report_period
+16. "连续N期均满足条件"用 GROUP BY + HAVING COUNT(*)=N AND MIN(字段)>阈值 或 MAX(字段)<阈值，不要用多表自连接。
+17. SQLite 不支持 PERCENTILE_CONT / PERCENTILE_DISC。计算中位数用：SELECT val FROM table WHERE ... ORDER BY val LIMIT 1 OFFSET (SELECT COUNT(*)/2 FROM table WHERE ...)。
+18. SQLite 不支持 POWER / POW / EXP / LOG 等数学函数。计算"复合增长率"时不要用 POWER，只需查出起始值和终止值即可，后续由系统计算。例如复合增长率只需：SELECT stock_code, stock_abbr, t1.rev AS rev_start, t2.rev AS rev_end FROM ... 。
+19. 子查询作为 FROM 子句时，外部只能引用子查询 SELECT 出的列。例如 (SELECT stock_code, rev FROM ...) t1，外部只能用 t1.stock_code 和 t1.rev，不能用 t1.report_year（除非子查询也 SELECT 了 report_year）。
+20. 【重要】2022年只有FY数据。查询"2022-2025年连续四个Q3"时，2022年Q3不存在，最多只有2023-2025三年Q3数据（COUNT=3而非4）。如果用户要求"连续四年Q3"，应改为 HAVING COUNT(*)>=3 或在结果中说明2022年Q3数据缺失。
 
 ## Few-shot 示例：
 {FEW_SHOT_EXAMPLES}
@@ -139,13 +207,29 @@ def _validate_readonly(sql: str) -> Optional[str]:
 
 
 def _clean_sql(sql_text: str) -> str:
-    if sql_text.startswith("```"):
-        lines = sql_text.split("\n")
-        if lines[0].strip().startswith("```"):
-            lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        sql_text = "\n".join(lines).strip()
+    """从 LLM 输出中提取 SQL SELECT 语句。
+
+    处理场景：
+    1. 纯 SQL 语句
+    2. ```sql ... ``` 代码块（可能出现在文本中间）
+    3. "SQL: SELECT ..." 前缀
+    4. 混杂解释文本中的 SELECT 语句
+    """
+    # 1) 提取 markdown 代码块中的 SQL
+    code_block = re.search(r"```(?:sql)?\s*\n?(.*?)```", sql_text, re.DOTALL | re.IGNORECASE)
+    if code_block:
+        sql_text = code_block.group(1).strip()
+
+    # 2) 去掉 "SQL:" 或 "sql:" 前缀
+    sql_text = re.sub(r"^(?:SQL|sql)\s*[:：]\s*", "", sql_text.strip())
+
+    # 3) 如果仍然不是以 SELECT 开头，尝试从文本中提取第一条 SELECT 语句
+    if not sql_text.upper().lstrip().startswith("SELECT"):
+        select_match = re.search(r"(SELECT\b.+?;)", sql_text, re.DOTALL | re.IGNORECASE)
+        if select_match:
+            sql_text = select_match.group(1)
+
+    # 4) 规范化空白
     return " ".join(sql_text.split())
 
 

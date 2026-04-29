@@ -1,0 +1,350 @@
+# 天花
+
+多国外部形势报告第58号，发布于2025年9月19日
+
+<table><tr><td colspan="4">关键指标</td></tr><tr><td>面积</td><td>数量
+报告确认
+案例</td><td>死亡人数
+在确诊中
+案例</td><td>数量
+报告国</td></tr><tr><td>全球（2025年1月1日至2025年8月31日）</td><td>* 38 671</td><td>163</td><td>92</td></tr><tr><td colspan="4">主要国家（2025年1月1日－9月14日）</td></tr><tr><td>民主共和国
+刚果</td><td>16 879</td><td>43</td><td>-</td></tr><tr><td>乌干达</td><td>6689</td><td>37</td><td>-</td></tr><tr><td>塞拉利昂</td><td>5291</td><td>56</td><td>-</td></tr><tr><td>布隆迪</td><td>1501</td><td>0</td><td>-</td></tr></table>
+
+* 最新全球监测数据。
+
+# 重点
+
+- 根据《国际卫生条例（2005）》的规定，在2025年9月4日召开的紧急委员会上，世界卫生组织总干事确定，monkey pox跨国爆发已不再构成国际关注的公共卫生突发事件（PHEIC）。  
+- 解除突发公共卫生事件（PHEIC）并不意味着威胁结束，世卫组织的应对仍在继续。猴痘持续传播，特别是在非洲，超过 $90\%$ 的病例报告于此，世界各地仍可能爆发。弱势群体，特别是儿童、孕妇和艾滋病患者，继续面临更严重的疾病和死亡风险。因此，必须保持监测、诊断、社区参与和应对能力。  
+- 2025年9月2日对猴痘造成的中总体公共卫生风险进行了快速风险评估。总体全球公共卫生风险被评估为中等。  
+- 所有猴痘病毒（MPXV）谱系仍在持续传播。当猴痘疫情无法被迅速控制且人传人传播未被阻断时，它们将带来持续社区传播的风险。  
+- 自此报告上次版本以来，有一个国家科威特首次报告了mpox；基因组测序分析确定了IIb分支MPXV。日本和塞内加尔首次报告了由Ib分支MPXV引起的mpox病例。  
+- 2025年8月，所有世界卫生组织地区的59个国家报告了共计3780例确诊病例，包括15例死亡（病死率[CFR]0.4%）。东地中海区和欧洲区报告的病例数较2025年7月有所增加，而非洲区、美洲区、东南亚区和西太平洋区的病例数有所减少。  
+- 过去六周内，非洲有十九个国家报告了猴痘的活跃传播。IIb谱系MPXV继续主要在西非报告，中非国家报告了la和Ib谱系MPXV，东非国家报告了Ib谱系MPXV。  
+- 澳大利亚和泰国自上次疫情报告以来，已报告了因clade Ib MPXV导致的猴痘新增病例。这些病例与旅行有关，而clade Ib MPXV的社区传播仅持续报告在中部和东部非洲的国家。
+
+此情况报告仅包括与mpox疫情暴发和应对活动最相关的新信息。更详细的流行病学分析和数据可在whompox监测报告.
+
+# 全球猴痘病毒（MPXV）分布
+
+Since the 最后情况报告，日本和塞内加尔首次报告了检测到分支Ib MPXV（图1）。只有科威特首次报告了猴痘，基因组测序分析显示为分支IIb MPXV。有关特定分支的传播动态的详细信息可参见情况报告#53.
+
+# MPXV clades detected globally
+
+Includes imported cases; known distribution from 1 January 2022 to 14 Sep 2025
+
+![](images/d59dd622d607d88fae06b8a5adf4bff7da326038f29ed4dee58f461355b6b0b8.jpg)  
+图1。世界卫生组织报告的MPXV分支地理分布，按国家划分，2022年1月1日至2025年9月14日
+
+World Health Organization
+
+![](images/8fb0023257b48040f47671ae48b201fb2611d795729390362f7a182e49bc516f.jpg)
+
+# MPXV clades detected
+
+Clade la   
+Clade Ib   
+Clade II (a and/or b)   
+Clades Ja and II (a and/or b).   
+Clades Ja, Ib and II (a and/or b).   
+Gladcs 1b and ll (a and b)   
+1   
+MPX with unknown clade   
+No MPXV clades reported
+
+![](images/7fcba7f7aec684cf46c8af106c4d6d9eb14ffd5f1ecb39cb6e2e2cf6e3c3b991.jpg)
+
+Not applicable.
+
+分支Ib MPXV的社区传播仍限于中非和东非国家（图2），而之前有零星进口的大多数国家没有报告分支Ib MPXV的活跃传播。
+
+# Global transmission status of clade Ib MPXV
+
+As of 16 September 2025
+
+![](images/9db0d94ece500b435e8d1c74fe75ac7dba8310a2b110f032a135a57f0bb49507.jpg)  
+图2.截至2025年9月16日，过去六周内各国lb组MPXV传播状况。
+
+World Health
+
+Organization
+
+![](images/dc49d6fe9f3a2cce6835055dbd5be30daf72d4716e3a069c7f3bbdf74c961f4a.jpg)
+
+The designations employed and the presentation of the material in this publication do not imply the expression of any opinion or whatever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delineation of its boundaries or boundaries.   
+Dollars and debted lines on major represent approxmats border lines for which they may not be full agreement   
+Data Source: V   
+Map Pseudo Nenn Health Emergencies Programn 9/WHO2025 All rights reserved.
+
+所显示的MPXV谱系的地理分布基于确认的mpox病例的临床样本序列。废水和环境样本的序列被排除在此分析之外。
+
+# 全球形势
+
+全球监测数据每月更新，最新可用数据截至2025年8月31日。2025年8月，全球59个国家报告总计3780例确诊病例（图3），包括15例死亡（死亡率[CFR]0.4%）
+
+2
+
+![](images/bce7baa7f89ef91998362505fc4a1989d5184a1f3d2d6697ee5341b7819e1351.jpg)  
+图3.各国向世卫组织报告的猴痘病例分布情况，2025年8月31日-  
+Confirmed cases of mpox, August 2025
+
+World Health Organization
+
+![](images/974a93758921ff589d2e4b54b33d2cbc3c83f0f32361cecc1ef3078da4c08ec0.jpg)
+
+Confirmed cases
+
+![](images/93f4d9762e7edb39f1d135ab7add5eb1d20e9e1990f22b06f800a0d0f9e01de8.jpg)
+
+0
+
+10-9
+
+100-999
+
+1,000+
+
+![](images/04f68414fe2abc96bb17b9f8c19766db35b30fdca6b623dfb613332b694e8091.jpg)
+
+Not applicable
+
+No data
+
+The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. The use of any other terms or phrases that express the views of the author(s) is an indication that the intended meaning is clear.   
+Data Source: World Health Organization   
+Map Production: WHO Health Emergencies Programme   
+© WHO 2025 All rights reserved.
+
+大多数月度病例仍在非洲区域报告（图4），该区域经2025年5月达到峰值后的确诊病例下降趋势仍在继续（更多详情在）非洲部分）。
+
+世界卫生组织美洲区，尽管在2025年8月报告的确诊病例数量比2025年7月减少了 $33\%$ ，但在2025年8月记录了确诊病例数量第二高的地区（253例），其中大部分病例由美利坚合众国报告（165例）。报告病例数量增加的地区包括欧洲区，该地区在2025年8月观察到的病例增加幅度最高（ $34\%$ ，203例与152例），与2025年7月相比；以及东地中海区，该地区在2025年8月报告了七例确诊病例，而2025年7月未报告病例。欧洲区报告病例数量最多的国家是西班牙（76例）、德国（22例）、法国（20例）和英国（18例）。
+
+西太平洋和东南亚地区报告了8月份病例的月度下降，与2025年7月相比，分别下降了 $25\%$ 和 $24\%$
+
+data as of 31 Aug 2025
+
+图4世界卫生组织每月报告的猴痘确诊病例流行曲线，按世界卫生组织区域划分，2024年9月1日至2025年8月31日．  
+Trends in global mpox cases by WHO region   
+![](images/c154f6ed8e16de2de79536f1894768a5a283852d69a124ffe0ca59e05d1f16c9.jpg)  
+Source: WHO
+
+# 非洲局势
+
+从2025年1月1日到2025年9月14日，非洲的25个国家报告了34273例确诊的猴痘病例，包括158例死亡（CFR $0.5\%$ ）。该大洲的19个国家在过去六周内报告了持续的活动性猴痘传播（图5）。
+
+图5过去六周非洲确诊病例地理分布，2025年8月3日至9月14日。  
+![](images/53dc4f1e162a15716ffa58c7323b76fab69a25f1ae4045c50c4901f46edf51eb.jpg)  
+The designations employed and the presentation of the material in this publication do not imply the expression of any opinion whatsoever on the part of WHO   
+concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its fronbers or boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not yet be full agreement.   
+#   
+Data Source: World Health Organization  
+Map Production: WHO Health Emergencies Programme
+
+© WHO 2025 All rights reserved.
+
+总体而言，确诊病例的流行趋势继续下降（图6）。然而，最近几周的数据应谨慎解读，因为报告延迟往往导致回顾性调整。总体而言，最近几周每周报告约500例新增确诊病例。最近几周的陆地区域趋势主要受刚果民主共和国、几内亚、利比里亚和加纳报告的病例影响。相比之下，塞拉利昂、布隆迪和乌干达等先前报告病例占较大比重的国家，最近已持续维持较低的传播水平。关于国家病例趋势的更多详细信息，请参见世卫组织全球猴痘趋势。
+
+![](images/be677f54f2d025db6920cc1d328da22849310ce633558b012f1e357af9be204a.jpg)  
+图6非洲过去12个月的确诊病例报告，按国家划分，2024年8月10日-2025年9月14日。
+
+# 关注选定国家
+
+几内亚西部的一些国家在2025年经历了mpox病例的增加，很大程度上与无关刚果民主共和国出现Ib谱系MPXV。
+
+这些国家中的大多数报告了Ib型猴痘病毒（MPXV）的传播，要么与之前在尼日利亚检测到的毒株有关，要么是独立的动物源性引入。目前，这些国家中的大多数正在经历持续的人传人传播。这些爆发通常始于城市地区，通过性接触迅速传播，然后扩展到其他地区并涉及所有年龄段。
+
+以下是一些近期在西非报告猴痘病例数量最多的国家。
+
+# 几内亚
+
+自2025年6月几内亚近期疫情开始以来，该国已报告共942例确认的猴痘病例，包括1例死亡（病例 fatality rate $0.1\%$ ）。基因组测序分析显示，主要流行株为IIb型猴痘病毒（MPXV），谱系为A.2.2，与西非其他国家爆发的猴痘疫情相似。
+
+该国家持续监测到确诊病例不断上升，凸显持续社区传播，尽管在最近几周似乎已经趋于平稳（图7）。最初，疫情集中在首都科纳克里及其周边地区，虽然科纳克里仍然是震中，但疫情迅速蔓延到该国的其他地区，有至少 $45\%$ （38个区中的17个）的区报告了病例。该国家大多数确诊病例报告为年轻人，20-29岁年龄段受影响最严重，其次是30-39岁年龄段，据报道男性受影响多于女性。
+
+几内亚最近制定了他们的mpox疫苗接种部署计划，并将20000剂MVA-BN疫苗分配给该国，用于给感染高风险人群接种，如mpox病例接触者、一线卫生和护理人员以及性工作者。
+
+图7.2024年9月7日至2025年9月14日几内亚报告的确诊mpox病例。  
+Trends in confirmed mpx cases   
+Bracket at end of curve indicates potential reporting delays in recent weeks of data. Data as of 14 Sep 2025   
+![](images/24f3795ae588aebf0f9a4ac337022f61da0edc669093ca523289a9bce0ace8f0.jpg)  
+Source: WHO
+
+![](images/7ea25aa2a266d6c621bcd0b2caa12fe854014c86249836f5cde2bc5e19812ed9.jpg)  
+Guinea
+
+# 利比里亚
+
+2025年至今，已报告721例确诊病例，无死亡病例。2024年末报告了较小规模的爆发，2025年初报告了散发病例，但2025年5月，报告的每周确诊病例数急剧增加，近几周每周报告约50例确诊病例（图8）。基因组测序分析显示，当前流行的主要毒株是IIb型MPXV，与其他西非国家的mpox爆发相似。
+
+在此波疫情初期，初始病例与邻国塞拉利昂的跨境传播有关，据报道这些初始病例在塞拉利昂短暂停留期间有过高风险暴露，之后返回利比里亚并出现症状。然而此后，大多数病例报告于无旅行史的人群，表明持续本地传播。大多数病例报告于蒙瑟拉多县，该县是首都蒙罗维亚所在地。尽管关于传播模式和最受影响群体的信息有限，但流行病动力学被认为与其他地区IIb型MPXV疫情相似，其中性行为被认为为主要传播驱动因素。
+
+图8 利比里亚确认猴痘病例报告，2024年9月7日-2025年9月14日。  
+![](images/3f1f13cc3d518f0a8307e6b2eaf17561a0848118023d4f9f9de456a2451562b8.jpg)  
+Source: WHO
+
+# 加纳
+
+在2022年全球疫情中该国病例报告激增后，加纳在2023年和2024年只报告了零星猴痘病例。然而自2025年4月起，报告了不断扩大的疫情，截至2025年目前，共报告514例病例，包括1例死亡（死亡率（ $0.2\%$ ），图9）。在最recent的几周里，每周报告约50例新确诊病例，基因组测序分析显示，主要流行株为IIb型MPXV，与其他西非国家猴痘疫情相似。
+
+已在该国至少 $94\%$ （16个地区中的15个）地区报告确诊病例，西部和阿克拉大区受影响最严重。该国大多数确诊病例报告为年轻人，其中20-29岁年龄段受影响最严重，其次是30-39岁年龄段；据报道男性受影响多于女性。
+
+Bracket at end of curve indicates potential reporting delays in recent weeks of data. Data as of 14 Sep 2025
+
+![](images/affff782909177e1d79e6a7b59c3db67f8d5dfebb87c67e55da4df8de1e06696.jpg)  
+图9 加纳报告猴痘确诊病例，2024年9月12日-2025年9月7日。  
+Trends in confirmed mbox cases
+
+![](images/363b968e505199fe232bafde4c883e22fcab089f56e51c1fe786230872881c22.jpg)  
+Source: WHO
+
+# 首次报告猴痘的国家
+
+一个国家，科威特，自上次情况报告以来首次报告了mpox。2025年8月10日，该国通知世界卫生组织其发现了首例mpox病例（目前已确认三例）。报告了与国际旅行到中国的联系，基因组测序分析已鉴定出IIb分支MPXV。卫生当局已开展病例调查，实施了病例隔离、密切接触者追踪、向密切接触者提供适当的公共卫生建议等响应措施。
+
+# 报告新进口的lb亚分支MPXV的国家
+
+自上次情况报告以来，已有三个国家报告了 Importations of clade Ib MPXV。
+
+- 澳大利亚：2025年9月9日，澳大利亚向世卫组织通报了一例由lb分支MPXV引起的mpox病例，患者为近期有中国和菲律宾旅行史的一名成年男性旅行者。这是该国自2024年1月以来报告的第三例由lb分支MPXV引起的mpox病例。患者自诊断以来已居家隔离，正在康复。该国卫生部门已开展病例调查、接触者追踪、接触者暴露后疫苗接种等应对措施。 $\cdot$ 日本：2025年9月16日，日本卫生部门宣布发现首例由lb分支MPXV引起的mpox病例，患者为近期有非洲旅行史的一名成年女性旅行者。该国卫生部门已开展病例调查，并实施病例隔离等应对措施。 $\cdot$ 泰国：2025年9月9日，泰国向世卫组织通报了一例由lb分支MPXV引起的mpox病例，患者为近期有阿曼旅行史的一名成年男性旅行者。这是该国自2024年1月以来报告的第六例由lb分支MPXV引起的mpox病例。患者临床状况稳定，正在接受治疗。该国卫生部门已开展病例调查、接触者追踪等应对措施。
+
+# 猴痘国际关注公共卫生紧急状态终止
+
+2025年9月4日，根据《国际卫生条例（2005）》（IHR）的相关规定，世界卫生组织总干事召集了关于猴痘疫情激增的紧急委员会第五次会议，就事件是否继续构成国际关注的突发公共卫生事件（PHEIC）提供咨询建议。
+
+会议纪要的关键方面包括：
+
+- 由世卫组织秘书处提供的关于全球猴痘流行病学形势的最新情况以及自事件于2024年8月14日被确定为突发公共卫生事件以来风险评估的演变情况。·邀请的成员国就其猴痘流行病学形势及相关的应对工作、需求和挑战进行的发言。
+
+经审议，委员会表示，正在进行的猴痘疫情不再符合突发公共卫生事件（PHEIC）的标准，并就此向世界卫生组织总干事提出了建议。总干事同意委员会的建议，并宣布其决定于2025年9月5日终止PHEIC。这一决定是基于刚果民主共和国和其他经历大规模猴痘病例激增的国家（包括布隆迪、塞拉利昂和乌干达）病例和死亡人数的持续下降。各国也加强了应对能力，对传播动力学和风险因素的认识也有所提高。
+
+终止肺结核疫情并不意味着猴痘不再构成公共卫生风险。猴痘病毒仍在传播，特别是在非洲，超过 $90\%$ 的病例报告在那里，且爆发仍有可能发生。易感人群，特别是儿童和艾滋病患者，继续面临更高的风险。因此，必须保持监测、诊断、社区参与和应对能力。
+
+根据世卫组织风险评估在委员会第五次会议上提出的总体全球风险被评估为中等而每个具体分支的风险评估如下：
+
+- 类群 Ib MPXV - 中等  
+- la MPXV - 低   
+- 类群II MPXV（历史上的地方流行区）-中度  
+·类IIb MPXV（全球爆发）-低
+
+世界卫生组织、非洲疾控中心和合作伙伴将继续协调努力，包括测试、治疗和疫苗接种。已承诺近600万支疫苗。截至目前，有1200万支MVA-BN疫苗通过双边协议已运抵刚果民主共和国，另有1100万支LC16m8已运抵12个国家。在11个国家已接种110万支疫苗。站立推荐根据《国际卫生条例》的规定，由世卫组织总干事发布的，以及疫苗和诊断产品的应急使用清单，有效期已延长至2026年8月。
+
+尽管进展明显，但仍面临挑战：多种mpox谱系持续传播，监测存在空白，资金有限，且社区参与需要持续投入。世卫组织敦促成员国及合作伙伴保持政治意愿，继续动员资源，并将mpox应对纳入常规卫生系统，以防范未来疫情。
+
+世界卫生组织总干事在媒体简报上的开场发言——2025年9月5日
+
+根据健康突发事件预防、准备、响应和复原（HEPR）框架，
+
+增强猴痘预防和控制战略框架（2024-2027）并且世界卫生组织全球战略准备和反应计划(SPRP), 世界卫生组织正在通过
+
+重点关注加强五个核心组成部分——5C：紧急C协调C协作监控C社区保护，安全且可扩展C是，以及获取和交付C对抗措施。
+
+本节提供关于世卫组织全球mpox反应的最新情况
+
+截至2025年9月19日。
+
+# 1.紧急协调
+
+- 无论是否终止突发公共卫生事件（pHEIC），世卫组织和非洲疾控中心在非洲的mpox应对协调工作继续通过大陆事件管理支持团队进行。  
+- 世界卫生组织正积极与合作伙伴协调应对工作，包括通过全球疫情警报和反应网络（GOARN）。截至2025年9月18日，通过GOARN已向刚果民主共和国和肯尼亚派遣了16名专家，以支持在数据管理和分析、流行病学和监测、实验室、病例管理、感染预防和控制、风险沟通和社区参与等领域的应对工作。有关针对mpox应对的全球合作伙伴部署的更多信息，可以找到这里。
+
+# 2.协作监控
+
+- 更新到 非洲猴痘流行病学数据 继续每周，更新到 全球流行病学数据
+
+每月继续，两者都可以通过访问在线世卫组织仪表板·世界卫生组织继续通过全球mpox诊断联盟与合作伙伴合作，协调为受影响国家提供实验室诊断支持。
+
+# 3. 社区保护
+
+- 协调工作正在多个技术领域进行中，包括风险沟通和社区参与、信息疫情管理以及基于社区的感染预防与控制。社区服务提供、公共卫生和社会措施、边境卫生和大规模集会、动物-人类界面调查以及社会和经济保护的跨部门行动是其他关键工作领域。  
+- 刚果民主共和国的Tshopo省正根据社区保护快速评估通用方案进行运营研究。此项工作旨在收集关于社区认知、需求、关注点、资产及解决方案的数据和分析，为响应行动提供信息。利比里亚正在推进相关工作以在该地进行实施。
+
+# 4. 安全且可扩展的护理
+
+- 世界卫生组织继续推广使用数据收集工具，以促进mpox临床特征的描述 WHO全球临床平台该平台包括在研究电子数据捕获（REDCap）和开放数据工具包（ODK）数据平台上开发的公开可用工具。这些工具正在用于了解非洲疫情的临床特征，特别是在刚果民主共和国、塞拉利昂、乌干达和赞比亚。  
+- 世界卫生组织为塞拉利昂的mpox疫情应对措施提供了内部行动评审支持，该评审借鉴了正在发生的疫情经验教训，反思了近期开发的关于重症的临床实践指南，并审查了MPXV-HIV合并感染的影响。
+
+# 5. 对策的获取与交付
+
+# 访问与分配机制 (AAM)
+
+# 疫苗
+
+- 世界卫生组织继续为各国提供针对疫苗接种策略的指导和技术支持，重点关注病例数最高的地理区域，并在这些区域中，根据地方流行病学高风险接触人群。此外，旨在优化因资金限制而有限的疫苗供应，世界卫生组织正支持各国规划使用MVA-BN疫苗的剂量节省方案（单剂量或皮内分数剂量）。  
+- 所有在首批四次分配中分配的MVA-BN疫苗剂量均已送达，而分配给第五次和第六次的剂量（超过276000）正在运往各国。  
+- 在11个国家（安哥拉、科特迪瓦、中非共和国、刚果民主共和国、肯尼亚、利比里亚、尼日利亚、卢旺达、塞拉利昂、南非和乌干达）已经开始使用MVA-BN疫苗进行mpox疫苗接种活动（大多数国家正在实施单剂量策略，针对暴露风险较高的群体）。在这11个国家已接种超过110万剂MVA-BN疫苗。在刚果民主共和国已接种超过65万剂MVA-BN疫苗和4万剂LC16疫苗，这占非洲国家接种疫苗人数的 $62\%$ 以上。近期报告了mpox的其他国家正在制定其国家mpox疫苗接种计划，并鼓励考虑采用MVA-BN疫苗的分数剂量。已捐赠或采购了额外剂量；然而，仍需资金以确保从制造商处获得额外的疫苗供应。
+
+- AAM合作伙伴继续共同工作，以支持获得mpox疫苗并确保国家mpox疫苗接种计划的实施资金。
+
+# 诊断
+
+- 额外的两只猴痘病毒核酸检测试剂已获得紧急使用认证(EUL): 猴痘病毒Lyo-PCR试剂盒 由上海ZJ生物科技有限公司制造；和，
+
+VIASURE猴痘病毒实时荧光PCR检测试剂盒 由CerTest Biotec, S.L.制造 截至2025年9月18日，已有71家诊断制造商联系世界卫生组织（WHO）获取MPXV核酸检测试剂（NAT）紧急使用清单（EUL）的相关信息，WHO已与43家制造商进行过预提交会议。在14家制造商提交的16份NAT检测方法档案中，
+
+为EUL列出了八种产品 ，七种产品正在接受评估 , 和 六个产品的公共报告 已提供。
+
+# mpox爆发工具包
+
+- 世界卫生组织mpox疫情工具箱，2025年5月更新。https://www.who.int/emergencies/outbreak-toolkit/disease-outbreak-toolboxes/mpox-outbreak-toolbox
+
+# 战略规划与全球支持
+
+- who mpox 全球战略准备和应对计划。更新于 2025 年 4 月 17 日。  
+https://www.who.int/publications/m/item/mpox-global-strategic-preparedness-and-response-plan-april-2025  
+- 基因工程大陆应对计划2.0. 更新日期：2025年4月15日。 https://africacdc.org/download/mpox- continental-response-plan-2-0/  
+- 强化猴痘预防控制战略框架（2024-2027年）。2024年5月。可在：https://www.who.int/publications/i/item/9789240092907
+
+# 国际卫生条例紧急委员会、审查委员会和总干事的建议
+
+- 《2005年国际卫生条例》应急委员会关于猴痘2024年反弹的第四次会议——临时建议 https://www.who.int/news/item/09-06-2025-fourth-meeting-of-the-international-health-regulations-(2005)-emergency-committee-regarding-the-upsurge-of-mpox-2024-temporary-recommendations
+
+# 监视
+
+- 对mpox进行监测、病例调查和接触者追踪：临时指南，2024年12月6日。https://www.who.int/publications/i/item/B09169
+
+# 实验室和诊断
+
+- mpox诊断检测和检测策略：临时指南，2024年11月12日 https://www.who.int/publications/i/item/B09166  
+- 猴痘病毒核酸检测 应急使用注册, 2025年9月18日
+
+# 临床管理与感染预防控制
+
+- 临床管理和猴痘感染预防控制：现行指南，2025年5月 https://www.who.int/publications/i/item/B09434  
+- 在猴痘背景下加强对社区环境和医疗机构的手卫生实践，2025年5月1日。 https://www.who.int/publications/i/item/B09396  
+- 在mpox疾病爆发期间，医疗机构中感染预防和控制以及饮用水卫生和手部卫生的快速评估工具使用指南，2025年2月19日。https://www.who.int/publications/i/item/9789240105324  
+- 在mpox疫情响应中针对感染预防控制以及水、卫生和健康的战略措施 https://iris.who.int/bitstream/handle/10665/381583/9789240107762-eng.pdf?sequence=1 . 预防控制猴痘感染的海报关于PPE 穿戴PPE的步骤，移除PPE的步骤
+
+# 疫苗接种
+
+- 世界卫生组织。关于在疫苗供应受限的疫情应对中采用肌肉内注射mpox MVA-BN疫苗进行分剂量使用的常见问题解答(FAQ)。2025年6月19日。https://www.who.int/publications/m/item/frequently-asked-questions-(faq)-on-use-of-fractional-dosing- with-intradermal-administration of mpox mva-bn vaccine in the context of vaccine supply-constrained outbreak response
+
+- 世界卫生组织天花和mpox疫苗。https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/smallpox-and-mpox   
+- 如何在爆发环境中实现和维持猴痘疫苗接种的高覆盖率。世界卫生组织、联合国儿童基金会、国际红十字会；2025年4月10日。https://www.who.int/publications/m/item/how-to-achieve-and-sustain-high-uptake-of-mpox-vaccination-in-outbreak-settings  
+- 天花疫苗接种工具包（包括支持国家免疫技术顾问组的材料、MVA-BN和LC16m8的培训模块以及其他相关资源）https://www.technet-21.org/en/topics/programme-management/mpox-vaccination-toolkit
+
+# 社区保护公共卫生建议和风险沟通及社区参与（RCCE）资源
+
+- 2025年3月关于mpox公共卫生响应的社会和行为研究临时指南
+
+https://iris.who.int/handle/10665/380881
+
+# 培训和教育
+
+- 健康主题 -mpox: https://www.who.int/health-topics/monkeypox   
+- 天花信息表，2024年8月26日。https://www.who.int/news-room/fact-sheets/detail/mpox  
+- 天花问答，2024年10月16日。https://www.who.int/news-room/questions-and-answers/item/mpox  
+- openwho. 关于mpox（2025）的十件事 你应该知道. 在线快速视频
+
+https://openwho.org/infectiousdiseases/503162/Mpox
+
+- openwho。在线培训模块。monkeypox：介绍（2020），英文和法文：  
+https://openwho.org/infectiousdiseases/503162/Mpox   
+- OpenWHO。扩展培训。猴痘流行病学、准备和反应（2021年），英法语：https://openwho.org/infectiousdiseases/503162/Mpox  
+openwho。mpox和2022-2023年全球疫情（2023）  
+- 英语：
+
+翻译文本：https://openwho.org/infectiousdiseases/503162/Mpox
+
+# 这里可以找到更详尽的mpox资源列表。
+
+免责声明在使用所有提供的数据时必须谨慎解读，并且预期世界卫生组织、国家公共卫生当局和其他使用不同纳入标准和不同数据截止时间的来源发布的信息产品之间会出现差异。尽管采取了措施确保准确性和可靠性，但所有数据都持续受到核查和更改。所有计数都可能因国家、州和地区在病例发现、定义、实验室检测和报告策略方面的差异而有所不同。

@@ -24,6 +24,7 @@ import os
 import json
 import time
 import re
+import hashlib
 from pathlib import Path
 from typing import Optional, Dict, Any, List, Tuple
 from datetime import datetime
@@ -56,7 +57,7 @@ from urllib3.util.retry import Retry
 MINERU_BASE_URL = "https://mineru.net"
 DEFAULT_TIMEOUT = 0  # 超时时间（秒），0表示不限制
 POLL_INTERVAL = 10      # 轮询间隔（秒）
-BATCH_SIZE = 200        # 每批最大文件数
+BATCH_SIZE = 10         # 减小批次避免429限流
 
 
 # =============================================================================
@@ -140,10 +141,10 @@ class MinerUV4Client:
         """
         url = f"{self.base_url}/api/v4/file-urls/batch"
 
-        files_data = [
-            {"name": fp.name, "data_id": fp.stem}
-            for fp in file_paths
-        ]
+        files_data = []
+        for fp in file_paths:
+            data_id = _stem_to_data_id(fp.stem)
+            files_data.append({"name": fp.name, "data_id": data_id})
 
         data = {
             "files": files_data,
@@ -238,23 +239,19 @@ class MinerUV4Client:
 # =============================================================================
 # PDF解析函数
 # =============================================================================
+def _stem_to_data_id(stem: str) -> str:
+    return hashlib.md5(stem.encode('utf-8')).hexdigest()[:16]
+
+
 def parse_files_batch(pdf_paths: List[Path], token: str, model_version: str = "vlm", timeout: int = 0) -> Dict[str, Dict[str, Any]]:
-    """批量解析PDF文件
-    
-    Args:
-        pdf_paths: PDF文件路径列表
-        token: API Token
-        model_version: 模型版本
-        timeout: 超时时间（秒），0表示不限制
-        
-    Returns:
-        {pdf_stem: result} 字典
-    """
+    """批量解析PDF文件，返回 {pdf_stem: result} 字典。"""
     import zipfile
     import io
 
     if not pdf_paths:
         return {}
+
+    hash_to_stem = {_stem_to_data_id(fp.stem): fp.stem for fp in pdf_paths}
 
     client = MinerUV4Client(token=token, model_version=model_version)
 
@@ -269,7 +266,6 @@ def parse_files_batch(pdf_paths: List[Path], token: str, model_version: str = "v
 
         batch_result = client._poll_results(batch_id, len(pdf_paths), timeout=timeout)
 
-        # 处理超时情况
         if batch_result.get("status") == "timeout":
             batch_id = batch_result.get("batch_id")
             print(f"\n    [API] 轮询超时，任务可能仍在处理中")
@@ -277,52 +273,48 @@ def parse_files_batch(pdf_paths: List[Path], token: str, model_version: str = "v
                 results[p.stem] = {
                     "status": "timeout",
                     "content": None,
-                    "error": f"轮询超时({batch_result.get('elapsed', 0):.0f}秒)，任务可能仍在后台处理",
+                    "error": f"轮询超时({batch_result.get('elapsed', 0):.0f}秒)",
                     "batch_id": batch_id
                 }
             return results
 
-        # 解析返回结果
         extract_results = batch_result.get("extract_result", [])
-        
+
         for item in extract_results:
             data_id = item.get("data_id", "")
+            stem = hash_to_stem.get(data_id, data_id)
             file_state = item.get("state", "")
             err_msg = item.get("err_msg", "")
             zip_url = item.get("full_zip_url")
 
             if file_state == "done":
                 content = None
-                # 下载ZIP并提取markdown内容
                 if zip_url:
                     try:
                         headers = {"Authorization": f"Bearer {token}"}
                         zip_response = requests.get(zip_url, headers=headers, timeout=120)
                         zip_response.raise_for_status()
-                        
+
                         with zipfile.ZipFile(io.BytesIO(zip_response.content)) as zf:
-                            # 查找所有.md文件，优先选择主内容文件
                             md_files = [f for f in zf.namelist() if f.endswith('.md')]
                             if md_files:
-                                # 过滤掉图片说明文件，只取主要markdown内容
                                 for md_file in md_files:
                                     if 'image' not in md_file.lower() and 'img' not in md_file.lower():
                                         content = zf.read(md_file).decode('utf-8')
                                         break
-                                # 如果没找到合适的，使用第一个
                                 if not content and md_files:
                                     content = zf.read(md_files[0]).decode('utf-8')
                     except Exception as e:
                         err_msg = f"下载失败: {e}"
 
-                results[data_id] = {
+                results[stem] = {
                     "status": "success" if content else "failed",
                     "content": content,
                     "error": None if content else err_msg,
                     "batch_id": batch_result.get("batch_id")
                 }
             else:
-                results[data_id] = {
+                results[stem] = {
                     "status": "failed",
                     "content": None,
                     "error": err_msg or "解析失败",
@@ -440,6 +432,10 @@ def batch_ensure_md_for_pdf(
                 error = results.get(stem, {}).get("error", "未知错误")
                 print(f"    [失败] {pdf.name} - {error}")
                 cached_results[stem] = (output_subdir, None)
+
+        if i + batch_size < len(to_process):
+            print(f"    批次间等待30秒避免限流...")
+            time.sleep(30)
 
     return cached_results
 

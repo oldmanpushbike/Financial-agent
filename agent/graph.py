@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""LangGraph StateGraph — Planner → 条件路由 → Tool 节点 → Synthesis → END。
+"""LangGraph StateGraph — 统一任务列表架构。
 
-支持单一意图（原有路径）和多意图拆分（executor 路径）。
+流程：Planner → Executor → Synthesis → Formatter → END
 """
 from __future__ import annotations
 
@@ -14,9 +14,13 @@ from langchain_core.messages import AIMessage, SystemMessage
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 
-from agent.conditions import route_after_planner, route_after_sql
-from agent.llm import get_llm
 from agent.planner import planner_node
+from agent.state import AgentState
+from tool.sql_query import (
+    SQL_SYSTEM_PROMPT,
+    sql_query_tool,
+    _clean_sql,
+)
 
 
 # ═══════════════════════════════════════════════════════
@@ -24,7 +28,6 @@ from agent.planner import planner_node
 # ═══════════════════════════════════════════════════════
 
 def _html_table_to_text(html: str) -> str:
-    """将 <table> HTML 转为可读纯文本，每行用 | 分隔单元格。"""
     if "<table>" not in html:
         return html
 
@@ -60,14 +63,7 @@ def _html_table_to_text(html: str) -> str:
     if not p.rows:
         return html
     return "\n".join(" | ".join(row) for row in p.rows)
-from agent.state import AgentState
-from tool.sql_query import (
-    DB_SCHEMA,
-    FEW_SHOT_EXAMPLES,
-    SQL_SYSTEM_PROMPT,
-    sql_query_tool,
-    _clean_sql,
-)
+
 
 # ═══════════════════════════════════════════════════════
 # LLM 懒加载
@@ -77,6 +73,7 @@ _sql_llm = None
 _rag_llm = None
 _viz_llm = None
 _synthesis_llm = None
+_trace_llm = None
 
 
 def _get_sql_llm():
@@ -87,11 +84,9 @@ def _get_sql_llm():
         _sql_llm = ChatOpenAI(
             model="glm-4-flash", api_key=ZHIPU_API_KEY,
             base_url="https://open.bigmodel.cn/api/paas/v4/",
-            temperature=0.3, streaming=False,
+            temperature=0.3, streaming=False, max_retries=3,
         )
     return _sql_llm
-
-_trace_llm = None
 
 
 def _get_trace_llm():
@@ -102,7 +97,7 @@ def _get_trace_llm():
         _trace_llm = ChatOpenAI(
             model="glm-4-flash", api_key=ZHIPU_API_KEY,
             base_url="https://open.bigmodel.cn/api/paas/v4/",
-            temperature=0, streaming=False,
+            temperature=0, streaming=False, max_retries=3,
         )
     return _trace_llm
 
@@ -115,7 +110,7 @@ def _get_rag_llm():
         _rag_llm = ChatOpenAI(
             model="glm-4-flash", api_key=ZHIPU_API_KEY,
             base_url="https://open.bigmodel.cn/api/paas/v4/",
-            temperature=0.1, streaming=False,
+            temperature=0.1, streaming=False, max_retries=3,
         )
     return _rag_llm
 
@@ -128,7 +123,7 @@ def _get_viz_llm():
         _viz_llm = ChatOpenAI(
             model="glm-4-flash", api_key=ZHIPU_API_KEY,
             base_url="https://open.bigmodel.cn/api/paas/v4/",
-            temperature=0.1, streaming=False,
+            temperature=0.1, streaming=False, max_retries=3,
         )
     return _viz_llm
 
@@ -141,39 +136,258 @@ def _get_synthesis_llm():
         _synthesis_llm = ChatOpenAI(
             model="glm-4-flash", api_key=ZHIPU_API_KEY,
             base_url="https://open.bigmodel.cn/api/paas/v4/",
-            temperature=0.2, streaming=True,
+            temperature=0.2, streaming=True, max_retries=3,
         )
     return _synthesis_llm
 
 
 # ═══════════════════════════════════════════════════════
-# 可复用工具函数（供节点和 executor 共用）
+# 列名→表名映射（用于 SQL 重试时精准提示）
 # ═══════════════════════════════════════════════════════
 
-def _execute_sql(query: str) -> str:
-    """生成 SQL + 执行，返回结果字符串。"""
-    # 去掉可视化相关词汇，避免干扰 SQL 生成模型
-    clean_query = re.sub(r"[，,]?\s*(做|进行|生成)?\s*(可视化|绘图|画图|图表|画个图|做个图)[。？]?", "", query).strip()
-    if not clean_query:
-        clean_query = query
+_COLUMN_TABLE_MAP: dict[str, list[str]] = {}
+
+
+def _build_column_map():
+    if _COLUMN_TABLE_MAP:
+        return
+    from tool.sql_query import DB_SCHEMA
+    current_table = ""
+    for line in DB_SCHEMA.splitlines():
+        line = line.strip()
+        if line.startswith("### "):
+            m = re.match(r"###\s+\d+\.\s+(\w+)", line)
+            if m:
+                current_table = m.group(1)
+        elif current_table and "（" in line:
+            for part in line.split(","):
+                col = part.strip().split("（")[0].strip()
+                if col and not col.startswith("#"):
+                    _COLUMN_TABLE_MAP.setdefault(col, [])
+                    if current_table not in _COLUMN_TABLE_MAP[col]:
+                        _COLUMN_TABLE_MAP[col].append(current_table)
+
+
+def _get_column_hint(error_msg: str) -> str:
+    _build_column_map()
+    m = re.search(r"no such column:\s*(?:\w+\.)?(\w+)", error_msg)
+    if not m:
+        return ""
+    col = m.group(1)
+    tables = _COLUMN_TABLE_MAP.get(col, [])
+    if tables:
+        return f"字段 {col} 不在你查询的表中，它只存在于 {'/'.join(tables)} 表，请用 JOIN 关联后再引用该字段。"
+    return ""
+
+
+# ═══════════════════════════════════════════════════════
+# 可复用工具函数
+# ═══════════════════════════════════════════════════════
+
+def _clean_query_for_sql(query: str) -> str:
+    clean = re.sub(r"[，,]?\s*(做|进行|生成|给出|画出|绘制)?\s*(可视化|绘图|画图|图表|画个图|做个图|折线图|柱状图|饼图|趋势图|雷达图|直方图|双条形图|散点图|箱线图|表格图)[。？]?", "", query).strip()
+    return clean or query
+
+
+def _try_direct_sql(query: str) -> str:
+    """Phase 1: 直接生成 SQL 并执行，含重试。返回结果或错误。"""
+    clean_query = _clean_query_for_sql(query)
     llm = _get_sql_llm()
+    messages = [
+        SystemMessage(content=SQL_SYSTEM_PROMPT),
+        {"role": "user", "content": clean_query},
+    ]
+
+    last_sql = ""
+    last_result = ""
+    max_attempts = 3
+    for attempt in range(max_attempts):
+        try:
+            resp = llm.invoke(messages)
+            sql = _clean_sql(resp.content.strip())
+        except Exception as e:
+            return f"SQL 生成失败: {e}"
+
+        if not sql.upper().startswith("SELECT"):
+            if attempt < max_attempts - 1:
+                messages.append({"role": "assistant", "content": resp.content})
+                messages.append({"role": "user", "content": "请只返回一条SQL SELECT语句，不要包含任何解释。"})
+                continue
+            return f"无法生成有效SQL。模型返回: {sql[:200]}"
+
+        last_sql = sql
+        result = sql_query_tool.invoke({"sql": sql})
+        last_result = result
+
+        if "SQL 执行错误" in result and attempt < max_attempts - 1:
+            hint = _get_column_hint(result)
+            retry_msg = f"上面的SQL执行报错：{result}\n"
+            if hint:
+                retry_msg += f"【提示】{hint}\n"
+            retry_msg += "请修正SQL语句，只返回修正后的SQL。"
+            messages.append({"role": "assistant", "content": sql})
+            messages.append({"role": "user", "content": retry_msg})
+            continue
+
+        if result == "查询无结果。" and attempt < max_attempts - 1:
+            retry_msg = (
+                f"上面的SQL查询无结果。可能原因：\n"
+                f"1. stock_code 错误（请改用 stock_abbr 匹配）\n"
+                f"2. 2022年只有FY数据，没有Q1/HY/Q3\n"
+                f"3. 条件过于严格（如HAVING COUNT(*)=4但实际最多3年）\n"
+                f"请检查并修正SQL，只返回修正后的SQL。"
+            )
+            messages.append({"role": "assistant", "content": sql})
+            messages.append({"role": "user", "content": retry_msg})
+            continue
+
+        return f"SQL: {sql}\n\n结果:\n{result}"
+
+    return f"SQL: {last_sql}\n\n结果:\n{last_result}"
+
+
+# ── SQL 分解执行（Phase 2 fallback） ──
+
+_DECOMPOSE_PROMPT = """你是 SQL 分解助手。用户的查询需要跨表数据，直接生成的 SQL 执行失败了。
+请将问题拆成多条单表查询，每条只查一张表的字段。
+
+## 数据库表结构：
+{schema}
+
+## 核心原则：
+每个字段只存在于它所属的表中！拆分时必须确保每条 SQL 只使用该表拥有的字段。
+
+## 示例：
+问题：经营性现金流量净额与净利润的比值
+→ 拆分为：
+1. 从 cash_flow_sheet 查 operating_cf_net_amount（经营性现金流量净额只在现金流量表）
+2. 从 income_sheet 查 net_profit（净利润只在利润表）
+
+问题：销售费用率低于均值的公司的ROE
+→ 拆分为：
+1. 从 income_sheet 查 operating_expense_selling_expenses 和 total_operating_revenue
+2. 从 core_performance_indicators_sheet 查 roe
+
+## 规则：
+1. 每条 SQL 只查一张表，绝对不能用 JOIN，也不能引用其他表的字段
+2. 每条 SQL 必须 SELECT stock_code, stock_abbr 以便后续关联
+3. 每条 SQL 必须包含 report_year 和 report_period 过滤条件
+4. 只返回 JSON 数组，不要解释：
+[{{"sql": "SELECT ...", "purpose": "查询说明"}}]
+
+## 失败的原始 SQL 和错误信息：
+{error_context}
+"""
+
+_SYNTHESIZE_PROMPT = """你是数据分析助手。用户问题被拆成了多条单表查询，以下是各查询结果。
+请根据这些数据回答用户问题，进行必要的计算（比率、排名、对比、筛选等）。
+
+## 规则：
+1. 用 stock_code 关联不同表的数据（同一公司在不同表中 stock_code 相同）
+2. 金额单位万元，百分比单位%，每股单位元/股
+3. 只用提供的数据，不要编造
+4. 必须输出一个合并后的结果表格（用 | 分隔列），然后再给出文字总结
+5. 表格第一行是表头，后续每行一条数据
+6. 如果需要计算复合增长率(CAGR)：CAGR = (终值/初值)^(1/年数) - 1，用百分比表示
+
+## 查询结果：
+{results}
+"""
+
+
+def _decompose_and_execute(query: str, error_context: str) -> str:
+    """Phase 2: 将跨表查询拆成多条单表 SQL，逐条执行后 LLM 综合。"""
+    from tool.sql_query import DB_SCHEMA
+
+    llm = _get_sql_llm()
+
+    prompt = _DECOMPOSE_PROMPT.format(schema=DB_SCHEMA, error_context=error_context)
     try:
         resp = llm.invoke([
-            SystemMessage(content=SQL_SYSTEM_PROMPT),
-            {"role": "user", "content": clean_query},
+            SystemMessage(content=prompt),
+            {"role": "user", "content": _clean_query_for_sql(query)},
         ])
-        sql = _clean_sql(resp.content.strip())
     except Exception as e:
-        return f"SQL 生成失败: {e}"
+        return f"SQL 分解失败: {e}"
 
-    if not sql.upper().startswith("SELECT"):
-        return f"无法生成有效SQL。模型返回: {sql[:200]}"
+    m = re.search(r"\[[\s\S]+\]", resp.content)
+    if not m:
+        return error_context
 
-    result = sql_query_tool.invoke({"sql": sql})
-    return f"SQL: {sql}\n\n结果:\n{result}"
+    try:
+        sub_queries = json.loads(m.group())
+    except (json.JSONDecodeError, TypeError):
+        return error_context
+
+    if not sub_queries or not isinstance(sub_queries, list):
+        return error_context
+
+    sql_parts = []
+    result_parts = []
+    all_ok = True
+    for i, sq in enumerate(sub_queries, 1):
+        sql = _clean_sql(str(sq.get("sql", "")))
+        purpose = sq.get("purpose", "")
+        if not sql.upper().startswith("SELECT"):
+            continue
+        res = sql_query_tool.invoke({"sql": sql})
+        if "SQL 执行错误" in res:
+            hint = _get_column_hint(res)
+            if hint:
+                retry_msg = f"SQL执行报错：{res}\n【提示】{hint}\n请修正SQL，只返回修正后的SQL。"
+                try:
+                    fix_resp = llm.invoke([
+                        SystemMessage(content=SQL_SYSTEM_PROMPT),
+                        {"role": "user", "content": _clean_query_for_sql(query)},
+                        {"role": "assistant", "content": sql},
+                        {"role": "user", "content": retry_msg},
+                    ])
+                    fixed_sql = _clean_sql(fix_resp.content.strip())
+                    if fixed_sql.upper().startswith("SELECT"):
+                        res2 = sql_query_tool.invoke({"sql": fixed_sql})
+                        if "SQL 执行错误" not in res2:
+                            sql = fixed_sql
+                            res = res2
+                except Exception:
+                    pass
+        sql_parts.append(f"-- 子查询{i}: {purpose}\n{sql}")
+        if "SQL 执行错误" in res:
+            all_ok = False
+            result_parts.append(f"【子查询{i}】{purpose}\n执行失败: {res}")
+        else:
+            result_parts.append(f"【子查询{i}】{purpose}\n{res}")
+
+    if not result_parts:
+        return error_context
+
+    results_text = "\n\n".join(result_parts)
+
+    if not all_ok and all("执行失败" in r for r in result_parts):
+        return error_context
+
+    synth_prompt = _SYNTHESIZE_PROMPT.format(results=results_text)
+    try:
+        synth_resp = llm.invoke([
+            SystemMessage(content=synth_prompt),
+            {"role": "user", "content": _clean_query_for_sql(query)},
+        ])
+        answer = synth_resp.content.strip()
+    except Exception as e:
+        answer = results_text
+
+    all_sql = "\n".join(sql_parts)
+    return f"SQL(分解执行):\n{all_sql}\n\n结果:\n{answer}"
 
 
-_RAG_SYSTEM_PROMPT = """你是一个专业的中药行业研报分析师。请严格根据以下检索到的研报片段回答用户问题。
+def _execute_sql(query: str) -> str:
+    """两阶段 SQL 执行：先直接生成，失败则分解为多条单表查询。"""
+    result = _try_direct_sql(query)
+    if "SQL 执行错误" not in result:
+        return result
+    return _decompose_and_execute(query, result)
+
+
+_RAG_SYSTEM_PROMPT = """你是一个专业的医药/CXO行业研报分析师。请严格根据以下检索到的研报片段回答用户问题。
 
 ## 规则：
 1. 只使用提供的研报内容回答，不要编造任何数据或信息
@@ -196,24 +410,32 @@ _RAG_SYSTEM_PROMPT = """你是一个专业的中药行业研报分析师。请�
 
 
 def _execute_rag(query: str) -> str:
-    """混合检索 + LLM 生成，返回 JSON 结果字符串（含 content + references）。"""
     from tool.rag_search import hybrid_search
 
+    search_query = query
+    if len(query) < 15:
+        search_query = f"医药CXO行业 {query}"
+
     try:
-        hits = hybrid_search(query, n_results=5)
+        hits = hybrid_search(search_query, n_results=5)
     except Exception as e:
         return json.dumps({"content": f"研报检索失败: {e}", "references": []}, ensure_ascii=False)
+
+    if not hits and search_query != query:
+        try:
+            hits = hybrid_search(query, n_results=5)
+        except Exception:
+            pass
 
     if not hits:
         return json.dumps({"content": "研报检索无结果。", "references": []}, ensure_ascii=False)
 
-    _RERANK_THRESHOLD = 0.5
+    _RERANK_THRESHOLD = 0.15
     filtered = [h for h in hits if h.get("score", 0) >= _RERANK_THRESHOLD]
     if not filtered:
         return json.dumps({"content": "根据现有研报资料，暂无与该问题高度相关的信息。", "references": []}, ensure_ascii=False)
     hits = filtered
 
-    # 构建 context — 表格 chunk 转纯文本且不截断
     context_parts = []
     for i, h in enumerate(hits, 1):
         title = h["metadata"].get("title", "")
@@ -224,8 +446,6 @@ def _execute_rag(query: str) -> str:
         chunk_text = h["text"]
         if "<table>" in chunk_text:
             chunk_text = _html_table_to_text(chunk_text)
-        else:
-            chunk_text = chunk_text[:800]
         context_parts.append(f"{label}\n{chunk_text}")
     context = "\n\n---\n\n".join(context_parts)
 
@@ -239,27 +459,21 @@ def _execute_rag(query: str) -> str:
     except Exception as e:
         content = f"LLM 生成失败: {e}"
 
-    # 溯源：用 LLM 判断哪些 chunk 真正被引用在回答中
     references = _trace_references(content, hits)
-
     return json.dumps({"content": content, "references": references}, ensure_ascii=False)
 
 
 def _trace_references(answer: str, hits: list[dict]) -> list[dict]:
-    """用强模型判断哪些 chunk 真正被回答引用，只保留被引用的。"""
     if not hits or not answer:
         return []
 
     llm = _get_trace_llm()
-    # 一次性把所有 chunk 编号送给 LLM，让它返回被引用的编号列表
     chunk_list = []
     for i, h in enumerate(hits, 1):
         title = h["metadata"].get("title", "")
         chunk_text = h["text"]
         if "<table>" in chunk_text:
             chunk_text = _html_table_to_text(chunk_text)
-        else:
-            chunk_text = chunk_text[:600]
         chunk_list.append(f"[{i}] 《{title}》\n{chunk_text}")
     chunks_text = "\n\n".join(chunk_list)
 
@@ -280,7 +494,6 @@ def _trace_references(answer: str, hits: list[dict]) -> list[dict]:
     if text == "无":
         return []
 
-    # 解析编号
     indices = set()
     for part in re.findall(r"\d+", text):
         idx = int(part)
@@ -291,27 +504,37 @@ def _trace_references(answer: str, hits: list[dict]) -> list[dict]:
     for idx in sorted(indices):
         h = hits[idx - 1]
         meta = h["metadata"]
-        # 表格转纯文本摘要
         ref_text = h["text"]
         if "<table>" in ref_text:
             ref_text = _html_table_to_text(ref_text)
         ref_text = ref_text[:300]
-        refs.append({
-            "paper_path": meta.get("source_pdf", ""),
+        ref = {
+            "paper_path": meta.get("source_pdf", "").replace("./research report/", "./附件5：研报数据/"),
             "text": ref_text,
-            "paper_image": "",
-        })
+        }
+        table_title = meta.get("table_title", "")
+        if table_title:
+            ref["paper_image"] = table_title
+        refs.append(ref)
     return refs
 
-
-# ── PLACEHOLDER_VIZ_PROMPT ──
 
 _VIZ_SYSTEM_PROMPT = """你是一个数据可视化助手。根据用户问题和 SQL 查询结果，决定最佳的图表类型并组织数据。
 
 ## 图表类型选择规则（必须严格遵守）：
+
+### 默认图表（根据数据特征自动选择）：
 - **line（折线图）**：用于时间序列、趋势分析、多年变化、增长率走势。关键词：趋势、变化、走势、近N年、历年。
 - **bar（柱状图）**：用于不同实体之间的对比、排名、Top N。关键词：对比、排名、最高、最低、Top。
 - **pie（饼图）**：用于占比、构成、结构分析。关键词：占比、构成、结构、比例、分布。
+
+### 特殊图表（仅当用户明确要求时才使用，不要自行推断）：
+- **radar（雷达图）**：用户明确说"雷达图"时才用。需要至少3个维度。
+- **histogram（直方图）**：用户明确说"直方图"时才用。展示数值分布频率。
+- **double_bar（双条形图）**：用户明确说"双条形图"或"水平双条形图"时才用。水平方向，恰好2组数据对比。
+- **scatter（散点图）**：用户明确说"散点图"时才用。展示两个变量之间的关系。
+- **table（表格）**：用户明确说"表格"或"生成表格"时才用。以表格形式展示数据。
+- **boxplot（箱线图）**：用户明确说"箱线图"时才用。展示数据分布的四分位数。
 
 ## 数据单位说明：
 - 数据库中金额字段单位为万元，不做换算，直接使用原值。
@@ -320,38 +543,101 @@ _VIZ_SYSTEM_PROMPT = """你是一个数据可视化助手。根据用户问题�
 - title 中应包含单位信息。
 
 ## 输出格式（严格 JSON，不要输出其他任何内容）：
+
+line/bar/pie 单系列：
 ```json
-{
-  "chart_type": "line",
-  "title": "金花股份2020-2022年营业总收入趋势（万元）",
-  "y_label": "万元",
-  "data": {
-    "labels": ["2020", "2021", "2022"],
-    "values": [12.5, 14.3, 16.8]
-  }
-}
+{"chart_type": "line", "title": "标题（万元）", "y_label": "万元", "data": {"labels": ["2020", "2021"], "values": [12.5, 14.3]}}
 ```
 
-多系列数据时用 datasets:
+line/bar 多系列：
 ```json
-{
-  "chart_type": "bar",
-  "title": "营业收入与净利润对比（万元）",
-  "y_label": "万元",
-  "data": {
-    "labels": ["2020", "2021", "2022"],
-    "datasets": [
-      {"label": "营业收入", "values": [100, 150, 180]},
-      {"label": "净利润", "values": [20, 30, 35]}
-    ]
-  }
-}
+{"chart_type": "bar", "title": "标题（万元）", "y_label": "万元", "data": {"labels": ["2020", "2021"], "datasets": [{"label": "系列1", "values": [100, 150]}, {"label": "系列2", "values": [20, 30]}]}}
+```
+
+radar（雷达图）：
+```json
+{"chart_type": "radar", "title": "标题", "y_label": "", "data": {"labels": ["维度1", "维度2", "维度3"], "values": [80, 60, 90]}}
+```
+多系列雷达图用 datasets，格式同多系列 bar。
+
+histogram（直方图）：
+```json
+{"chart_type": "histogram", "title": "标题", "y_label": "频次", "data": {"values": [1.2, 3.4, 2.1, 5.6, 3.3], "bins": 10, "x_label": "万元"}}
+```
+
+double_bar（双条形图，水平方向）：
+```json
+{"chart_type": "double_bar", "title": "标题（万元）", "y_label": "万元", "data": {"labels": ["公司A", "公司B"], "datasets": [{"label": "指标1", "values": [100, 200]}, {"label": "指标2", "values": [80, 150]}]}}
+```
+
+scatter（散点图）：
+```json
+{"chart_type": "scatter", "title": "标题", "y_label": "Y轴", "data": {"x_values": [1, 2, 3], "y_values": [4, 5, 6], "labels": ["A", "B", "C"], "x_label": "X轴", "y_label": "Y轴"}}
+```
+
+table（表格）：
+```json
+{"chart_type": "table", "title": "标题", "y_label": "", "data": {"headers": ["公司", "营收", "净利润"], "rows": [["公司A", "100", "20"], ["公司B", "200", "30"]]}}
+```
+
+boxplot（箱线图）：
+```json
+{"chart_type": "boxplot", "title": "标题（万元）", "y_label": "万元", "data": {"labels": ["2022", "2023"], "datasets": [{"values": [10, 20, 30, 40]}, {"values": [15, 25, 35, 45]}]}}
 ```
 """
 
 
+def _parse_sql_table(sql_result: str) -> tuple[list[str], list[list[str]]]:
+    """从 SQL 结果文本中解析表头和数据行。"""
+    lines = []
+    in_result = False
+    for line in sql_result.split("\n"):
+        if line.startswith("结果:") or line.startswith("结果："):
+            in_result = True
+            continue
+        if in_result and line.strip():
+            lines.append(line)
+    if not lines:
+        for line in sql_result.split("\n"):
+            if "\t" in line:
+                lines.append(line)
+    if not lines:
+        return [], []
+    headers = lines[0].split("\t")
+    rows = [line.split("\t") for line in lines[1:] if line.strip()]
+    return headers, rows
+
+
+def _fix_truncated_json(raw: str) -> str:
+    """尝试修复 LLM 输出的非标准 JSON。"""
+    raw = raw.replace("None", "null").replace("NaN", "null")
+    depth_sq = raw.count("[") - raw.count("]")
+    depth_br = raw.count("{") - raw.count("}")
+    fixed = raw + "]" * depth_sq + "}" * depth_br
+    return fixed
+
+
+def _parse_json_lenient(raw: str) -> dict | None:
+    """宽容地解析 JSON，处理 None/NaN 和截断。"""
+    try:
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        pass
+    fixed = _fix_truncated_json(raw)
+    try:
+        return json.loads(fixed)
+    except (json.JSONDecodeError, TypeError):
+        pass
+    try:
+        decoder = json.JSONDecoder()
+        obj, _ = decoder.raw_decode(fixed)
+        return obj
+    except (json.JSONDecodeError, TypeError):
+        pass
+    return None
+
+
 def _execute_viz(query: str, sql_result: str) -> str:
-    """基于 SQL 结果生成图表，返回图片路径或错误信息。"""
     from tool.visualizer import data_visualizer_tool
 
     llm = _get_viz_llm()
@@ -364,13 +650,57 @@ def _execute_viz(query: str, sql_result: str) -> str:
     if not m:
         return ""
 
-    try:
-        parsed = json.loads(m.group())
+    raw_json = m.group()
+    parsed = _parse_json_lenient(raw_json)
+
+    if not parsed:
+        chart_type_m = re.search(r'"chart_type"\s*:\s*"(\w+)"', raw_json)
+        title_m = re.search(r'"title"\s*:\s*"([^"]+)"', raw_json)
+        chart_type = chart_type_m.group(1) if chart_type_m else "bar"
+        title = title_m.group(1) if title_m else "图表"
+        y_label = ""
+        data = {}
+    else:
         chart_type = parsed.get("chart_type", "bar")
         title = parsed.get("title", "图表")
         data = parsed.get("data", {})
         y_label = parsed.get("y_label", "")
-    except (json.JSONDecodeError, TypeError):
+
+    if chart_type in ("scatter", "histogram", "boxplot"):
+        headers, rows = _parse_sql_table(sql_result)
+        if headers and rows:
+            if chart_type == "scatter" and len(headers) >= 4:
+                x_col, y_col = 2, 3
+                labels_col = 1
+                x_vals, y_vals, labels = [], [], []
+                for row in rows:
+                    try:
+                        xv = float(row[x_col])
+                        yv = float(row[y_col])
+                    except (ValueError, IndexError):
+                        continue
+                    x_vals.append(xv)
+                    y_vals.append(yv)
+                    labels.append(row[labels_col] if labels_col < len(row) else "")
+                if x_vals:
+                    data = {
+                        "x_values": x_vals, "y_values": y_vals, "labels": labels,
+                        "x_label": data.get("x_label", headers[x_col]),
+                        "y_label": data.get("y_label", headers[y_col]),
+                    }
+            elif chart_type == "histogram":
+                val_col = len(headers) - 1
+                vals = []
+                for row in rows:
+                    try:
+                        vals.append(float(row[val_col]))
+                    except (ValueError, IndexError):
+                        continue
+                if vals:
+                    data = {"values": vals, "bins": min(20, max(5, len(vals) // 3)),
+                            "x_label": data.get("x_label", headers[val_col])}
+
+    if not data:
         return ""
 
     result = data_visualizer_tool.invoke({
@@ -386,116 +716,17 @@ def _execute_viz(query: str, sql_result: str) -> str:
 
 
 # ═══════════════════════════════════════════════════════
-# 图节点实现（单一意图路径，复用工具函数）
+# 辅助函数
 # ═══════════════════════════════════════════════════════
 
 def _get_user_msg(state: AgentState) -> str:
-    """从 state 中取最新用户消息。"""
     for m in reversed(state["messages"]):
         if hasattr(m, "type") and m.type == "human":
             return m.content
     return ""
 
 
-def clarify_node(state: AgentState) -> dict:
-    intent = state.get("intent", {})
-    msg = intent.get("clarification_message", "请提供更多信息以便我回答您的问题。")
-    return {"final_answer": msg, "messages": [AIMessage(content=msg)]}
-
-
-def sql_node(state: AgentState) -> dict:
-    user_msg = _get_user_msg(state)
-    result = _execute_sql(user_msg)
-    return {
-        "sql_result": result,
-        "messages": [AIMessage(content=f"[SQL 查询完成]\n{result}")],
-    }
-
-
-def rag_node(state: AgentState) -> dict:
-    user_msg = _get_user_msg(state)
-    result = _execute_rag(user_msg)
-    try:
-        content = json.loads(result).get("content", result)
-    except (json.JSONDecodeError, TypeError):
-        content = result
-    return {
-        "rag_result": result,
-        "messages": [AIMessage(content=f"[RAG 检索完成] {content[:200]}...")],
-    }
-
-
-def sql_branch_node(state: AgentState) -> dict:
-    return sql_node(state)
-
-
-def rag_branch_node(state: AgentState) -> dict:
-    return rag_node(state)
-
-
-def visualizer_node(state: AgentState) -> dict:
-    user_msg = _get_user_msg(state)
-    sql_result = state.get("sql_result", "")
-    plot_path = _execute_viz(user_msg, sql_result)
-    msg = f"图表已保存: {plot_path}" if plot_path else "无法生成图表。"
-    return {"plot_path": plot_path, "messages": [AIMessage(content=msg)]}
-
-# ── PLACEHOLDER_EXECUTOR ──
-
-
-# ═══════════════════════════════════════════════════════
-# Executor 节点（多意图拆分路径）
-# ═══════════════════════════════════════════════════════
-
-def executor_node(state: AgentState) -> dict:
-    """按依赖顺序执行所有子任务，聚合结果到 state 字段。"""
-    sub_tasks = [dict(t) for t in state["sub_tasks"]]  # 深拷贝
-    results_map: dict[str, str] = {}
-
-    for task in sub_tasks:
-        tid = task["id"]
-        tool = task["tool"]
-        query = task["query"]
-        dep = task.get("depends_on", "")
-        dep_result = results_map.get(dep, "") if dep else ""
-
-        try:
-            if tool == "sql":
-                task["result"] = _execute_sql(query)
-            elif tool == "rag":
-                task["result"] = _execute_rag(query)
-            elif tool == "visualize":
-                task["result"] = _execute_viz(query, dep_result)
-            else:
-                task["result"] = f"未知工具类型: {tool}"
-            task["status"] = "done"
-        except Exception as e:
-            task["result"] = f"执行失败: {e}"
-            task["status"] = "failed"
-
-        results_map[tid] = task["result"]
-
-    # 聚合到 state 字段供 synthesis 使用
-    sql_parts = [t["result"] for t in sub_tasks if t["tool"] == "sql" and t["result"]]
-    rag_parts = [t["result"] for t in sub_tasks if t["tool"] == "rag" and t["result"]]
-    viz_paths = [t["result"] for t in sub_tasks if t["tool"] == "visualize" and t["result"]]
-
-    # 合并多个 RAG 结果
-    merged_rag = ""
-    if rag_parts:
-        merged_rag = _merge_rag_results(rag_parts)
-
-    return {
-        "sub_tasks": sub_tasks,
-        "sql_result": "\n---\n".join(sql_parts),
-        "rag_result": merged_rag,
-        "plot_path": ",".join(viz_paths),
-        "messages": [AIMessage(content=f"[Executor] 完成 {len(sub_tasks)} 个子任务")],
-    }
-
-
 def _merge_rag_results(rag_jsons: list[str]) -> str:
-    """合并多个 RAG JSON 结果为一个。"""
     all_content = []
     all_refs = []
     for rj in rag_jsons:
@@ -512,81 +743,103 @@ def _merge_rag_results(rag_jsons: list[str]) -> str:
 
 
 # ═══════════════════════════════════════════════════════
+# Executor 节点
+# ═══════════════════════════════════════════════════════
+
+def executor_node(state: AgentState) -> dict:
+    """按依赖顺序执行所有子任务。clarify/chat 直接用 query 作为 result。"""
+    sub_tasks = [dict(t) for t in state["sub_tasks"]]
+    results_map: dict[str, str] = {}
+
+    for task in sub_tasks:
+        tid = task["id"]
+        tool = task["tool"]
+        query = task["query"]
+        dep = task.get("depends_on", "")
+        dep_result = results_map.get(dep, "") if dep else ""
+
+        try:
+            if tool == "sql":
+                task["result"] = _execute_sql(query)
+            elif tool == "rag":
+                task["result"] = _execute_rag(query)
+            elif tool == "visualize":
+                viz_input = dep_result
+                if not viz_input or "\t" not in viz_input:
+                    sql_results = [t["result"] for t in sub_tasks
+                                   if t["tool"] == "sql" and t.get("result") and "\t" in t["result"]]
+                    if sql_results:
+                        viz_input = "\n---\n".join(sql_results)
+                task["result"] = _execute_viz(query, viz_input)
+            elif tool in ("clarify", "chat"):
+                task["result"] = query
+            else:
+                task["result"] = f"未知工具类型: {tool}"
+            task["status"] = "done"
+        except Exception as e:
+            task["result"] = f"执行失败: {e}"
+            task["status"] = "failed"
+
+        results_map[tid] = task["result"]
+
+    sql_parts = [t["result"] for t in sub_tasks if t["tool"] == "sql" and t["result"]]
+    rag_parts = [t["result"] for t in sub_tasks if t["tool"] == "rag" and t["result"]]
+    viz_paths = [t["result"] for t in sub_tasks if t["tool"] == "visualize" and t["result"]]
+
+    merged_rag = ""
+    if rag_parts:
+        merged_rag = _merge_rag_results(rag_parts)
+
+    return {
+        "sub_tasks": sub_tasks,
+        "sql_result": "\n---\n".join(sql_parts),
+        "rag_result": merged_rag,
+        "plot_path": ",".join(viz_paths),
+        "messages": [AIMessage(content=f"[Executor] 完成 {len(sub_tasks)} 个子任务")],
+    }
+
+
+# ═══════════════════════════════════════════════════════
 # Synthesis 节点
 # ═══════════════════════════════════════════════════════
 
+_SYNTHESIS_PLACEHOLDER = "<!-- SYNTHESIS_NEXT -->"
+
+
 def synthesis_node(state: AgentState) -> dict:
-    """汇总所有证据，生成最终回答。支持单一意图和多意图两种模式。"""
-    from agent.conditions import sql_succeeded
-
+    """汇总所有证据，生成最终回答。"""
     sub_tasks = state.get("sub_tasks", [])
+    tools_used = [t.get("tool", "") for t in sub_tasks]
 
-    # ── 多意图模式：按子任务组织证据 ──
-    if sub_tasks:
-        evidence_parts = []
-        for i, task in enumerate(sub_tasks, 1):
-            tool_label = {"sql": "数据查询", "rag": "研报检索", "visualize": "图表生成"}.get(task["tool"], task["tool"])
-            result_text = task.get("result", "")
-            # RAG 结果提取 content
-            if task["tool"] == "rag":
-                try:
-                    result_text = json.loads(result_text).get("content", result_text)
-                except (json.JSONDecodeError, TypeError):
-                    pass
-            evidence_parts.append(f"【子问题{i}】{task['query']}\n【工具】{tool_label}\n【结果】\n{result_text}")
+    # clarify 或 chat 单任务：直接返回，不走 LLM
+    if len(sub_tasks) == 1 and tools_used[0] in ("clarify", "chat"):
+        msg = sub_tasks[0].get("result", sub_tasks[0].get("query", ""))
+        return {"final_answer": msg, "messages": [AIMessage(content=msg)]}
 
-        evidence = "\n\n---\n\n".join(evidence_parts)
-        user_msg = _get_user_msg(state)
+    # 组织证据
+    evidence_parts = []
+    for i, task in enumerate(sub_tasks, 1):
+        tool_label = {"sql": "数据查询", "rag": "研报检索", "visualize": "图表生成"}.get(task["tool"], task["tool"])
+        result_text = task.get("result", "")
+        if task["tool"] == "rag":
+            try:
+                result_text = json.loads(result_text).get("content", result_text)
+            except (json.JSONDecodeError, TypeError):
+                pass
+        if task["tool"] in ("clarify", "chat"):
+            continue
+        evidence_parts.append(f"【子问题{i}】{task['query']}\n【工具】{tool_label}\n【结果】\n{result_text}")
 
-        sys_prompt = (
-            "你是一个专业的财务分析师。用户提出了一个包含多个子问题的复合问题。\n"
-            "以下是各子问题的查询结果，请综合所有结果，给出完整、连贯的回答。\n"
-            "用简洁准确的中文回答。如果某个子问题的证据不足，请诚实说明。不要编造数据。\n"
-            "金额单位为万元，百分比单位为%，每股单位为元/股。\n\n"
-            f"【证据】\n{evidence}"
-        )
+    if not evidence_parts:
+        fallback = "抱歉，无法回答该问题。"
+        return {"final_answer": fallback, "messages": [AIMessage(content=fallback)]}
 
-        llm = _get_synthesis_llm()
-        resp = llm.invoke([
-            SystemMessage(content=sys_prompt),
-            {"role": "user", "content": user_msg},
-        ])
-        return {"final_answer": resp.content, "messages": [AIMessage(content=resp.content)]}
-
-    # ── 单一意图模式（原有逻辑） ──
-    sql_result = state.get("sql_result", "")
-    rag_result = state.get("rag_result", "")
+    evidence = "\n\n---\n\n".join(evidence_parts)
+    user_msg = _get_user_msg(state)
     plot_path = state.get("plot_path", "")
 
-    has_valid_sql = sql_succeeded(state)
-    has_rag = bool(rag_result) and "stub" not in rag_result and "检索失败" not in rag_result
-
-    if sql_result and not has_valid_sql and not has_rag:
-        fail_msg = (
-            "抱歉，无法回答该问题。\n"
-            "原因：数据库中不包含该问题所需的数据字段。"
-            "当前数据库仅覆盖核心业绩指标表、利润表、资产负债表、现金流量表的结构化数据。"
-        )
-        return {"final_answer": fail_msg, "messages": [AIMessage(content=fail_msg)]}
-
-    evidence_parts = []
-    if sql_result and has_valid_sql:
-        evidence_parts.append(f"【结构化查询结果】\n{sql_result}")
-    if has_rag:
-        rag_text = rag_result
-        try:
-            rag_text = json.loads(rag_result).get("content", rag_result)
-        except (json.JSONDecodeError, TypeError):
-            pass
-        evidence_parts.append(f"【研报检索结果】\n{rag_text}")
-    if plot_path:
-        evidence_parts.append(f"【图表路径】{plot_path}")
-
-    evidence = "\n\n".join(evidence_parts) if evidence_parts else "无可用证据。"
-    user_msg = _get_user_msg(state)
-
     sys_prompt = (
-        "你是一个专业的财务分析师。请**仅根据**以下收集到的证据回答用户问题，不要参考对话历史中的其他问题。\n"
+        "你是一个专业的财务分析师。请**仅根据**以下收集到的证据回答用户问题。\n"
         "用简洁准确的中文回答。如果证据不足以回答，请诚实说明。不要编造数据。\n\n"
         "【重要规则】\n"
         "- 如果证据中包含 SQL 查询结果的数据表格，你必须用具体数字回答，不要说'请参考图表'。\n"
@@ -597,6 +850,8 @@ def synthesis_node(state: AgentState) -> dict:
         "回答时必须带上正确的单位。\n\n"
         f"【证据】\n{evidence}"
     )
+    if plot_path:
+        sys_prompt += f"\n\n【图表路径】{plot_path}"
 
     llm = _get_synthesis_llm()
     resp = llm.invoke([
@@ -611,7 +866,6 @@ def synthesis_node(state: AgentState) -> dict:
 # ═══════════════════════════════════════════════════════
 
 def formatter_node(state: AgentState) -> dict:
-    """将本轮结果格式化为标准 JSON。"""
     from tool.json_formatter import format_turn
 
     user_msg = _get_user_msg(state)
@@ -632,54 +886,13 @@ def build_graph():
     g = StateGraph(AgentState)
 
     g.add_node("planner", planner_node)
-    g.add_node("clarify", clarify_node)
-    g.add_node("sql", sql_node)
-    g.add_node("rag", rag_node)
-    g.add_node("sql_branch", sql_branch_node)
-    g.add_node("rag_branch", rag_branch_node)
-    g.add_node("visualizer", visualizer_node)
     g.add_node("executor", executor_node)
     g.add_node("synthesis", synthesis_node)
     g.add_node("formatter", formatter_node)
 
     g.set_entry_point("planner")
-
-    # Planner 之后的主路由
-    g.add_conditional_edges(
-        "planner",
-        route_after_planner,
-        {
-            "clarify": "clarify",
-            "sql": "sql",
-            "rag": "rag",
-            "sql_and_rag": "sql_branch",
-            "executor": "executor",
-        },
-    )
-
-    # clarify → formatter → END
-    g.add_edge("clarify", "formatter")
-
-    # sql → 是否需要可视化
-    g.add_conditional_edges("sql", route_after_sql, {
-        "visualize": "visualizer",
-        "synthesis": "synthesis",
-    })
-
-    # rag → synthesis
-    g.add_edge("rag", "synthesis")
-
-    # sql_and_rag 并行分支（串行模拟）
-    g.add_edge("sql_branch", "rag_branch")
-    g.add_edge("rag_branch", "synthesis")
-
-    # visualizer → synthesis
-    g.add_edge("visualizer", "synthesis")
-
-    # executor → synthesis
+    g.add_edge("planner", "executor")
     g.add_edge("executor", "synthesis")
-
-    # synthesis → formatter → END
     g.add_edge("synthesis", "formatter")
     g.add_edge("formatter", END)
 

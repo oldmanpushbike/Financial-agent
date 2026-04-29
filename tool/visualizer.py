@@ -25,6 +25,16 @@ from pydantic import BaseModel, Field
 ASSET_DIR = Path(__file__).resolve().parent.parent / "result" / "img"
 ASSET_DIR.mkdir(parents=True, exist_ok=True)
 
+_next_chart_name: str | None = None
+_chart_prefix: str = ""
+_chart_counter: int = 0
+
+
+def set_chart_prefix(prefix: str):
+    global _chart_prefix, _chart_counter
+    _chart_prefix = prefix
+    _chart_counter = 0
+
 
 # ──────────────────────────────────────────────
 # 绘图核心
@@ -67,16 +77,135 @@ def _plot_pie(data: Dict[str, Any]) -> None:
     plt.axis("equal")
 
 
+def _plot_radar(data: Dict[str, Any]) -> None:
+    import numpy as np
+
+    labels = data.get("labels", [])
+    n = len(labels)
+    if n < 3:
+        raise ValueError("雷达图至少需要 3 个维度")
+    angles = np.linspace(0, 2 * np.pi, n, endpoint=False).tolist()
+    angles += angles[:1]
+
+    ax = plt.gca()
+    ax.remove()
+    ax = plt.gcf().add_subplot(111, polar=True)
+
+    if "datasets" in data:
+        for ds in data["datasets"]:
+            vals = ds.get("values", [])[:n]
+            vals += vals[:1]
+            ax.plot(angles, vals, "o-", label=ds.get("label", ""))
+            ax.fill(angles, vals, alpha=0.15)
+        ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1.1))
+    else:
+        vals = data.get("values", [])[:n]
+        vals += vals[:1]
+        ax.plot(angles, vals, "o-", color="b")
+        ax.fill(angles, vals, alpha=0.25, color="b")
+
+    ax.set_thetagrids(np.degrees(angles[:-1]), labels)
+
+
+def _plot_histogram(data: Dict[str, Any]) -> None:
+    values = data.get("values", [])
+    if not values:
+        raise ValueError("直方图缺少 values 数据")
+    bins = data.get("bins", 10)
+    plt.hist(values, bins=bins, color="skyblue", edgecolor="black", alpha=0.7)
+    plt.xlabel(data.get("x_label", ""))
+
+
+def _plot_double_bar(data: Dict[str, Any]) -> None:
+    import numpy as np
+
+    labels = data.get("labels", [])
+    datasets = data.get("datasets", [])
+    if not datasets:
+        values = data.get("values", [])
+        if values:
+            labels = labels[:len(values)]
+            plt.barh(range(len(labels)), values)
+            plt.yticks(range(len(labels)), labels)
+            return
+        raise ValueError("双条形图需要 datasets 或 values")
+    max_len = max(len(ds.get("values", [])) for ds in datasets)
+    labels = labels[:max_len]
+    if len(datasets) == 1:
+        plt.barh(range(len(labels)), datasets[0].get("values", []), label=datasets[0].get("label", ""))
+        plt.yticks(range(len(labels)), labels)
+        plt.legend()
+        return
+    x = np.arange(len(labels))
+    width = 0.35
+    plt.barh(x + width / 2, datasets[0].get("values", []), width, label=datasets[0].get("label", ""))
+    plt.barh(x - width / 2, datasets[1].get("values", []), width, label=datasets[1].get("label", ""))
+    plt.yticks(x, labels)
+    plt.legend()
+
+
+def _plot_scatter(data: Dict[str, Any]) -> None:
+    x_vals = data.get("x_values", [])
+    y_vals = data.get("y_values", [])
+    if not x_vals or not y_vals:
+        raise ValueError("散点图需要 x_values 和 y_values")
+    point_labels = data.get("labels", [])
+    plt.scatter(x_vals, y_vals, c="steelblue", alpha=0.7, edgecolors="black", s=60)
+    plt.xlabel(data.get("x_label", ""))
+    plt.ylabel(data.get("y_label", ""))
+    for i, lbl in enumerate(point_labels):
+        if i < len(x_vals):
+            plt.annotate(lbl, (x_vals[i], y_vals[i]), textcoords="offset points",
+                         xytext=(5, 5), fontsize=8)
+
+
+def _plot_table(data: Dict[str, Any]) -> None:
+    headers = data.get("headers", [])
+    rows = data.get("rows", [])
+    if not headers or not rows:
+        raise ValueError("表格需要 headers 和 rows")
+    ax = plt.gca()
+    ax.axis("off")
+    table = ax.table(cellText=rows, colLabels=headers, loc="center", cellLoc="center")
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.scale(1.2, 1.5)
+
+
+def _plot_boxplot(data: Dict[str, Any]) -> None:
+    datasets = data.get("datasets", [])
+    labels = data.get("labels", [])
+    if not datasets:
+        raise ValueError("箱线图缺少 datasets")
+    box_data = [ds.get("values", []) for ds in datasets]
+    bp = plt.boxplot(box_data, patch_artist=True)
+    colors = ["#4C72B0", "#55A868", "#C44E52", "#8172B2", "#CCB974", "#64B5CD"]
+    for i, patch in enumerate(bp["boxes"]):
+        patch.set_facecolor(colors[i % len(colors)])
+    if labels:
+        plt.xticks(range(1, len(labels) + 1), labels)
+
+
 _PLOT_FUNCS = {
     "line": _plot_line,
     "bar": _plot_bar,
     "pie": _plot_pie,
+    "radar": _plot_radar,
+    "histogram": _plot_histogram,
+    "double_bar": _plot_double_bar,
+    "scatter": _plot_scatter,
+    "table": _plot_table,
+    "boxplot": _plot_boxplot,
 }
 
 
 def _generate_chart(chart_type: str, title: str, data: Dict[str, Any], y_label: str = "") -> Optional[str]:
     """生成图表并保存为 PNG，返回相对路径；失败返回 None。"""
-    if not data or (not data.get("values") and not data.get("datasets")):
+    has_data = (
+        data.get("values") or data.get("datasets")
+        or data.get("rows") or data.get("x_values")
+    )
+    if not data or not has_data:
         return None
 
     plot_fn = _PLOT_FUNCS.get(chart_type)
@@ -87,16 +216,21 @@ def _generate_chart(chart_type: str, title: str, data: Dict[str, Any], y_label: 
     try:
         plot_fn(data)
         plt.title(title, fontsize=14)
-        if y_label and chart_type != "pie":
+        if y_label and chart_type not in ("pie", "table", "radar"):
             plt.ylabel(y_label)
-        if chart_type != "pie":
+        if chart_type not in ("pie", "table", "radar"):
             plt.grid(True, linestyle="--", alpha=0.6)
 
-        filename = f"chart_{uuid.uuid4().hex[:8]}.png"
+        global _chart_prefix, _chart_counter
+        if _chart_prefix:
+            _chart_counter += 1
+            filename = f"{_chart_prefix}_{_chart_counter}.png"
+        else:
+            filename = f"chart_{uuid.uuid4().hex[:8]}.png"
         filepath = ASSET_DIR / filename
         plt.savefig(filepath, bbox_inches="tight", dpi=150)
         plt.close()
-        return str(filepath)
+        return f"result/img/{filename}"
     except Exception:
         plt.close()
         return None

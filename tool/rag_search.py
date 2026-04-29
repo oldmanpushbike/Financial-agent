@@ -9,8 +9,6 @@
 from __future__ import annotations
 
 import json
-import io
-import contextlib
 from pathlib import Path
 from typing import Optional
 
@@ -24,11 +22,9 @@ _COLLECTION_NAME = "research_reports"
 
 # ── 全局缓存 ──
 _bm25_index: Optional[BM25Okapi] = None
-_bm25_chunks: list[dict] = []  # [{id, text, metadata}, ...]
+_bm25_chunks: list[dict] = []  # child chunks [{id, text, metadata}, ...]
 _bm25_corpus: list[list[str]] = []  # 分词后的语料
-
-_embedding_model = None
-_reranker_model = None
+_parent_lookup: dict[str, dict] = {}  # parent_id → {text, metadata}
 
 
 def _enrich_text(text: str, metadata: dict) -> str:
@@ -52,13 +48,28 @@ def _enrich_text(text: str, metadata: dict) -> str:
 
 
 def _load_bm25_index():
-    """从 data/chunks/ 加载全部 chunk，构建 BM25 索引。"""
-    global _bm25_index, _bm25_chunks, _bm25_corpus
+    """从 data/chunks/ 加载 child chunks 构建 BM25 索引，同时加载 parent chunks 做 lookup。"""
+    global _bm25_index, _bm25_chunks, _bm25_corpus, _parent_lookup
     if _bm25_index is not None:
         return
 
-    chunks = []
+    # 加载 parent chunks
     for jsonl_file in sorted(_CHUNKS_DIR.rglob("*.jsonl")):
+        if "_children" in jsonl_file.name:
+            continue
+        stem = jsonl_file.stem
+        with open(jsonl_file, "r", encoding="utf-8") as f:
+            for i, line in enumerate(f):
+                line = line.strip()
+                if not line:
+                    continue
+                obj = json.loads(line)
+                pid = f"{stem}_{i}"
+                _parent_lookup[pid] = {"text": obj["text"], "metadata": obj["metadata"]}
+
+    # 加载 child chunks 构建 BM25
+    chunks = []
+    for jsonl_file in sorted(_CHUNKS_DIR.rglob("*_children.jsonl")):
         with open(jsonl_file, "r", encoding="utf-8") as f:
             for i, line in enumerate(f):
                 line = line.strip()
@@ -67,17 +78,15 @@ def _load_bm25_index():
                 obj = json.loads(line)
                 text = obj["text"]
                 meta = obj["metadata"]
-                # 表格 chunk：将 table_title + heading 拼到文本前面，增强语义匹配
                 enriched = _enrich_text(text, meta)
                 chunks.append({
                     "id": f"{jsonl_file.stem}_{i}",
-                    "text": text,           # 原始文本（给 LLM 用）
-                    "search_text": enriched, # 增强文本（给 BM25 用）
+                    "text": text,
+                    "search_text": enriched,
                     "metadata": meta,
                 })
 
     _bm25_chunks = chunks
-    # jieba 分词构建语料 — 用增强文本
     _bm25_corpus = [list(jieba.cut(c["search_text"])) for c in chunks]
     _bm25_index = BM25Okapi(_bm25_corpus)
 
@@ -85,12 +94,18 @@ def _load_bm25_index():
 
 
 def _vector_search(query: str, n: int = 20) -> list[dict]:
-    """BGE 向量检索，返回 [{id, text, metadata}, ...]。"""
+    """千帆 API 向量检索，返回 [{id, text, metadata}, ...]。"""
     import chromadb
+    import sys
+    from pathlib import Path
 
-    model = _get_embedding_model()
-    q_with_inst = f"为这个句子生成表示以用于检索中文相关段落：{query}"
-    vec = model.encode(q_with_inst, normalize_embeddings=True).tolist()
+    # 添加 pipeline 路径以导入 qianfan_embedding
+    _pipeline_dir = str(Path(__file__).resolve().parent.parent / "pipeline" / "research report")
+    if _pipeline_dir not in sys.path:
+        sys.path.insert(0, _pipeline_dir)
+    from qianfan_embedding import embed_query
+
+    vec = embed_query(query)
 
     client = chromadb.PersistentClient(path=str(_CHROMA_DIR))
     col = client.get_or_create_collection(
@@ -132,16 +147,27 @@ def _bm25_search(query: str, n: int = 20) -> list[dict]:
 
 
 def hybrid_search(query: str, n_results: int = 5) -> list[dict]:
-    """三阶段混合检索：向量 + BM25 召回 → 去重 → Cross-Encoder 重排。
+    """三阶段混合检索：向量 + BM25 召回 → 去重 → 千帆 Rerank → 映射回 parent。
 
     返回 top n_results 个 chunk，每个为:
         {"id": str, "text": str, "metadata": dict, "score": float}
+    其中 text 为 parent 的完整文本。
     """
-    # Stage 1: 双路召回
+    import sys
+    from pathlib import Path
+
+    _pipeline_dir = str(Path(__file__).resolve().parent.parent / "pipeline" / "research report")
+    if _pipeline_dir not in sys.path:
+        sys.path.insert(0, _pipeline_dir)
+    from qianfan_embedding import rerank
+
+    _load_bm25_index()
+
+    # Stage 1: 双路召回（child chunks）
     vec_hits = _vector_search(query, n=20)
     bm25_hits = _bm25_search(query, n=20)
 
-    # Stage 2: 合并去重
+    # Stage 2: 合并去重（按 child id）
     seen = set()
     candidates = []
     for hit in vec_hits + bm25_hits:
@@ -152,37 +178,34 @@ def hybrid_search(query: str, n_results: int = 5) -> list[dict]:
     if not candidates:
         return []
 
-    # Stage 3: Cross-Encoder 重排 — 用增强文本提升表格 chunk 的匹配度
-    reranker = _get_reranker()
-    pairs = [(query, _enrich_text(c["text"], c["metadata"])[:512]) for c in candidates]
-    scores = reranker.predict(pairs)
+    # Stage 3: 千帆 Rerank API 重排（用 child 短文本）
+    documents = [_enrich_text(c["text"], c["metadata"])[:512] for c in candidates]
+    rerank_results = rerank(query, documents, top_n=min(len(candidates), n_results * 3))
 
-    for i, c in enumerate(candidates):
-        c["score"] = float(scores[i])
+    # Stage 4: 映射回 parent，按 parent_id 去重
+    seen_parents = set()
+    ranked = []
+    for item in rerank_results:
+        idx = item["index"]
+        c = candidates[idx]
+        parent_id = c["metadata"].get("parent_id", "")
+        if parent_id in seen_parents:
+            continue
+        seen_parents.add(parent_id)
 
-    candidates.sort(key=lambda x: x["score"], reverse=True)
-    return candidates[:n_results]
+        parent = _parent_lookup.get(parent_id)
+        if parent:
+            ranked.append({
+                "id": parent_id,
+                "text": parent["text"],
+                "metadata": parent["metadata"],
+                "score": float(item["relevance_score"]),
+            })
+        else:
+            c["score"] = float(item["relevance_score"])
+            ranked.append(c)
 
+        if len(ranked) >= n_results:
+            break
 
-def _get_embedding_model():
-    """懒加载 BGE embedding 模型。"""
-    global _embedding_model
-    if _embedding_model is None:
-        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
-            from sentence_transformers import SentenceTransformer
-            from modelscope import snapshot_download
-            model_dir = snapshot_download("BAAI/bge-large-zh-v1.5")
-            _embedding_model = SentenceTransformer(model_dir)
-    return _embedding_model
-
-
-def _get_reranker():
-    """懒加载 Cross-Encoder reranker。"""
-    global _reranker_model
-    if _reranker_model is None:
-        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
-            from sentence_transformers import CrossEncoder
-            from modelscope import snapshot_download
-            model_dir = snapshot_download("BAAI/bge-reranker-v2-m3")
-            _reranker_model = CrossEncoder(model_dir)
-    return _reranker_model
+    return ranked

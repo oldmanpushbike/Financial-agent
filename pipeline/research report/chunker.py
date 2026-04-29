@@ -17,6 +17,7 @@ import re
 import sys
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
+from html.parser import HTMLParser
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent  # FS/
 _RAG_MD_ROOT = _PROJECT_ROOT / "data" / "RAG_md"
@@ -36,10 +37,95 @@ _HEADING_RE = re.compile(r"^(#{1,4})\s+(.+)$", re.MULTILINE)
 # ── PLACEHOLDER_FOR_APPEND ──
 
 
+def _parse_html_table(html: str) -> list[list[str]]:
+    """解析 HTML table 为二维列表 [[cell, ...], ...]。"""
+    class _P(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.rows: list[list[str]] = []
+            self._row: list[str] = []
+            self._cell = ""
+            self._in_cell = False
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "tr":
+                self._row = []
+            elif tag in ("td", "th"):
+                self._cell = ""
+                self._in_cell = True
+
+        def handle_endtag(self, tag):
+            if tag in ("td", "th"):
+                self._in_cell = False
+                self._row.append(self._cell.strip())
+            elif tag == "tr":
+                if self._row:
+                    self.rows.append(self._row)
+
+        def handle_data(self, data):
+            if self._in_cell:
+                self._cell += data
+
+    p = _P()
+    p.feed(html)
+    return p.rows
+
+
+def _html_table_to_kv_text(html: str) -> str:
+    """将 HTML table 转为 '列名: 值' 逐行格式。
+
+    例:
+      序号: 1 | 公司: 华润三九 | 药品: 益气清肺颗粒 | ...
+      序号: 2 | 公司: 以岭药业 | 药品: 芪防鼻通片 | ...
+    """
+    rows = _parse_html_table(html)
+    if len(rows) < 2:
+        return html
+
+    headers = rows[0]
+    lines = []
+    for row in rows[1:]:
+        pairs = []
+        for i, cell in enumerate(row):
+            col_name = headers[i] if i < len(headers) else f"列{i+1}"
+            pairs.append(f"{col_name}: {cell}")
+        lines.append(" | ".join(pairs))
+    return "\n".join(lines)
+
+
 @dataclass
 class Chunk:
     text: str
     metadata: dict = field(default_factory=dict)
+
+
+_CHILD_MAX_LEN = 256
+_CHILD_OVERLAP = 64
+
+
+def _split_children(parent_text: str, parent_id: str, metadata: dict) -> list[Chunk]:
+    """将超长 parent chunk 按滑窗切分为 child chunks。
+
+    不超过 _CHILD_MAX_LEN 的 parent 直接作为自身的 child 返回。
+    """
+    child_meta_base = {**metadata, "parent_id": parent_id, "is_child": True}
+
+    if len(parent_text) <= _CHILD_MAX_LEN:
+        return [Chunk(text=parent_text, metadata={**child_meta_base})]
+
+    children = []
+    start = 0
+    idx = 0
+    while start < len(parent_text):
+        end = min(start + _CHILD_MAX_LEN, len(parent_text))
+        child_text = parent_text[start:end]
+        children.append(Chunk(
+            text=child_text,
+            metadata={**child_meta_base, "child_idx": idx},
+        ))
+        idx += 1
+        start += _CHILD_MAX_LEN - _CHILD_OVERLAP
+    return children
 
 
 def _parse_frontmatter(content: str) -> tuple[dict, str]:
@@ -170,8 +256,11 @@ def chunk_file(filepath: Path) -> list[Chunk]:
                 i += 1
 
             table_text = "\n".join(table_lines).strip()
+            kv_text = _html_table_to_kv_text(table_text)
+            if table_title:
+                kv_text = table_title + "\n" + kv_text
             chunks.append(Chunk(
-                text=table_text,
+                text=kv_text,
                 metadata={
                     "source_pdf": source_pdf,
                     "report_type": report_type,
@@ -194,8 +283,11 @@ def chunk_file(filepath: Path) -> list[Chunk]:
 
 
 def _write_chunks(chunks: list[Chunk], md_path: Path) -> Path:
-    """将 chunks 写入 data/chunks/{report_type}/{stem}.jsonl，返回输出路径。"""
-    # 从第一个 chunk 的 metadata 取 report_type，兜底用文件父目录名
+    """将 chunks 写入 parent + children 两个文件，返回 parent 输出路径。
+
+    - {stem}.jsonl — parent chunks（完整文本，供 LLM 上下文）
+    - {stem}_children.jsonl — child chunks（短文本，供 embedding 检索）
+    """
     report_type = ""
     if chunks and chunks[0].metadata.get("report_type"):
         report_type = chunks[0].metadata["report_type"]
@@ -204,11 +296,23 @@ def _write_chunks(chunks: list[Chunk], md_path: Path) -> Path:
 
     out_dir = _CHUNKS_DIR / report_type
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{md_path.stem}.jsonl"
-    with open(out_path, "w", encoding="utf-8") as f:
-        for c in chunks:
-            f.write(json.dumps(asdict(c), ensure_ascii=False) + "\n")
-    return out_path
+    stem = md_path.stem
+    parent_path = out_dir / f"{stem}.jsonl"
+    children_path = out_dir / f"{stem}_children.jsonl"
+
+    with open(parent_path, "w", encoding="utf-8") as fp, \
+         open(children_path, "w", encoding="utf-8") as fc:
+        for i, c in enumerate(chunks):
+            parent_id = f"{stem}_{i}"
+            c.metadata["parent_id"] = ""
+            c.metadata["is_child"] = False
+            fp.write(json.dumps(asdict(c), ensure_ascii=False) + "\n")
+
+            children = _split_children(c.text, parent_id, c.metadata)
+            for child in children:
+                fc.write(json.dumps(asdict(child), ensure_ascii=False) + "\n")
+
+    return parent_path
 
 
 def chunk_all() -> int:
@@ -220,7 +324,7 @@ def chunk_all() -> int:
         _write_chunks(chunks, md_file)
         total_chunks += len(chunks)
         total_files += 1
-    print(f"完成，共 {total_files} 份研报，{total_chunks} 个 chunk → {_CHUNKS_DIR}")
+    print(f"完成，共 {total_files} 份研报，{total_chunks} 个 parent chunk → {_CHUNKS_DIR}")
     return total_chunks
 
 

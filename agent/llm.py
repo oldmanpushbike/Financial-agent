@@ -15,4 +15,5 @@ def get_llm(temperature: float = 0.3, streaming: bool = True) -> ChatOpenAI:
         base_url=ZHIPU_BASE_URL,
         temperature=temperature,
         streaming=streaming,
+        max_retries=3,
     )
