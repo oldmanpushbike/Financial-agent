@@ -1,4 +1,4 @@
-# FS Agent — 中药上市公司智能问数系统
+# FS Agent — 上市公司智能问数系统
 
 基于 LangGraph + 智谱 GLM-4 的财务数据分析 Agent，支持自然语言查询财务报表、检索研究报告、生成可视化图表。
 
@@ -131,7 +131,7 @@ Planner ──► Executor ──► Synthesis ──► Formatter ──► END
 - **Matplotlib**：图表生成
 - **sentence-transformers + modelscope**：本地 Embedding 模型
 
-## 适用数据范围
+## 适用数据范围（可替换）
 
 - **10 家医药/CXO 上市公司**：凯莱英、迪安诊断、泰格医药、迈普医学、百普赛斯、百诚医药、昭衍新药、药明康德、成都先导、百克生物
 - **时间跨度**：2022-2025 年
